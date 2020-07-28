@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .mw {
@@ -13,11 +13,11 @@ body {
 }
 
 .bg-orange {
-  background: #FA9B03 !important;
+  background: #fa9b03 !important;
 }
 
 .bg-indigo {
-  background: #6372C1 !important;
+  background: #6372c1 !important;
 }
 
 .bg-black {
@@ -33,11 +33,11 @@ body {
 }
 
 .text-orange {
-  color: #FA9B03 !important;
+  color: #fa9b03 !important;
 }
 
 .text-indigo {
-  color: #6372C1 !important;
+  color: #6372c1 !important;
 }
 
 .btn.bg-orange:hover {
@@ -94,7 +94,7 @@ body {
 }
 
 .homepage .focus {
-  background: #FA9B03;
+  background: #fa9b03;
   text-decoration: none;
 }
 
@@ -105,9 +105,11 @@ body {
 .homepage .wrapper {
   width: 100%;
   height: 100vh;
+  overflow: hidden;
   background-size: cover;
   background-position: center top;
   position: relative;
+  overflow: hidden;
 }
 
 .homepage .wrapper .search {
@@ -124,7 +126,18 @@ body {
 }
 
 .homepage .wrapper .search input:focus::-webkit-input-placeholder {
-  color: #6C6B6B;
+  color: #6c6b6b;
+}
+
+.homepage .wrapper .banner {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s 0.3s;
+}
+
+.homepage .wrapper .banner.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .homepage .wrapper .banner .discover {
@@ -145,6 +158,14 @@ body {
 
 .homepage .wrapper .about {
   height: calc(100vh - 88px);
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.5s 0.3s;
+}
+
+.homepage .wrapper .about.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .homepage .wrapper .about p.explore {
@@ -158,20 +179,37 @@ body {
   }
 }
 
-.homepage .wrapper .gallery img {
+@media screen and (min-width: 768px) {
+  .homepage .wrapper .galleryDiv {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+}
+
+.homepage .wrapper .galleryDiv .gallery img {
   width: 100%;
   height: auto;
 }
 
-.homepage .wrapper .gallery i.fa {
+.homepage .wrapper .galleryDiv .gallery i.fa {
   text-shadow: #000 0px 0px 1px;
   font-size: 10px;
   -webkit-font-smoothing: antialised;
 }
 
-.homepage .wrapper .gallery .col-* {
+.homepage .wrapper .galleryDiv .gallery .col-* {
   padding-left: 5px !important;
   padding-right: 5px !important;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage .wrapper .works {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+  .homepage .wrapper .works.pb-0 {
+    padding-bottom: 0 !important;
+  }
 }
 
 .homepage .wrapper .works div.cc {
@@ -190,7 +228,7 @@ body {
 }
 
 .homepage .wrapper.bg-explore-art {
-  background: #FA9B03 url("/images/homepage/orange-bg.png");
+  background: #fa9b03 url("/images/homepage/orange-bg.png");
   background-position: center;
   background-size: cover;
 }
@@ -223,7 +261,7 @@ body {
 }
 
 .homepage .contactInfo input::-webkit-input-placeholder {
-  color: #6C6B6B;
+  color: #6c6b6b;
 }
 
 .homepage .contactInfo input:focus {
@@ -232,7 +270,7 @@ body {
 }
 
 .homepage .whatAreYou.discover {
-  color: #6C6B6B;
+  color: #6c6b6b;
 }
 
 .homepage .whatAreYou.discover h4 {
@@ -248,7 +286,7 @@ body {
 
 .homepage .whatAreYou.discover .what-you-do span {
   font-size: 16px;
-  border-bottom: 1px solid #6C6B6B;
+  border-bottom: 1px solid #6c6b6b;
 }
 
 .homepage .whatAreYou.discover .what-you-do span i.fa-check {
@@ -256,7 +294,7 @@ body {
 }
 
 .homepage .whatAreYou.discover .what-you-do span:hover {
-  background: #FA9B03;
+  background: #fa9b03;
   text-decoration: none;
 }
 
@@ -311,159 +349,3 @@ body {
 /**************************************
                 HOME
 **************************************/
-.Home {
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center top;
-}
-
-.Home .title {
-  font-size: 45px;
-}
-
-@media screen and (min-width: 768px) {
-  .Home .py-md-space {
-    padding-top: 80px !important;
-    padding-bottom: 80px !important;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .Home .pt-md-space {
-    padding-top: 80px !important;
-  }
-}
-
-.Home .border-line {
-  height: 10px;
-  width: 250px;
-}
-
-.Home .border-line .bg-orange {
-  border-radius: 5px 0 0 5px;
-}
-
-.Home .border-line .bg-indigo {
-  border-radius: 0 5px 5px 0;
-}
-
-.Home .illustrationSection .illustration img {
-  height: 300px;
-  width: auto;
-}
-
-.Home .illustrationSection .illustration .store {
-  flex-wrap: wrap;
-}
-
-.Home .illustrationSection .illustration .store img {
-  width: 200px;
-  height: 65px;
-}
-
-.Home hr.hr {
-  height: 2px;
-  background: #C4C4C4;
-}
-
-.Home .who-we-are {
-  overflow: hidden;
-}
-
-.Home .who-we-are .abtQrate {
-  font-size: 200%;
-}
-
-.Home .who-we-are h3 {
-  font-size: 35px;
-}
-
-.Home .who-we-are .rect-img {
-  border: 5px solid #FA9B03;
-}
-
-.Home .who-we-are .round-img {
-  border: 5px solid #6372C1;
-  position: absolute;
-  z-index: -1;
-  border-radius: 50%;
-  top: 180px;
-  right: -160px;
-}
-
-.Home .who-we-are .round {
-  width: 300px;
-  height: 300px;
-}
-
-.Home .how-it-works .works-div {
-  height: 250px;
-}
-
-.Home .how-it-works .works-div .round-circle {
-  position: relative;
-}
-
-.Home .how-it-works .works-div .round-circle span {
-  width: 50px;
-  height: 50px;
-  padding-left: 20px;
-  padding-top: 12px;
-}
-
-.Home .how-it-works .works-div .round-circle img {
-  position: absolute;
-  z-index: 1;
-  left: 22px;
-}
-
-.Home .how-it-works .works-div .round-circle .z-2 {
-  z-index: 2;
-}
-
-.Home .how-it-works .worksDiv {
-  height: 150px;
-}
-
-.Home .art-categories .custom-select {
-  display: inline-block !important;
-  width: 250px;
-}
-
-.Home .art-categories .custom-select option {
-  width: 400px !important;
-  height: auto !important;
-}
-
-.Home .art-categories .card {
-  width: 280px;
-}
-
-.Home .art-categories .card-img {
-  height: 350px;
-}
-
-@media screen and (max-width: 767px) {
-  .Home .testimonial .testimonial-wrapper {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
-
-.Home .testimonial .fa.fa-user-circle {
-  font-size: 200px;
-}
-
-.Home .testimonial p {
-  font-size: 30px;
-}
-
-.Home .get-notified input {
-  max-width: 750px;
-}
-
-.Home footer a {
-  display: block;
-  margin: 10px 0;
-  color: #000000;
-}
