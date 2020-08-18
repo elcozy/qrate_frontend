@@ -11,9 +11,18 @@ import HomepageNavigator from "./Components/Homepage/HomepageNavigator";
 import HomepageHeader from "./Components/Homepage/HomepageHeader";
 import FirstHomepage from "./Components/Homepage/FirstHomepage";
 
+
+
 const Homepage = () => {
 	const [showComponent, setWhichComponentToShow] = useState("StartPage");
 	const [displayNext, setDisplayNext] = useState("FirstPage");
+
+	document.title = "Qrate";
+
+	
+	// For Scrolling
+
+	
 
 	// useEffect(() => {
 	// 	const components = ["FirstPage", "SecondPage", "ThirdPage", "FourthPage", "FifthPage", "SixthPage", "SeventhPage"];
@@ -32,21 +41,21 @@ const Homepage = () => {
 	// 	var lastAnimation = 0;
 	// 	let index = 0;
 
-	// 	document.addEventListener("wheel", (e) => {
+	// 	function scroll(e) {
 	// 		var delta = e.wheelDelta;
 	// 		var timeNow = new Date().getTime();
-
+	
 	// 		const changeComponent = (index, state) => {
 	// 			if (state === "show") {
 	// 				setDisplayNext(components[index]);
 	// 			}
 	// 		};
-
+	
 	// 		if (timeNow - lastAnimation < idlePeriod + animationDuration) {
 	// 			// e.preventDefault();
 	// 			return;
 	// 		}
-
+	
 	// 		if (delta < 0) {
 	// 			console.log("Scroll up");
 	// 			if (index > 6) return;
@@ -59,10 +68,14 @@ const Homepage = () => {
 	// 				}
 	// 			});
 	// 		} else console.log("Scroll down");
-
+	
 	// 		lastAnimation = timeNow;
-	// 	});
-	// }, [displayNext]);
+	// 	}
+
+	// 	document.addEventListener("wheel", scroll);
+
+	// 	return () => document.removeEventListener("wheel", scroll);
+	// });
 
 	return (
 		<div className="homepage">

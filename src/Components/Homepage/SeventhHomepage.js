@@ -42,14 +42,14 @@ const SeventhHomepage = (props) => {
 						</div>
 					</div>
 					<div className="text-center text-sm-left">
-						<Link className="text-light mx-2" to="/">
-							Terms
+						<Link className="text-light mx-2" to="/dashboard">
+							Dashboard
 						</Link>
-						<Link className="text-light mx-2" to="/">
-							Privacy
+						<Link className="text-light mx-2" to="/dashboard/gallery">
+							Gallery
 						</Link>
-						<Link className="text-light mx-2" to="/">
-							Support
+						<Link className="text-light mx-2" to="/dashboard/categories">
+							Categories
 						</Link>
 					</div>
 				</div>
