@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import FixedNavBar from "../FixedNavBar";
 import TopBar from "../TopBar";
 import Nav from "./Nav";

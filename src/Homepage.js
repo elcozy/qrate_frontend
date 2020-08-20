@@ -19,64 +19,6 @@ const Homepage = () => {
 
 	document.title = "Qrate";
 
-	
-	// For Scrolling
-
-	
-
-	// useEffect(() => {
-	// 	const components = ["FirstPage", "SecondPage", "ThirdPage", "FourthPage", "FifthPage", "SixthPage", "SeventhPage"];
-	// 	const pages = [
-	// 		"FirstHomepage",
-	// 		"SecondHomepage",
-	// 		"ThirdHomepage",
-	// 		"FourthHomepage",
-	// 		"FifthHomepage",
-	// 		"SixthHomepage",
-	// 		"SeventhHomepage",
-	// 	];
-	// 	const idlePeriod = 100;
-	// 	const animationDuration = 800;
-
-	// 	var lastAnimation = 0;
-	// 	let index = 0;
-
-	// 	function scroll(e) {
-	// 		var delta = e.wheelDelta;
-	// 		var timeNow = new Date().getTime();
-	
-	// 		const changeComponent = (index, state) => {
-	// 			if (state === "show") {
-	// 				setDisplayNext(components[index]);
-	// 			}
-	// 		};
-	
-	// 		if (timeNow - lastAnimation < idlePeriod + animationDuration) {
-	// 			// e.preventDefault();
-	// 			return;
-	// 		}
-	
-	// 		if (delta < 0) {
-	// 			console.log("Scroll up");
-	// 			if (index > 6) return;
-	// 			index++;
-	// 			pages.forEach((page, i) => {
-	// 				if (i === index) {
-	// 					changeComponent(i, "show");
-	// 					// page.scrollIntoView({behaviour: "smooth"});
-	// 					// page.scrollIntoView({block: 'end', behavior: 'smooth'});
-	// 				}
-	// 			});
-	// 		} else console.log("Scroll down");
-	
-	// 		lastAnimation = timeNow;
-	// 	}
-
-	// 	document.addEventListener("wheel", scroll);
-
-	// 	return () => document.removeEventListener("wheel", scroll);
-	// });
-
 	return (
 		<div className="homepage">
 			<HomepageHeader
