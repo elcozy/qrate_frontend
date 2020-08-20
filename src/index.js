@@ -4,6 +4,10 @@ import {BrowserRouter, Route} from 'react-router-dom';
 
 // Components
 import Homepage from './Homepage';
+import Dashboard from './Components/Dashboard/index';
+import ArtDetails from './Components/Dashboard/ArtDetails/index';
+import Gallery from './Components/Dashboard/Gallery/index';
+import Categories from './Components/Dashboard/Categories/index';
 
 // CSS
 import "./css/styles.css";
@@ -20,12 +24,10 @@ ReactDOM.render(
   <BrowserRouter>
     <div>
       <Route exact path="/" component={App}></Route>
-      {/* <Route exact path="/:id" component={App}></Route>
-      <Route exact path="/get-started" component={ContactDetails}></Route>
-      <Route exact path="/what-are-you" component={WhatAreYou}></Route>
-      <Route exact path="/captcha-confirmation" component={NotARobot}></Route>
-      <Route exact path="/enter-email" component={Email}></Route>
-      <Route exact path="/enter-password" component={Password}></Route> */}
+      <Route exact path="/dashboard" component={Dashboard}></Route>
+      <Route exact path="/dashboard/art/:id" component={ArtDetails}></Route>
+      <Route exact path="/dashboard/gallery" component={Gallery}></Route>
+      <Route exact path="/dashboard/categories" component={Categories}></Route>
     </div>
     
   </BrowserRouter>,

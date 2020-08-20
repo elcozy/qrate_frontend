@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from 'react-router-dom';
 
 const randomBg = () => {
 	var randomNo = Math.floor(Math.random() * 6);
@@ -22,9 +23,6 @@ const Display = (props) => {
 						<h2 className="font-weight-bold mb-4">
 							Discover The Beauty of <span className="text-orange">Art</span>
 						</h2>
-						{/* <h3 className="d-sm-none font-weight-bold mb-4">
-                            Discover The Beauty of <span className="text-orange">Art</span>
-                        </h3> */}
 						<p className="lead px-3">Qrate connects Africa's best visual artists and creatives.</p>
 					</div>
 					<div className="px-2 px-md-auto w-100">
@@ -188,7 +186,7 @@ const Display = (props) => {
 							required
 						/>
 						<button className="btn bg-orange w-100 text-light mt-3 btn-lg" value="ConfirmEmail">
-							Log in
+							<Link to="/dashboard">Log in</Link>
 						</button>
 					</div>
 				</div>
