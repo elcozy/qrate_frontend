@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 
-import $ from "jquery";
+import $ from "./node_modules/jquery";
 // IMPORTING CSS
 import "./cart.css";
-import { Table, Form } from "react-bootstrap";
+import { Table, Form } from "./node_modules/react-bootstrap";
 
 export default class CartHome extends Component {
   state = {

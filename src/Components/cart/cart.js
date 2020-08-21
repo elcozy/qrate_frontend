@@ -1,4 +1,4 @@
-import React from "react";
+import React from "./node_modules/react";
 
 //IMPORTING FOLDERS
 
@@ -6,10 +6,14 @@ import CartHome from "./cartHome";
 import CartCheckout from "./cartCheckout";
 
 // IMPORTING REACT ROUTER DOM
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "./node_modules/react-router-dom";
 
 // IMPORTING FROM REACT ROUTER
-import { Redirect } from "react-router-dom";
+import { Redirect } from "./node_modules/react-router-dom";
 
 class cart extends React.Component {
   render() {
