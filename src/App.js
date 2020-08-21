@@ -3,19 +3,19 @@ import React from "react";
 //IMPORTING FOLDERS
 
 import home from "./Components/Homepage/home";
-import artist from "./Components/Artist/artist";
-import explore from "./Components/Explore/explore";
+import artist from "./Components/artist/artist";
+import explore from "./Components/explore/explore";
 import Navbar from "./Components/Navbar/nav";
 import gallery from "./Components/ArtGallery/artgallery";
 import supplies from "./Components/ArtSupplies/artsupplies";
-import cart from "./Components/Cart/cart";
+import Cart from "./Components/Cart/Cart";
 
 // IMPORTING REACT ROUTER DOM
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // IMPORTING FROM REACT ROUTER
 import { Redirect } from "react-router-dom";
-
+import Checkout from "./Components/Cart/Checkout";
 class App extends React.Component {
   render() {
     return (
@@ -28,7 +28,8 @@ class App extends React.Component {
 
           <Route exact path="/explore" component={explore}></Route>
 
-          <Route exact path="/cart" component={cart}></Route>
+          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/checkout" component={Checkout} />
 
           <Route exact path="/gallery" component={gallery}></Route>
 

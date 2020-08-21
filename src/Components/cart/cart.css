@@ -5,30 +5,13 @@
   width: 20%;
 }
 
-.product-details {
-  float: left;
-  /* width: 37%; */
-}
-
-.product-price {
-  float: left;
-  /* width: 12%; */
-}
-
-.product-quantity {
-  float: left;
-  /* width: 10%; */
-}
-
-.product-removal {
-  /* float: left; */
-  /* width: 9%; */
-}
-
 .product-line-price {
   float: left;
   /* width: 12%; */
   text-align: right;
+}
+.order-item .row {
+  overflow: scroll;
 }
 
 /* This is used as the traditional .clearfix class */
@@ -66,10 +49,41 @@
 /* Apply dollar signs */
 .product .product-price:before,
 .product .product-line-price:before,
-.totals-value:before {
+.totals-value:before,
+.fee .total:before,
+.total-fee .total:before {
   content: "$";
 }
+.total-fee .text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3e3e3e;
+}
+.delivery-partners {
+  background: #f3f3f3;
+}
+.total-fee .total {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #f7931e;
+}
+.fee .total {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
 
+  color: #3e3e3e;
+}
+.fee .text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #3e3e3e;
+}
 /* Body/Header stuff */
 body {
   font-family: "Ubuntu", sans-serif;
@@ -94,9 +108,6 @@ label {
 
   color: #6c6b6b;
 }
-.column-labels .product-details {
-  text-indent: -9999px;
-}
 
 /* Product entries */
 .product {
@@ -113,7 +124,8 @@ label {
   width: 142px;
   height: 200px;
 }
-.product .product-details .product-title {
+.product .product-details .product-title,
+.product-title {
   font-weight: bold;
   font-size: 17px;
   line-height: 21px;
@@ -162,7 +174,13 @@ tbody tr td {
   border: 0 !important;
   font-size: 18px;
   color: #6c6b6b;
+  padding: 0;
+  text-align: center;
   font-weight: normal;
+  padding: 0 20px 0 0;
+}
+.w-1 {
+  width: 1% !important;
 }
 thead * {
   white-space: nowrap;
@@ -238,13 +256,118 @@ thead * {
 .explore:hover {
   opacity: 0.7;
 }
+.delivery-address,
+.payment-method,
+.order-item,
+.delivery-information {
+  background: #ffffff;
+}
+.card-type {
+  padding-right: 1.2rem;
+}
+.delivery-address .form-label {
+  font-size: 16px;
+  line-height: 21px;
+  color: #3e3e3e;
+}
+.checkout-card-title {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 24px;
+  margin-top: 0.6rem;
+  color: #3e3e3e;
+}
+.delivery-address input,
+.delivery-address textarea {
+  border-radius: 0;
+  resize: none;
+}
+.checkbx {
+  position: relative;
+}
+.card-cont {
+  padding-left: 30px;
+}
+.card-cont p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
 
+  color: #979797;
+}
+
+/* The radio */
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  width: fit-content;
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkround {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-color: #f7931e;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .checkround {
+  background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkround:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .checkround:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .checkround:after {
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f7931e;
+}
+.checkout-br {
+  border: 1.5px solid #3e3e3e;
+}
 /* Make adjustments for tablet */
 @media screen and (max-width: 650px) {
   .shopping-cart {
     margin: 0;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    /* padding-top: 20px;
+    border-top: 1px solid #eee; */
   }
 
   .column-labels {
@@ -256,14 +379,14 @@ thead * {
     width: 142px;
   }
   .product-image img {
-    margin: 0 0 10px 10px;
+    /* margin: 0 0 10px 10px; */
   }
 
-  .product-details {
+  /* .product-details {
     float: none;
     margin-bottom: 10px;
     width: auto;
-  }
+  } */
 
   .product-price {
     clear: both;
