@@ -5,7 +5,7 @@ export default class artist extends  Component{
 
     render(){
         return(
-            <div  className="main">
+            <div  className="main content">
                 <h1>Artist Page</h1>
             </div>
         )
