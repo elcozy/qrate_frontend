@@ -5,7 +5,7 @@ export default class supplies extends  Component{
 
     render(){
         return(
-            <div  className="main content">
+            <div  className="main">
                 <h1>Supplies Page</h1>
             </div>
         )
