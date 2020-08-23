@@ -7,7 +7,7 @@ import "./cart.css";
 import { Table, Form } from "react-bootstrap";
 import { data } from "./data";
 
-export default class CartHome extends Component {
+export default class Cart extends Component {
   productTable = React.createRef();
   productPrice = React.createRef();
   state = {
