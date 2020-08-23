@@ -5,7 +5,7 @@ export default class gallery extends  Component{
 
     render(){
         return(
-            <div  className="main content">
+            <div  className="main">
                 <h1>Gallery Page</h1>
             </div>
         )
