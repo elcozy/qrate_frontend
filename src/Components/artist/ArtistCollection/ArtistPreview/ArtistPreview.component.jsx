@@ -2,7 +2,7 @@ import React from 'react';
 
 import {BrowserRouter as Router, Link, Route } from "react-router-dom";
 
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 
 import ArtistMain from '../../ArtistMain/ArtistMain.component';
 

@@ -23,3 +23,25 @@
         width: 50%;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .page-description input{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .artist .page-description{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 2rem auto;
+    }
+    .page-description input{
+        width: 60%;
+        margin: 1.5rem auto;
+    }
+    .page-description p {
+        text-align: center;
+    }
+}

@@ -24,8 +24,8 @@ class artist extends  Component{
 
     render(){
         return(
-            <div className="main content">
-                <div className='artist'>
+            <div className="main">
+                <div className='artist content'>
                     <h2>Artists</h2>
                     <div className='page-description'>
                         <Input inputName='search' placeholder='Search'/>
