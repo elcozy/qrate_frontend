@@ -7,6 +7,7 @@ import artist from "./Components/artist/artist";
 import explore from "./Components/explore/explore";
 import Navbar from "./Components/Navbar/nav";
 import gallery from "./Components/ArtGallery/artgallery";
+import galleryDetails from "./Components/ArtGallery/ArtGalleryDetails";
 import supplies from "./Components/ArtSupplies/artsupplies";
 import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Cart/Checkout";
@@ -35,7 +36,7 @@ class App extends React.Component {
           <Route exact path="/checkout" component={Checkout} />
 
           <Route exact path="/gallery" component={gallery}></Route>
-          <Route exact path="/gallery/:id" component={Cart}></Route>
+          <Route exact path="/gallery/:id" component={galleryDetails}></Route>
 
           <Route exact path="/supplies" component={supplies}></Route>
         </Switch>
