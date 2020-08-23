@@ -1,0 +1,440 @@
+/* Global settings */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+.product-image {
+  float: left;
+  width: 20%;
+}
+
+.product-line-price {
+  float: left;
+  /* width: 12%; */
+  text-align: right;
+}
+.order-item .row {
+  overflow: scroll;
+}
+
+/* This is used as the traditional .clearfix class */
+/* .group:before,
+.shopping-cart:before,
+.column-labels:before,
+.product:before,
+.totals-item:before,
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  content: "";
+  display: table;
+} */
+
+.group:after,
+.shopping-cart:after,
+.column-labels:after,
+.product:after,
+.totals-item:after {
+  clear: both;
+}
+
+.group,
+.shopping-cart,
+.column-labels,
+.product,
+.totals-item {
+  zoom: 1;
+}
+
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+.product .product-price:before,
+.product .product-line-price:before,
+.totals-value:before,
+.fee .total:before,
+.total-fee .total:before {
+  content: "$";
+}
+.total-fee .text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #3e3e3e;
+}
+.delivery-partners {
+  background: #f3f3f3;
+}
+.total-fee .total {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #f7931e;
+}
+.fee .total {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  color: #3e3e3e;
+}
+.fee .text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #3e3e3e;
+}
+/* Body/Header stuff */
+body {
+  font-family: "Ubuntu", sans-serif;
+  background: #f8f8f8;
+}
+
+h1 {
+  font-weight: 100;
+}
+
+label {
+  color: #aaa;
+}
+
+/* Column headers */
+.column-labels label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+
+  color: #6c6b6b;
+}
+
+/* Product entries */
+.product {
+  margin-bottom: 20px;
+  /* padding-bottom: 10px; */
+  /* border-bottom: 1px solid #eee; */
+  background: #ffffff;
+}
+.product .product-image {
+  text-align: center;
+  width: auto;
+}
+.product .product-image img {
+  width: 142px;
+  height: 200px;
+}
+.product .product-details .product-title,
+.product-title {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 21px;
+  color: #3e3e3e;
+  white-space: nowrap;
+}
+.product .form-control {
+  width: fit-content;
+  cursor: pointer;
+}
+.product .product-details .product-description,
+.artist-name {
+  font-weight: normal;
+  font-size: 16px;
+  margin: 5px 0;
+  line-height: 1.4em;
+  line-height: 18px;
+
+  color: #3e3e3e;
+}
+.product .product-quantity input {
+  width: 40px;
+}
+.remove-product {
+  /* border: 0;
+  padding: 4px 8px;
+  background-color: #c66;
+  color: #fff;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+  font-size: 12px;
+  border-radius: 3px; */
+  height: 24px;
+  width: 100px;
+  /* margin-left: 11px; */
+  background: url(/assets/img/cart/remove.png) no-repeat;
+  cursor: pointer;
+}
+.remove-product:hover {
+  opacity: 0.7;
+}
+tbody tr td {
+  padding: 0 !important;
+  vertical-align: middle !important;
+}
+.table thead th {
+  border: 0 !important;
+  font-size: 18px;
+  color: #6c6b6b;
+  padding: 0;
+  text-align: center;
+  font-weight: normal;
+  padding: 0 20px 0 0;
+}
+.w-1 {
+  width: 1% !important;
+}
+thead * {
+  white-space: nowrap;
+}
+.table {
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+/* Totals section */
+.totals .totals-item {
+  float: right;
+  clear: both;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals .totals-item label {
+  /* float: left; */
+  /* clear: both; */
+  /* width: 79%; */
+  text-align: right;
+  font-weight: 500;
+  font-size: 24px;
+  color: #3e3e3e;
+  margin: 0;
+}
+.cart-title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 41px;
+  color: #000000;
+}
+.totals .totals-item .totals-value {
+  /* float: right; */
+  /* width: 21%; */
+  /* text-align: right; */
+  font-size: 32px;
+  line-height: 37px;
+  color: #f7931e;
+}
+.totals .totals-item-total {
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
+}
+
+.checkout {
+  /* float: right; */
+  border: 0;
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1rem;
+  line-height: 28px;
+
+  color: #ffffff;
+  background: #f7931e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.explore {
+  border: 0;
+  margin-top: 20px;
+  padding: 10px 25px;
+
+  background: #ffffff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  font-size: 1rem;
+  line-height: 28px;
+
+  color: #f7931e;
+  cursor: pointer;
+}
+
+.checkout:hover,
+.explore:hover {
+  opacity: 0.7;
+}
+.delivery-address,
+.payment-method,
+.order-item,
+.delivery-information {
+  background: #ffffff;
+}
+.card-type {
+  padding-right: 1.2rem;
+}
+.delivery-address .form-label {
+  font-size: 16px;
+  line-height: 21px;
+  color: #3e3e3e;
+}
+.checkout-card-title {
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 24px;
+  margin-top: 0.6rem;
+  color: #3e3e3e;
+}
+.delivery-address input,
+.delivery-address textarea {
+  border-radius: 0;
+  resize: none;
+}
+.checkbx {
+  position: relative;
+}
+.card-cont {
+  padding-left: 30px;
+}
+.card-cont p {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #979797;
+}
+
+/* The radio */
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  width: fit-content;
+  font-weight: 300;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000000;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkround {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-color: #f7931e;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .checkround {
+  background-color: #fff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkround:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .checkround:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .checkround:after {
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f7931e;
+}
+.checkout-br {
+  border: 1.5px solid #3e3e3e;
+}
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+  .shopping-cart {
+    margin: 0;
+    /* padding-top: 20px;
+    border-top: 1px solid #eee; */
+  }
+
+  .column-labels {
+    display: none;
+  }
+
+  .product-image {
+    float: right;
+    width: 142px;
+  }
+  .product-image img {
+    /* margin: 0 0 10px 10px; */
+  }
+
+  /* .product-details {
+    float: none;
+    margin-bottom: 10px;
+    width: auto;
+  } */
+
+  .product-price {
+    clear: both;
+    width: 70px;
+    text-align: center;
+  }
+
+  .product-quantity {
+    width: 100px;
+  }
+  .product-quantity input {
+    margin-left: 20px;
+  }
+
+  .product-quantity:before {
+    content: "x";
+  }
+
+  .product-removal {
+    width: auto;
+  }
+
+  .product-line-price {
+    float: right;
+    width: 70px;
+  }
+}
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+  .product-removal {
+    float: right;
+  }
+
+  .product-line-price {
+    float: right;
+    clear: left;
+    width: auto;
+    margin-top: 10px;
+  }
+
+  .product .product-line-price:before {
+    content: "Item Total: $";
+  }
+
+  .totals .totals-item label {
+    width: 60%;
+  }
+  .totals .totals-item .totals-value {
+    width: 40%;
+  }
+}

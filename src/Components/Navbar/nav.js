@@ -66,7 +66,7 @@ render(){
             <img src="images/categories.svg" /><span  className="icon-sidebar-name">Categories</span>
             </div>
             <div className="icon-sidebar-item">
-            <img src="images/cart.svg" /><span  className="icon-sidebar-name">Cart</span>
+           <Link to="/cart"><img src="images/cart.svg" /><span  className="icon-sidebar-name">Cart</span></Link>
             </div>
             <div className="icon-sidebar-item">
             <img src="images/settings.svg" /> <span className="icon-sidebar-name"> Settings</span>
