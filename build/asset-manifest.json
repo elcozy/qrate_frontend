@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4a31576d.chunk.css",
+    "main.js": "/static/js/main.09cfaa31.chunk.js",
+    "main.js.map": "/static/js/main.09cfaa31.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ac46601e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ac46601e.js.map",
+    "static/js/2.a2906458.chunk.js": "/static/js/2.a2906458.chunk.js",
+    "static/js/2.a2906458.chunk.js.map": "/static/js/2.a2906458.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8b2b044605ef4ecd9db9bb9c0746e064.js": "/precache-manifest.8b2b044605ef4ecd9db9bb9c0746e064.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.4a31576d.chunk.css.map": "/static/css/main.4a31576d.chunk.css.map",
+    "static/js/2.a2906458.chunk.js.LICENSE.txt": "/static/js/2.a2906458.chunk.js.LICENSE.txt",
+    "static/media/RTX6W7OQ-e1560441912537 1.png": "/static/media/RTX6W7OQ-e1560441912537 1.37aab550.png",
+    "static/media/mona-lisa-by-leonardo-da-vinci 1.png": "/static/media/mona-lisa-by-leonardo-da-vinci 1.ab705ece.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ac46601e.js",
+    "static/js/2.a2906458.chunk.js",
+    "static/css/main.4a31576d.chunk.css",
+    "static/js/main.09cfaa31.chunk.js"
+  ]
+}
