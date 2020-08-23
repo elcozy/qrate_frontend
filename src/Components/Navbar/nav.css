@@ -7,6 +7,7 @@
   height: 100%;
   border-right: 1px solid #c4c4c4;
   background: white;
+  z-index: 9999;
 
   }
   .icon-sidebar{
@@ -74,7 +75,8 @@
 	  padding-bottom: 20px;
 	  border-bottom: 1px solid #c4c4c4;
 	  right: 0;
-	  width: 83%;
+    width: 83%;
+    z-index: 9999;
   }
   .icon-nav-name{
     padding-left: 15px;
