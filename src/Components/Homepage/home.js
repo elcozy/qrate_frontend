@@ -21,21 +21,8 @@ const home =() =>{
                 <div className="main content">
                     <div className="home__container">
                         <div className="home__main">
+                            
                             {/* Section One */}
-                            {/* <section className="home__main__card1">
-                                <div className="home__main__card1__upper">
-                                    <img  className="home__main__card1__img" src={UserImage} alt="UserImage" />
-                                    <p className="home__main__card1__text">Any art buzz you want to share, feranmiolowo?</p>
-                                </div>
-                                <div className="home__main__card1__lower">
-                                    <div className="home__main__card1__lower__img-container">
-                                        <img  className="home__main__card1__lower__img" src={CardIcon} alt="CardIcon" />
-                                        <img  className="home__main__card1__lower__img" src={FaceIcon} alt="FaceIcon" />
-                                        <img  className="home__main__card1__lower__img" src={CalendarIcon} alt="CalendarIcon" />
-                                    </div>
-                                    <button className="btn home__main__card1__btn">POST</button>
-                                </div>
-                            </section> */}
                             <section className="home__main__card1">
                                 <div className="home__main__card2__img-section">
                                     <img  className="home__main__card2__img" src={UserImage} alt="UserImage" />

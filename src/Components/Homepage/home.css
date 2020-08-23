@@ -21,7 +21,6 @@ body {
 }
 
 /* Section One */
-
 .home__main__card1 {
     background:  #FFFFFF;
     margin: 10px 0;
@@ -30,18 +29,6 @@ body {
     display: grid;
     grid-template-columns: 80px 2fr;
 }
-
-/* .home__main__card1__upper{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 55px;
-} */
-
-/* .home__main__card1__img{
-    margin-right: 20px;
-    border-radius: 100px;
-} */
 
 .home__main__card1__text {
     font-size: 21px;
