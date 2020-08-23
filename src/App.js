@@ -12,10 +12,11 @@ import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Cart/Checkout";
 
 // IMPORTING REACT ROUTER DOM
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 // IMPORTING FROM REACT ROUTER
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 
 class App extends React.Component {
   render() {
@@ -34,6 +35,7 @@ class App extends React.Component {
           <Route exact path="/checkout" component={Checkout} />
 
           <Route exact path="/gallery" component={gallery}></Route>
+          <Route exact path="/gallery/:id" component={Cart}></Route>
 
           <Route exact path="/supplies" component={supplies}></Route>
         </Switch>
