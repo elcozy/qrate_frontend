@@ -24,7 +24,7 @@ class artist extends  Component{
 
     render(){
         return(
-            <div className="main">
+            <div className="main content">
                 <div className='artist'>
                     <h2>Artists</h2>
                     <div className='page-description'>

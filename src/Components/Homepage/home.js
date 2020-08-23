@@ -40,6 +40,17 @@ const home =() =>{
                                 <div className="home__main__card2__img-section">
                                     <img  className="home__main__card2__img" src={UserImage} alt="UserImage" />
                                 </div>
+                                <div>
+                                    <p className="home__main__card1__text">Any art buzz you want to share, feranmiolowo?</p>
+                                    <div className="home__main__card1__lower">
+                                        <div className="home__main__card1__lower__img-container">
+                                            <img  className="home__main__card1__lower__img" src={CardIcon} alt="CardIcon" />
+                                            <img  className="home__main__card1__lower__img" src={FaceIcon} alt="FaceIcon" />
+                                            <img  className="home__main__card1__lower__img" src={CalendarIcon} alt="CalendarIcon" />
+                                        </div>
+                                        <button className="btn home__main__card1__btn">POST</button>
+                                    </div>
+                                </div>
                             </section>
                             
                             {/* Section  Two*/}
@@ -73,11 +84,9 @@ const home =() =>{
                                             <img className="home__main__card2__lower__group1__icon1" src={HeartIcon} alt="HeartIcon" />
                                             <span>108</span>
                                         </div>
-                                        <div className="home__main__card2__lower__group3">
-                                            <div className="home__main__card2__lower__group3__container">
-                                                <img className="home__main__card2__lower__group3__icon1" src={ShareIcon} alt="ShareIcon" />
-                                                <p className="home__main__card2__lower__group3__text">Share</p>
-                                            </div>
+                                        <div className="home__main__card2__lower__group3__container ml-auto">
+                                            <img className="home__main__card2__lower__group3__icon1 pb-3 pr-2" src={ShareIcon} alt="ShareIcon" />
+                                            <p className="home__main__card2__lower__group3__text">Share</p>
                                         </div>
                                     </div>
                                 </div>
@@ -114,11 +123,9 @@ const home =() =>{
                                             <img className="home__main__card2__lower__group1__icon1" src={HeartIcon} alt="HeartIcon" />
                                             <span>108</span>
                                         </div>
-                                        <div className="home__main__card2__lower__group3">
-                                            <div className="home__main__card2__lower__group3__container">
-                                                <img className="home__main__card2__lower__group3__icon1" src={ShareIcon} alt="ShareIcon" />
-                                                <p className="home__main__card2__lower__group3__text">Share</p>
-                                            </div>
+                                        <div className="home__main__card2__lower__group3__container ml-auto">
+                                            <img className="home__main__card2__lower__group3__icon1 pb-3 pr-2" src={ShareIcon} alt="ShareIcon" />
+                                            <p className="home__main__card2__lower__group3__text">Share</p>
                                         </div>
                                     </div>
                                 </div>
@@ -155,11 +162,9 @@ const home =() =>{
                                             <img className="home__main__card2__lower__group1__icon1" src={HeartIcon} alt="HeartIcon" />
                                             <span>108</span>
                                         </div>
-                                        <div className="home__main__card2__lower__group3">
-                                            <div className="home__main__card2__lower__group3__container">
-                                                <img className="home__main__card2__lower__group3__icon1" src={ShareIcon} alt="ShareIcon" />
-                                                <p className="home__main__card2__lower__group3__text">Share</p>
-                                            </div>
+                                        <div className="home__main__card2__lower__group3__container ml-auto">
+                                            <img className="home__main__card2__lower__group3__icon1 pb-3 pr-2" src={ShareIcon} alt="ShareIcon" />
+                                            <p className="home__main__card2__lower__group3__text">Share</p>
                                         </div>
                                     </div>
                                 </div>
