@@ -81,6 +81,7 @@ render(){
 }
     
         <div  className="main" >
+          <div>
         <nav  className="navbar icon-nav navbar-expand">
             <div  className="nav navbar-nav icon-navbar">
                 <a  className="nav-item nav-link" href="#"><img src="images/exhibition.svg" /><span className="icon-nav-name">Exhibition</span></a>
@@ -96,6 +97,7 @@ render(){
 				  </div>
                 
         </nav>
+        </div>
         <div className="line"></div>
       </div>
        

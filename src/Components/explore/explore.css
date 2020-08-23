@@ -1,0 +1,37 @@
+.explore-nav{
+    padding-top: 30px;
+}
+.explore-nav-link{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #3E3E3E;    
+    opacity: 0.6;
+    text-decoration: none;
+    padding: 10px 10px;
+
+}
+.explore-nav-link:hover{
+    color: #F7931E !important;
+    text-decoration: none;
+}
+.explore-nav-link:focus{
+    color: #F7931E;
+}
+.explore-images{
+    display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.explore-images-card{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+}
