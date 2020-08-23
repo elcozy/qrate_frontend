@@ -10,28 +10,28 @@ const Navbar = () => {
 
         <nav className="sidebar">
           <div className="sidebar-logo">
-            <a  href="#" className="logo-icon"><img src="images/qrate logo1-02 2.png" /></a>
+            <a  href="#" className="logo-icon"><img src="images/qrate logo1-02 2.png" alt=" "/></a>
             </div>
             <div>
                 
                     <div  className="sidebar-item">
-                      <Link to='./'><img src="images/home.svg"  className="sidebar-icon" /><span  className="sidebar-name">Home</span></Link>
+                      <Link to='./'><img src="images/home.svg"  className="sidebar-icon" alt=" "/><span  className="sidebar-name">Home</span></Link>
                     </div>
                     
                     <div   className="sidebar-item">
-                      <Link to ="./explore"><img src="images/safari 1.svg"  className="sidebar-icon" /><span className="sidebar-name">Explore</span></Link>
+                      <Link to ="./explore"><img src="images/safari 1.svg"  className="sidebar-icon" alt=" " /><span className="sidebar-name">Explore</span></Link>
                     </div>
                     <div  className="sidebar-item">
-                      <Link to="./gallery"><img src="images/artgallery.svg"  className="sidebar-icon" /><span  className="sidebar-name">Art Gallery</span></Link>
+                      <Link to="./gallery"><img src="images/artgallery.svg"  className="sidebar-icon" alt=" "/><span  className="sidebar-name">Art Gallery</span></Link>
                     </div>
                     <div   className="sidebar-item">
-                      <Link to="./artist"><img src="images/paint.svg"  className="sidebar-icon" /><span  className="sidebar-name">Artists</span></Link>
+                      <Link to="./artist"><img src="images/paint.svg"  className="sidebar-icon" alt=" "/><span  className="sidebar-name">Artists</span></Link>
                     </div>
                     <div  className="sidebar-item">
-                      <Link to="./supplies"><img src="images/artsupplies.svg" className="sidebar-icon" /><span  className="sidebar-name">Art Supplies</span></Link>
+                      <Link to="./supplies"><img src="images/artsupplies.svg" className="sidebar-icon" alt=" "/><span  className="sidebar-name">Art Supplies</span></Link>
                     </div>
                     <div   className="sidebar-item">
-                      <a href="#"> <img src="images/logout.svg"  className="sidebar-icon" /><span  className="sidebar-name">Log Out</span></a>
+                      <a href="#"> <img src="images/logout.svg"  className="sidebar-icon" alt=" "/><span  className="sidebar-name">Log Out</span></a>
                     </div>
             </div>
         </nav>
