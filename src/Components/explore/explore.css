@@ -1,3 +1,7 @@
+body{
+    background: 
+    white;
+}
 .explore-nav{
     padding-top: 30px;
 }
@@ -20,18 +24,40 @@
 .explore-nav-link:focus{
     color: #F7931E;
 }
-.explore-images{
-    display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-.explore-images-card{
-    position: relative;
-    display: -ms-flexbox;
+.explore-row{
+    display: -ms-flexbox; /* IE10 */
     display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+
 }
+.explore-images-body{
+    -ms-flex: 33%; /* IE10 */
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+.explore-img{
+    vertical-align: middle;
+    width: 100%;    
+}
+.explore-content{
+    margin-right: 10px;
+    margin-top: 15px;
+}
+@media screen and (max-width: 800px) {
+    .explore-images-body {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .explore-images-body {
+      -ms-flex: 100%;
+      flex: 100%;
+      max-width: 100%;
+    }
+  }

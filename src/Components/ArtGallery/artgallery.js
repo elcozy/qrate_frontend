@@ -240,7 +240,7 @@ export default class gallery extends React.Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="main artgallery">
         <div className="r">
           <div className="text-center">
             <h5 className="text-center">Art Galleries</h5>
