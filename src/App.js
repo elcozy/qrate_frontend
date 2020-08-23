@@ -2,12 +2,22 @@ import React from "react";
 
 //IMPORTING FOLDERS
 
+<<<<<<< HEAD
 import home from './Components/Homepage/home'
 import artist from './Components/artist/artist'
 import explore from './Components/explore/explore'
 import Navbar from './Components/Navbar/nav'
 import gallery from './Components/ArtGallery/artgallery'
 import supplies from  './Components/ArtSupplies/artsupplies'
+=======
+import home from "./Components/Homepage/home";
+import artist from "./Components/artist/artist";
+import explore from "./Components/explore/explore";
+import Navbar from "./Components/Navbar/nav";
+import gallery from "./Components/ArtGallery/artgallery";
+import supplies from "./Components/ArtSupplies/artsupplies";
+import Cart from "./Components/Cart/Cart";
+>>>>>>> 8fd3f8b174121cff8a2895c3393ac764637d16fd
 
 
 // IMPORTING REACT ROUTER DOM
@@ -15,29 +25,26 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // IMPORTING FROM REACT ROUTER
 import { Redirect } from "react-router-dom";
-
+import Checkout from "./Components/Cart/Checkout";
 class App extends React.Component {
- 
-
-
   render() {
-
     return (
       <div className="App">
-
-        <Navbar/>
+        <Navbar />
         <Switch>
+          <Route exact path="/" component={home}></Route>
 
-          <Route exact path='/' component={home}></Route>
+          <Route exact path="/artist" component={artist}></Route>
 
-          <Route exact path='/artist' component={artist}></Route>
+          <Route exact path="/explore" component={explore}></Route>
 
-          <Route exact path='/explore' component={explore}></Route>
+          <Route exact path="/cart" component={Cart} />
+          
+          <Route exact path="/checkout" component={Checkout} />
 
-          <Route exact path='/gallery' component={gallery}></Route>
+          <Route exact path="/gallery" component={gallery}></Route>
 
-          <Route exact path='/supplies' component={supplies}></Route>
-
+          <Route exact path="/supplies" component={supplies}></Route>
         </Switch>
       </div>
     );

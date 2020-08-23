@@ -1,13 +1,32 @@
 
 .sidebar{
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 17%;
+  height: 100%;
+  border-right: 1px solid #c4c4c4;
+  background: white;
+
+  }
+  .icon-sidebar{
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     height: 100%;
-    background: #FFFFFF;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 17%;
-    border-right: 1px solid #C4C4C4
+    border-right: 1px solid #c4c4c4;
+    background: white;
+    transition: 0.5s !important;
+    z-index: 1000;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+  }
+  .icon-sidebar-properties{
+    width: 85%;
+    background: white;
+    height: 100%;
 
   }
   .sidebar-list{
@@ -50,6 +69,12 @@
   .icon-nav{
     padding-top: 20px;
     background: #FFFFFF;   
+	  position: fixed;
+	  padding-top: 20px;
+	  padding-bottom: 20px;
+	  border-bottom: 1px solid #c4c4c4;
+	  right: 0;
+	  width: 83%;
   }
   .icon-nav-name{
     padding-left: 15px;
@@ -74,12 +99,26 @@
   border-radius: 50%;
 }
  
-  
+ 
+  .icon-navbar{
+	  margin-left: auto;
+	
+  }
+  .content{
+    margin-top: 100px;
+  }
 
   @media only screen and (max-width: 1200px){
-    .sidebar{
-      width: 12%;
-    }
+	.sidebar{
+		width: 12%;
+	}
+    .icon-nav{
+		width: 88%;
+  }	
+  .icon-nav .nav-link{
+    margin-right: 5px !important;
+  }
+    
     .sidebar-item{
       text-align: center;
       padding-left:  0px;
@@ -91,22 +130,137 @@
       margin-left: 12%;
     }
   }
-
-  @media only screen and (max-width: 768px){
-    .sidebar{
-      width: 16%;
-    }
-    .main{
-      margin-left: 16%;
-    }
+  @media only screen and (min-width: 769px){
+     .two{
+       display: none !important;
+     }
+     .icon-sidebar{
+       display: none;
+     }
+     .sidebar{
+       display: inline;
+     }
   }
-  @media only screen and (max-width: 576px){
+
+  @media only screen and (max-width: 770px){
+  
+	  .sidebar-logo{
+		  display: none;
+	  }
     .sidebar{
-      display: none;
+      width: 100%;
+	  height: auto !important;
+	  bottom: 0;
+	  overflow: hidden;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+	  border-top: 1px solid #c4c4c4;
     }
     .main{
       margin-left: 0%;
     }
-
+	.sidebar-item{
+		display: inline-block;
+		text-align: center;
+		padding-left: 10px;
+		padding-right: 10px;
+		
+	
   }
- 
+  .icon-nav .nav-link{
+    margin-right: 0px; 
+  }
+	
+	.sidebar-name{
+        display: block;
+		text-align: center;
+		font-size: 12px;
+        line-height: 14px;
+		padding-left: 0px;
+		padding-top: 5px;
+	} 
+	.out{
+		display: none;
+	}
+	
+	.icon-navbar{
+		display: none;
+	}
+	
+	.icon-nav{
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px !important;
+  }
+  .icon-sidebar-properties{
+    padding-top: 30px;
+  }
+  
+.icon-user-part{
+  padding-left: 20px;
+  border-bottom: 1px solid #c4c4c4;
+  line-height: 18px;
+  padding-bottom: 15px;
+}
+.icon-user-part h6{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  /* identical to box height */
+  
+  
+  color: #3E3E3E;  
+}
+.icon-user-part span{
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  
+  color: #6C6B6B;
+  
+  
+}
+.main-properties{
+  padding-left: 20px;
+  border-bottom: 1px solid #c4c4c4;
+  padding-bottom: 20px;
+}
+.icon-sidebar-item{
+  margin-top: 20px;
+}
+.icon-sidebar-name{
+  padding-left: 25px;
+}
+.logout{
+  padding-left: 20px;
+}
+	.content{
+    margin-top: 60px;
+  }
+  .sidebar-properties{
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+  }
+  }
+ @media only screen and (max-width: 411px){
+   .sidebar-item{
+     padding-left: 5px;
+     padding-right: 5px;
+   }
+   .sidebar-name{
+     display: none;
+   }
+ }
