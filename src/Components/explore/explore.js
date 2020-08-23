@@ -16,7 +16,7 @@ export default class explore extends  Component{
                     <a className="explore-nav-link" href="#">Ceramics</a>
                     <a className="explore-nav-link" href="#">Pastel Art</a>
                 </nav>
-           <div className="explore-row container-lg mt-3 bg-info">
+           <div className="explore-row container-lg mt-3">
                <div className="explore-images-body">
                    <div className="explore-content">
                        <img src="images/img-one.png" alt="" className="explore-img"></img>
