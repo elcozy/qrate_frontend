@@ -8,14 +8,15 @@ import explore from "./Components/explore/explore";
 import Navbar from "./Components/Navbar/nav";
 import gallery from "./Components/ArtGallery/artgallery";
 import supplies from "./Components/ArtSupplies/artsupplies";
-import Cart from "./Components/Cart/Cart";
-import Checkout from "./Components/Cart/Checkout";
+import Cart from "./Components/cart/cart";
+import Checkout from "./Components/cart/Checkout";
 
 // IMPORTING REACT ROUTER DOM
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // IMPORTING FROM REACT ROUTER
 import { Redirect } from "react-router-dom";
+
 class App extends React.Component {
   render() {
     return (
