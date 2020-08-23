@@ -1,0 +1,28 @@
+.artistPreview{
+    position: relative;
+    margin: 0 auto;
+    h4{
+        color: #ffffff;
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        left: 36%;
+        display: none;
+    }
+    &:hover{
+        .artistImage{
+            background-color: #000000;
+            cursor: pointer;
+        }
+        .artistImage img {
+            opacity: 0.6;
+        }
+        h4{
+            display: block;
+        }
+    }
+    .artistImage,
+    .artistImage img{
+        border-radius: 7px;
+    }
+}

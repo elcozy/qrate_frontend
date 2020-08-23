@@ -5,7 +5,7 @@ export default class explore extends  Component{
 
     render(){
         return(
-            <div  className="main">
+            <div  className="main content">
                 <h1>explore Page</h1>
             </div>
         )
