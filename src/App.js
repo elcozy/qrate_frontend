@@ -8,9 +8,8 @@ import explore from "./Components/explore/explore";
 import Navbar from "./Components/Navbar/nav";
 import gallery from "./Components/ArtGallery/artgallery";
 import supplies from "./Components/ArtSupplies/artsupplies";
-import Cart from "./Components/cart/cart";
-import Checkout from "./Components/cart/Checkout";
-
+import Cart from "./Components/Cart/Cart";
+import Checkout from "./Components/Cart/Checkout";
 
 // IMPORTING REACT ROUTER DOM
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -30,7 +29,7 @@ class App extends React.Component {
           <Route exact path="/explore" component={explore}></Route>
 
           <Route exact path="/cart" component={Cart} />
-          
+
           <Route exact path="/checkout" component={Checkout} />
 
           <Route exact path="/gallery" component={gallery}></Route>
