@@ -7,16 +7,19 @@ import artist from "./Components/artist/artist";
 import explore from "./Components/explore/explore";
 import Navbar from "./Components/Navbar/nav";
 import gallery from "./Components/ArtGallery/artgallery";
+import galleryDetails from "./Components/ArtGallery/ArtGalleryDetails";
 import supplies from "./Components/ArtSupplies/artsupplies";
 import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Cart/Checkout";
 import exhibition from "./Components/Exhibition/exhibition"
 
 // IMPORTING REACT ROUTER DOM
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 // IMPORTING FROM REACT ROUTER
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
+
 class App extends React.Component {
   render() {
     return (
@@ -34,6 +37,7 @@ class App extends React.Component {
           <Route exact path="/checkout" component={Checkout} />
 
           <Route exact path="/gallery" component={gallery}></Route>
+          <Route exact path="/gallery/:id" component={galleryDetails}></Route>
 
           <Route exact path="/supplies" component={supplies}></Route>
 

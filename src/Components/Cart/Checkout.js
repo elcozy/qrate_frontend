@@ -4,7 +4,7 @@ import React, { Component } from "react";
 // import $ from "jquery";
 // IMPORTING CSS
 import "./cart.css";
-import { Table, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 export default class Checkout extends Component {
   state = {
@@ -70,11 +70,20 @@ export default class Checkout extends Component {
                     <p class="m-0">Card payments are supported by all banks</p>
                     <span>
                       <img
+                        alt=""
                         src="/images/mastercard.svg"
                         className="card-type"
                       ></img>
-                      <img src="/images/visa.svg" className="card-type"></img>
-                      <img src="/images/paypal.svg" className="card-type"></img>
+                      <img
+                        alt=""
+                        src="/images/visa.svg"
+                        className="card-type"
+                      ></img>
+                      <img
+                        alt=""
+                        src="/images/paypal.svg"
+                        className="card-type"
+                      ></img>
                     </span>
                   </div>
                 </div>
@@ -96,7 +105,7 @@ export default class Checkout extends Component {
               <div className="order-item p-4 mb-4">
                 <div className="row">
                   <div className="product-image col-4">
-                    <img src="/assets/img/cart/cart_image.png" />
+                    <img alt="" src="/assets/img/cart/cart_image.png" />
                   </div>
                   <div className="products col">
                     {/* <div className="product-title">THE STORY OF THE EYES</div> */}
@@ -139,8 +148,8 @@ export default class Checkout extends Component {
                 <div className="delivery-partners p-3">
                   <h5 className="checkout-card-title">OUR SHIPPING PARTNERS</h5>
                   <div className="partners">
-                    <img src="/images/ups.svg" className=""></img>
-                    <img src="/images/dhl.svg" className="px-2"></img>
+                    <img alt="" src="/images/ups.svg" className=""></img>
+                    <img alt="" src="/images/dhl.svg" className="px-2"></img>
                   </div>
                 </div>
               </div>
