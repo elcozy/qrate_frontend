@@ -45,7 +45,7 @@ export default class explore extends  Component{
                            </div>
                               <div className="explore-content-text">
                                <div className="user-reaction row container">
-                               <div><i class="far fa-comment"></i></div>
+                               <div><i className="far fa-comment"></i></div>
                                    <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
@@ -75,7 +75,7 @@ export default class explore extends  Component{
                            </div>
                            <div className="explore-content-text">
                                <div className="user-reaction row container">
-                               <div><i class="far fa-comment"></i></div>
+                               <div><i className="far fa-comment"></i></div>
                                    <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
@@ -93,7 +93,7 @@ export default class explore extends  Component{
                                </div>
                                <p>Charcoal</p>
                                <div className="user-reaction row container">
-                               <div><i class="far fa-comment"></i></div>
+                               <div><i className="far fa-comment"></i></div>
                                    <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
@@ -112,7 +112,7 @@ export default class explore extends  Component{
                                </div>
                                <p>They say time eventually heals one’s wounds. But does it really? The illustration titled “Deception in ...</p>
                                <div className="user-reaction row container">
-                               <div><i class="far fa-comment"></i></div>
+                               <div><i className="far fa-comment"></i></div>
                                    <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
@@ -130,7 +130,7 @@ export default class explore extends  Component{
                            </div>
                            <div className="explore-content-text">
                                <div className="user-reaction row container">
-                               <div><i class="far fa-comment"></i></div>
+                               <div><i className="far fa-comment"></i></div>
                                    <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
@@ -144,7 +144,7 @@ export default class explore extends  Component{
                            </div>
                            <div className="explore-content-text">
                                <div className="user-reaction row container">
-                               <div><i class="far fa-comment"></i></div>
+                               <div><i className="far fa-comment"></i></div>
                                    <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>

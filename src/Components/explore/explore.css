@@ -183,6 +183,6 @@ body{
   .dark-orange{
     border: 1px solid #B58657;
   }
-  .dark-orange{
+  .dark-orange:hover{
       background: #B58657;
   }
