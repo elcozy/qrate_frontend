@@ -162,7 +162,7 @@ export default class explore extends  Component{
                                </div>
                                <p>Charcoal</p>
                                <div className="user-reaction row container">
-                               <div><i class="far fa-comment"></i></div>
+                               <div><i className="far fa-comment"></i></div>
                                    <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
