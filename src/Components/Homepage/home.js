@@ -230,6 +230,7 @@ class home extends React.Component{
                                 <span className="fa fa-search form-control-feedback"></span>
                                 <input type="text" className="form-control home__side__search-input" placeholder="Search Artist, Gallery or Artwork" />
                             </div> */}
+                            Side bar
                         </div>
                     </div>
                 </div>    
