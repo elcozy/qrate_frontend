@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
 // IMPORTING CSS
 import "./cart.css";
-import { Table, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 export function Checkout2() {
   return (
     <div className="mafin">
@@ -58,7 +58,7 @@ export function Checkout2() {
             <div className="order-item p-4 mb-4">
               <div className="row">
                 <div className="product-image col-4">
-                  <img src="/assets/img/cart/cart_image.png" />
+                  <img alt="" src="/assets/img/cart/cart_image.png" />
                 </div>
                 <div className="products col">
                   {/* <div className="product-title">THE STORY OF THE EYES</div> */}
@@ -101,8 +101,8 @@ export function Checkout2() {
               <div className="delivery-partners p-3">
                 <h5 className="checkout-card-title">OUR SHIPPING PARTNERS</h5>
                 <div className="partners">
-                  <img src="/images/ups.svg" className=""></img>
-                  <img src="/images/dhl.svg" className="px-2"></img>
+                  <img alt="" src="/images/ups.svg" className=""></img>
+                  <img alt="" src="/images/dhl.svg" className="px-2"></img>
                 </div>
               </div>
             </div>
