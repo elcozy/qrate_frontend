@@ -71,7 +71,7 @@ export default class gallery extends React.Component {
                 >
                   <a href={`/gallery/${item.id}`}>
                     {<img src={`${item.image}`} alt="" /> || (
-                      <Skeleton height={254} width={252} />
+                      <Skeleton height={254} />
                     )}
 
                     <div className="position-absolute overlay-gallery">
