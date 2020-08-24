@@ -1,4 +1,7 @@
-
+body{
+  background: 
+  white !important;
+}
 .sidebar{
   overflow: hidden;
   position: fixed;
@@ -7,6 +10,7 @@
   height: 100%;
   border-right: 1px solid #c4c4c4;
   background: white;
+  z-index: 9999;
 
   }
   .icon-sidebar{
@@ -74,7 +78,8 @@
 	  padding-bottom: 20px;
 	  border-bottom: 1px solid #c4c4c4;
 	  right: 0;
-	  width: 83%;
+    width: 83%;
+    z-index: 9999;
   }
   .icon-nav-name{
     padding-left: 15px;
@@ -257,6 +262,13 @@
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
   }
+  .main{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;  
+   }
   }
  @media only screen and (max-width: 411px){
    .sidebar-item{
@@ -269,4 +281,11 @@
  }
  .icon-nav{
   z-index: 1030;
+ }
+ .icon-navbar:focus{
+   color: #F7931E;
+ }
+ 
+ Link{
+   text-decoration: none !important;
  }
