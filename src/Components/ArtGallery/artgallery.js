@@ -1,5 +1,6 @@
 import React from 'react'
-import '../Navbar/nav.css';
+import './artgallery.css';
+
 
 // IMPORTING REACT ROUTER DOM
 import { Link } from 'react-router-dom'
