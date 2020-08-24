@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.059e92e7.chunk.css",
-    "main.js": "/static/js/main.c984e864.chunk.js",
-    "main.js.map": "/static/js/main.c984e864.chunk.js.map",
+    "main.css": "/static/css/main.c26e9f51.chunk.css",
+    "main.js": "/static/js/main.bf13093d.chunk.js",
+    "main.js.map": "/static/js/main.bf13093d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ac46601e.js",
     "runtime-main.js.map": "/static/js/runtime-main.ac46601e.js.map",
-    "static/js/2.2de5169b.chunk.js": "/static/js/2.2de5169b.chunk.js",
-    "static/js/2.2de5169b.chunk.js.map": "/static/js/2.2de5169b.chunk.js.map",
+    "static/js/2.e18d509c.chunk.js": "/static/js/2.e18d509c.chunk.js",
+    "static/js/2.e18d509c.chunk.js.map": "/static/js/2.e18d509c.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1bba004f58e3bd0205a8069b8fa6943e.js": "/precache-manifest.1bba004f58e3bd0205a8069b8fa6943e.js",
+    "precache-manifest.2824de17d762d7fb18fe559ae6840b84.js": "/precache-manifest.2824de17d762d7fb18fe559ae6840b84.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.059e92e7.chunk.css.map": "/static/css/main.059e92e7.chunk.css.map",
-    "static/js/2.2de5169b.chunk.js.LICENSE.txt": "/static/js/2.2de5169b.chunk.js.LICENSE.txt",
+    "static/css/main.c26e9f51.chunk.css.map": "/static/css/main.c26e9f51.chunk.css.map",
+    "static/js/2.e18d509c.chunk.js.LICENSE.txt": "/static/js/2.e18d509c.chunk.js.LICENSE.txt",
     "static/media/RTX6W7OQ-e1560441912537 1.png": "/static/media/RTX6W7OQ-e1560441912537 1.37aab550.png",
-    "static/media/mona-lisa-by-leonardo-da-vinci 1.png": "/static/media/mona-lisa-by-leonardo-da-vinci 1.ab705ece.png"
+    "static/media/comment.svg": "/static/media/comment.d6d162e8.svg",
+    "static/media/fa-heart.png": "/static/media/fa-heart.d4797463.png",
+    "static/media/heart.svg": "/static/media/heart.6d9544d7.svg",
+    "static/media/mona-lisa-by-leonardo-da-vinci 1.png": "/static/media/mona-lisa-by-leonardo-da-vinci 1.ab705ece.png",
+    "static/media/share.svg": "/static/media/share.f3c2eecd.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.ac46601e.js",
-    "static/js/2.2de5169b.chunk.js",
-    "static/css/main.059e92e7.chunk.css",
-    "static/js/main.c984e864.chunk.js"
+    "static/js/2.e18d509c.chunk.js",
+    "static/css/main.c26e9f51.chunk.css",
+    "static/js/main.bf13093d.chunk.js"
   ]
 }
