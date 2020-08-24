@@ -94,10 +94,10 @@ render(){
           <div>
         <nav  className="navbar icon-nav navbar-expand">
             <div  className="nav navbar-nav icon-navbar">
-                <a  className="nav-item nav-link" href="#"><img src="images/exhibition.svg" alt="" /><span className="icon-nav-name">Exhibition</span></a>
+                <a  className="nav-item nav-link" href="./exhibition"><img src="images/exhibition.svg" alt="" /><span className="icon-nav-name">Exhibition</span></a>
                 <a  className="nav-item nav-link " href="#"><img src="images/catalogue.svg" alt=""  /><span  className="icon-nav-name">My Catalogue</span></a>
                 <a  className="nav-item nav-link" href="#"><img src="images/categories.svg" alt="" /><span  className="icon-nav-name">Categories</span></a>
-                <a className="nav-item nav-link" href="/cart"><img src="images/cart.svg" alt="" /><span  className="icon-nav-name">Cart</span></a>
+                <a className="nav-item nav-link" href="./cart"><img src="images/cart.svg" alt="" /><span  className="icon-nav-name">Cart</span></a>
                 <a  className="nav-item nav-link mobile user" href="#"><img src="images/user.png" alt="" /></a>
 				</div>
 				<div  className="row container-fluid two"   >

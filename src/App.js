@@ -10,6 +10,7 @@ import gallery from "./Components/ArtGallery/artgallery";
 import supplies from "./Components/ArtSupplies/artsupplies";
 import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Cart/Checkout";
+import exhibition from "./Components/Exhibition/exhibition"
 
 // IMPORTING REACT ROUTER DOM
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -35,6 +36,8 @@ class App extends React.Component {
           <Route exact path="/gallery" component={gallery}></Route>
 
           <Route exact path="/supplies" component={supplies}></Route>
+
+          <Route exact path="/exhibition" component={exhibition}></Route>
         </Switch>
       </div>
     );
