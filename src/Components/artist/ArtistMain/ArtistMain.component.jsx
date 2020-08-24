@@ -6,12 +6,12 @@ const ArtistMain = ({match}) => {
     const { params: { artistId } } = match;
     console.log(artistId);
     return (
-        <>
-            <p>
-                <strong>User ID: </strong>
-                {artistId}
-            </p>
-        </>
+       
+        <div className='main content'>
+            <strong>User ID: </strong>
+            {artistId}
+        </div>
+        
     );
 }
 
