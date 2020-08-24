@@ -43,8 +43,8 @@ body{
 }
 .explore-content{
     margin-right: 10px;
-    margin-top: 15px;
-    outline: 1px solid red;
+    margin-top: 20px;
+    color: #3E3E3E;    
 }
 .explore-content-body{
     padding-left: 20px;
@@ -66,8 +66,7 @@ body{
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 21px;
-    color: #3E3E3E;    
+    line-height: 21px; 
 }
 .follow{
     font-family: Ubuntu;
@@ -78,7 +77,6 @@ body{
    background: none;
    outline: none;
    border: none;
-    color: #3E3E3E;
     
 }
 .explore-content-text{
@@ -90,11 +88,9 @@ body{
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
-    line-height: 10px;
+   
     /* identical to box height */
-    
-    
-    color: #3E3E3E;    
+
 }
 .explore-content-text .tag{
     font-family: Ubuntu;
@@ -102,17 +98,14 @@ body{
     font-weight: 300;
     font-size: 16px;
     line-height: 18px;
-    
-    color: #3E3E3E;    
+
 }
 .explore-content-text p{
     font-family: Ubuntu;
     font-style: normal;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 21px;
-    
-    color: #3E3E3E;    
     margin-top: 10px;
     padding-top: 10px;
 }
@@ -134,4 +127,62 @@ body{
       flex: 100%;
       max-width: 100%;
     }
+  }
+  .explore-content:hover{
+      color: white;
+  }
+.follow:hover{
+      color: white;
+  }
+  .pink{
+    border: 1px solid #BC0272;
+  }
+  .pink:hover{
+   background: #BC0272;
+   color: white !important;
+  }
+  .dark-blue{
+    border: 1px solid #2E384D;
+  }
+  .dark-blue:hover{
+      background: #2E384D;
+      color: white;
+  }
+  .light-danger{
+    border: 1px solid #FF0404;
+  }
+  .light-danger:hover{
+      background: #FF0404;
+      color: white;
+  }
+  .green{
+    border: 1px solid #4BC999;    
+  }
+  .green:hover{
+      background: #4BC999;
+      color: white;
+  }
+  .blue{
+    border: 1px solid #34ABE0;
+  }
+  .blue:hover{
+      background: #34ABE0;
+  }
+  .orange{
+    border: 1px solid #FF8A00;
+  }
+  .orange:hover{
+      background: #FF8A00;
+  }
+  .black{
+    border: 1px solid #3E2A2A;
+  }
+  .black:hover{
+      background: #3E2A2A;
+  }
+  .dark-orange{
+    border: 1px solid #B58657;
+  }
+  .dark-orange{
+      background: #B58657;
   }

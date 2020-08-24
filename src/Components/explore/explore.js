@@ -16,13 +16,13 @@ export default class explore extends  Component{
                     <a className="explore-nav-link" href="#">Ceramics</a>
                     <a className="explore-nav-link" href="#">Pastel Art</a>
                 </nav>
-           <div className="explore-row container-lg mt-3">
+           <div className="explore-row container-fluid mt-3">
                <div className="explore-images-body">
-                   <div className="explore-content">
+                   <div className="explore-content pink">
                        <img src="images/img-one.png" alt="" className="explore-img"></img>
                        <div className="explore-content-body"> 
                            <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <button className="follow">Follow</button>
+                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
                            </div>
                            <div className="explore-content-text">
                                <div className="explore-content-text-title">
@@ -31,27 +31,27 @@ export default class explore extends  Component{
                                </div>
                                <p>The event took place on the 25th of August, 2020. It was an event filled...</p>
                                <div className="user-reaction row container">
-                                   <div><img src="images/comment.svg"></img></div>
-                                   <div><img src="images/like.svg"></img></div>
+                                   <div><i className="far fa-comment"></i></div>
+                                   <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
                        </div>
                    </div>
-                   <div className="explore-content">
+                   <div className="explore-content dark-blue">
                        <img src="images/img-four.png" alt="" className="explore-img" ></img>
                        <div className="explore-content-body">
                        <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <button className="follow">Follow</button>
+                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
                            </div>
                               <div className="explore-content-text">
                                <div className="user-reaction row container">
-                                   <div><img src="images/comment.svg"></img></div>
-                                   <div><img src="images/like.svg"></img></div>
+                               <div><i class="far fa-comment"></i></div>
+                                   <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
                        </div>
                    </div>
-                   <div className="explore-content">
+                   <div className="explore-content light-danger">
                        <img src="images/img-seven.png" alt=""  className="explore-img"></img>
                        <div className="explore-content-body">
                        <div className="explore-user-detail">
@@ -59,33 +59,33 @@ export default class explore extends  Component{
                            </div>
                            <div className="explore-content-text">
                                <div className="user-reaction row container">
-                                   <div><img src="images/comment.svg"></img></div>
-                                   <div><img src="images/like.svg"></img></div>
+                               <div><i class="far fa-comment"></i></div>
+                                   <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
                        </div>
                    </div>
                </div>
                <div className="explore-images-body">
-                   <div className="explore-content">
+                   <div className="explore-content green">
                        <img src="images/img-two.png" alt=""  className="explore-img"></img>
                        <div className="explore-content-body">
                        <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <button className="follow">Follow</button>
+                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
                            </div>
                            <div className="explore-content-text">
                                <div className="user-reaction row container">
-                                   <div><img src="images/comment.svg"></img></div>
-                                   <div><img src="images/like.svg"></img></div>
+                               <div><i class="far fa-comment"></i></div>
+                                   <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
                        </div>
                    </div>
-                   <div className="explore-content">
+                   <div className="explore-content blue">
                        <img src="images/img-five.png" alt="" className="explore-img"></img>
                        <div className="explore-content-body">
                        <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <button className="follow">Follow</button>
+                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
                            </div>
                            <div className="explore-content-text">
                                <div className="explore-content-text-title">
@@ -93,58 +93,81 @@ export default class explore extends  Component{
                                </div>
                                <p>Charcoal</p>
                                <div className="user-reaction row container">
-                                   <div><img src="images/comment.svg"></img></div>
-                                   <div><img src="images/like.svg"></img></div>
+                               <div><i class="far fa-comment"></i></div>
+                                   <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
                        </div>
                    </div>
-                   <div className="explore-content">
-                       <img src="images/img-eight.png" alt=""  className="explore-img" height="200px"></img>
+                   <div className="explore-content orange">
+                       <img src="images/img-eight.png" alt=""  className="explore-img"></img>
                        <div className="explore-content-body">
                        <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <button className="follow">Follow</button>
+                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
                            </div>
                            <div className="explore-content-text">
+                           <div className="explore-content-text-title">
+                               <h5>Deception in disguise</h5>
+                               <span className="tag">Illustration</span>
+                               </div>
+                               <p>They say time eventually heals one’s wounds. But does it really? The illustration titled “Deception in ...</p>
                                <div className="user-reaction row container">
-                                   <div><img src="images/comment.svg"></img></div>
-                                   <div><img src="images/like.svg"></img></div>
+                               <div><i class="far fa-comment"></i></div>
+                                   <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
                        </div>
                    </div>
+                   
                </div>
                
                <div className="explore-images-body">
-               <div className="explore-content">
+               <div className="explore-content black">
                        <img src="images/img-three.png" alt=""  className="explore-img"></img>
                        <div className="explore-content-body">
                        <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <button className="follow">Follow</button>
+                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
                            </div>
                            <div className="explore-content-text">
                                <div className="user-reaction row container">
-                                   <div><img src="images/comment.svg"></img></div>
-                                   <div><img src="images/like.svg"></img></div>
+                               <div><i class="far fa-comment"></i></div>
+                                   <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
                        </div>
                    </div>
-                   <div className="explore-content">
+                   <div className="explore-content dark-orange">
                        <img src="images/img-six.png" alt=""  className="explore-img"></img>
                        <div className="explore-content-body">
                        <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <button className="follow">Follow</button>
+                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span>  <input className="follow" value="Follow" type="button" ></input>
                            </div>
                            <div className="explore-content-text">
                                <div className="user-reaction row container">
-                                   <div><img src="images/comment.svg"></img></div>
-                                   <div><img src="images/like.svg"></img></div>
+                               <div><i class="far fa-comment"></i></div>
+                                   <div><i className="far fa-heart"></i></div>
                                </div>
                            </div>
                        </div>
                    </div>
-             
+                   <div className="explore-content blue">
+                       <img src="images/img-five.png" alt="" className="explore-img"></img>
+                       <div className="explore-content-body">
+                       <div className="explore-user-detail">
+                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
+                           </div>
+                           <div className="explore-content-text">
+                               <div className="explore-content-text-title">
+                               <h5>The Face man</h5>
+                               </div>
+                               <p>Charcoal</p>
+                               <div className="user-reaction row container">
+                               <div><i class="far fa-comment"></i></div>
+                                   <div><i className="far fa-heart"></i></div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
                    
                </div>
            </div>
