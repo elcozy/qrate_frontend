@@ -7,10 +7,12 @@ import artist from "./Components/artist/artist";
 import explore from "./Components/explore/explore";
 import Navbar from "./Components/Navbar/nav";
 import gallery from "./Components/ArtGallery/artgallery";
+// import galleryDetails from "./Components/ArtGallery/ArtGalleryDetails";
 import supplies from "./Components/ArtSupplies/artsupplies";
 import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Cart/Checkout";
 import ArtistMain from "./Components/artist/ArtistMain/ArtistMain.component";
+import exhibition from "./Components/Exhibition/exhibition";
 
 // IMPORTING REACT ROUTER DOM
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -42,6 +44,8 @@ class App extends React.Component {
           <Route exact path="/gallery/:id" component={Cart}></Route>
 
           <Route exact path="/supplies" component={supplies}></Route>
+
+          <Route exact path="/exhibition" component={exhibition}></Route>
         </Switch>
       </div>
     );
