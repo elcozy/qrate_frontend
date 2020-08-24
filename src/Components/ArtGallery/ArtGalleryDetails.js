@@ -3,7 +3,6 @@ import "./artgallery.css";
 import "./ArtGalleryDetails.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { gallery_images, art_gallery_images } from "../Cart/data";
-
 export default class ArtGalleryDetails extends React.Component {
   render() {
     return (
