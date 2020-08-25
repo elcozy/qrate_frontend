@@ -5,17 +5,16 @@ import UserIcon from '../../assets/images/user.png'
 import FaceIcon from '../../assets/images/Vector (1).png'
 import CalendarIcon from '../../assets/images/Vector (2).png'
 import CardIcon from '../../assets/images/Vector.png'
-import EllipseIcon from '../../assets/images/Ellipse 26.png'
-import PaintPaletteIcon from '../../assets/images/paint-palette 1.png'
-import ElFriento from '../../assets/images/Rectangle 194.svg'
-import MonaLisa from '../../assets/images/mona-lisa-by-leonardo-da-vinci 1.png'
-import Painting from '../../assets/images/RTX6W7OQ-e1560441912537 1.png'
 import CommentIcon from '../../assets/images/comment.svg'
 import HeartIcon from '../../assets/images/heart.svg'
 import faHeart from '../../assets/images/fa-heart.png'
 import ShareIcon from '../../assets/images/share.svg'
 
 import './home.css'
+
+import MainCard from './mainCard'
+import SidebarCard from './sidebarCard'
+import SidebarTrending from './sidebarTrending'
 
 
 class home extends React.Component{
@@ -81,149 +80,38 @@ class home extends React.Component{
                             
                             {/* Section  Two*/}
                             <section className="home__main__card2">
-                                <Link to="#!">
-                                    <img  className="home__main__card2__img" src={UserIcon} alt="UserIcon" />
-                                </Link>
-                                <div className="home__main__card2__content">
-                                    <div className="home__main__card2__upper">
-                                        <p className="home__main__card2__text">artistgod</p>
-                                        <img  className="home__main__card2__icon" src={EllipseIcon} alt="EllipseIcon" />
-                                        <div className="home__main__card2__icon-container">
-                                            <img className="home__main__card2__icon" src={PaintPaletteIcon} alt="PaintPaletteIcon" />
-                                            <p className="home__main__card2__icon__text" >Artiste</p>
-                                        </div>
-                                    </div> 
-                                    <h6 className="home__main__card2__header">Mona Lisa</h6>
-                                    <p className="home__main__card2__body">
-                                    Da Vinci’s masterpiece is probably the most recognized artwork in the world today, and the most visited. Also known as La Giaconda, the painting is believed to illustrate the wife of wealthy Florentine merchant Francesco di Bartolomeo del Giocondo.
-                                    </p>
-                                    <div className="home__main__card2__body-image__container">
-                                        <img className="home__main__card2__body-image1" src={MonaLisa} alt="body" />
-                                        <img className="home__main__card2__body-image2" src={Painting} alt="body" />
-                                    </div>
-                                    <div className="home__main__card2__lower">
-                                        <div className="home__main__card2__lower__group1">
-                                            <Link to="#!">
-                                                <span onClick={this.onCommentClick}>
-                                                    <img className="home__main__card2__lower__group1__icon1" src={CommentIcon} alt="CommentIcon" />   
-                                                </span>      
-                                            </Link>
-                                            <span>{ this.state.commentCount }</span>
-                                        </div>
-                                        <div className="home__main__card2__lower__group2">
-                                            <Link>
-                                                <span onClick={this.onHeartClick}>
-                                                    <img className="home__main__card2__lower__group1__icon1" src={this.state.heart} alt="HeartIcon" />
-                                                </span>    
-                                            </Link>
-                                            <span>{ this.state.heartCount }</span>
-                                        </div>
-                                        <div className="home__main__card2__lower__group3__container ml-auto">
-                                            <Link>
-                                                <img className="home__main__card2__lower__group3__icon1 pb-3 pr-2" src={this.state.share} alt="ShareIcon" />
-                                            </Link>
-                                            <p className="home__main__card2__lower__group3__text">Share</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <MainCard
+                                 onHeartClick = {this.onHeartClick}
+                                 onCommentClick = {this.onCommentClick}
+                                 heart = {this.state.heart}
+                                 heartCount = {this.state.heartCount}
+                                 commentCount = {this.state.commentCount}
+                                 share={this.state.share}
+                                 />
                             </section>
 
                             {/* Section Three */}
                             <section className="home__main__card3">
-                                <Link to="#!">
-                                        <img  className="home__main__card2__img" src={UserIcon} alt="UserIcon" />
-                                </Link>
-                                <div className="home__main__card2__content">
-                                    <div className="home__main__card2__upper">
-                                        <p className="home__main__card2__text">artistgod</p>
-                                        <img  className="home__main__card2__icon" src={EllipseIcon} alt="EllipseIcon" />
-                                        <div className="home__main__card2__icon-container">
-                                            <img className="home__main__card2__icon" src={PaintPaletteIcon} alt="PaintPaletteIcon" />
-                                            <p className="home__main__card2__icon__text" >Artiste</p>
-                                        </div>
-                                    </div> 
-                                    <h6 className="home__main__card2__header">Mona Lisa</h6>
-                                    <p className="home__main__card2__body">
-                                    Da Vinci’s masterpiece is probably the most recognized artwork in the world today, and the most visited. Also known as La Giaconda, the painting is believed to illustrate the wife of wealthy Florentine merchant Francesco di Bartolomeo del Giocondo.
-                                    </p>
-                                    <div className="home__main__card2__body-image__container">
-                                        <img className="home__main__card2__body-image1" src={MonaLisa} alt="body" />
-                                        <img className="home__main__card2__body-image2" src={Painting} alt="body" />
-                                    </div>
-                                    <div className="home__main__card2__lower">
-                                        <div className="home__main__card2__lower__group1">
-                                            <Link to="#!">
-                                                <span onClick={this.onCommentClick}>
-                                                    <img className="home__main__card2__lower__group1__icon1" src={CommentIcon} alt="CommentIcon" />   
-                                                </span>      
-                                            </Link>
-                                            <span>{ this.state.commentCount }</span>
-                                        </div>
-                                        <div className="home__main__card2__lower__group2">
-                                            <Link>
-                                                <span onClick={this.onHeartClick}>
-                                                    <img className="home__main__card2__lower__group1__icon1" src={this.state.heart} alt="HeartIcon" />
-                                                </span>    
-                                            </Link>
-                                            <span>{ this.state.heartCount }</span>
-                                        </div>
-                                        <div className="home__main__card2__lower__group3__container ml-auto">
-                                            <Link>
-                                                <img className="home__main__card2__lower__group3__icon1 pb-3 pr-2" src={this.state.share} alt="ShareIcon" />
-                                            </Link>
-                                            <p className="home__main__card2__lower__group3__text">Share</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <MainCard
+                                 onHeartClick = {this.onHeartClick}
+                                 onCommentClick = {this.onCommentClick}
+                                 heart = {this.state.heart}
+                                 heartCount = {this.state.heartCount}
+                                 commentCount = {this.state.commentCount}
+                                 share={this.state.share}
+                                 />
                             </section>
 
                             {/* Section Four */}
                             <section className="home__main__card4">
-                                <Link to="#!">
-                                        <img  className="home__main__card2__img" src={UserIcon} alt="UserIcon" />
-                                </Link>
-                                <div className="home__main__card2__content mb-5">
-                                    <div className="home__main__card2__upper">
-                                        <p className="home__main__card2__text">artistgod</p>
-                                        <img  className="home__main__card2__icon" src={EllipseIcon} alt="EllipseIcon" />
-                                        <div className="home__main__card2__icon-container">
-                                            <img className="home__main__card2__icon" src={PaintPaletteIcon} alt="PaintPaletteIcon" />
-                                            <p className="home__main__card2__icon__text" >Artiste</p>
-                                        </div>
-                                    </div> 
-                                    <h6 className="home__main__card2__header">Mona Lisa</h6>
-                                    <p className="home__main__card2__body">
-                                    Da Vinci’s masterpiece is probably the most recognized artwork in the world today, and the most visited. Also known as La Giaconda, the painting is believed to illustrate the wife of wealthy Florentine merchant Francesco di Bartolomeo del Giocondo.
-                                    </p>
-                                    <div className="home__main__card2__body-image__container">
-                                        <img className="home__main__card2__body-image1" src={MonaLisa} alt="body" />
-                                        <img className="home__main__card2__body-image2" src={Painting} alt="body" />
-                                    </div>
-                                    <div className="home__main__card2__lower">
-                                        <div className="home__main__card2__lower__group1">
-                                            <Link to="#!">
-                                                <span onClick={this.onCommentClick}>
-                                                    <img className="home__main__card2__lower__group1__icon1" src={CommentIcon} alt="CommentIcon" />   
-                                                </span>      
-                                            </Link>
-                                            <span>{ this.state.commentCount }</span>
-                                        </div>
-                                        <div className="home__main__card2__lower__group2">
-                                            <Link>
-                                                <span onClick={this.onHeartClick}>
-                                                    <img className="home__main__card2__lower__group1__icon1" src={this.state.heart} alt="HeartIcon" />
-                                                </span>    
-                                            </Link>
-                                            <span>{ this.state.heartCount }</span>
-                                        </div>
-                                        <div className="home__main__card2__lower__group3__container ml-auto">
-                                            <Link>
-                                                <img className="home__main__card2__lower__group3__icon1 pb-3 pr-2" src={this.state.share} alt="ShareIcon" />
-                                            </Link>
-                                            <p className="home__main__card2__lower__group3__text">Share</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <MainCard
+                                 onHeartClick = {this.onHeartClick}
+                                 onCommentClick = {this.onCommentClick}
+                                 heart = {this.state.heart}
+                                 heartCount = {this.state.heartCount}
+                                 commentCount = {this.state.commentCount}
+                                 share={this.state.share}
+                                 />
                             </section>
                         </div>
                         <div className="home__side">
@@ -237,88 +125,18 @@ class home extends React.Component{
 
                                 {/* Section One */}
                                 <section className="home__side__card__container">
-                                    <div className="card home__side__card__content">
-                                        <img src={ElFriento} className="card-img-top" alt="ElFriento" />
-                                        <div className="home__side__card__content__body">
-                                            <h5 className="home__side__card__content__title">El Friento</h5>
-                                            <p className="home__side__card__content__text">by artistgod</p>
-                                            <span className="home__side__card__content__like">13,000 likes</span>
-                                            <Link to="#!">
-                                                <button className="btn home__side__card__content__button">Purchase</button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <div className="card home__side__card__content">
-                                        <img src={ElFriento} className="card-img-top" alt="ElFriento" />
-                                        <div className="home__side__card__content__body">
-                                            <h5 className="home__side__card__content__title">El Friento</h5>
-                                            <p className="home__side__card__content__text">by artistgod</p>
-                                            <span className="home__side__card__content__like">13,000 likes</span>
-                                            <Link to="#!">
-                                                <button className="btn home__side__card__content__button">Purchase</button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <div className="card home__side__card__content">
-                                        <img src={ElFriento} className="card-img-top" alt="ElFriento" />
-                                        <div className="home__side__card__content__body">
-                                            <h5 className="home__side__card__content__title">El Friento</h5>
-                                            <p className="home__side__card__content__text">by artistgod</p>
-                                            <span className="home__side__card__content__like">13,000 likes</span>
-                                            <Link to="#!">
-                                                <button className="btn home__side__card__content__button">Purchase</button>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <div className="card home__side__card__content">
-                                        <img src={ElFriento} className="card-img-top" alt="ElFriento" />
-                                        <div className="home__side__card__content__body">
-                                            <h5 className="home__side__card__content__title">El Friento</h5>
-                                            <p className="home__side__card__content__text">by artistgod</p>
-                                            <span className="home__side__card__content__like">13,000 likes</span>
-                                            <Link to="#!">
-                                                <button className="btn home__side__card__content__button">Purchase</button>
-                                            </Link>
-                                        </div>
-                                    </div>
+                                   <SidebarCard />
+                                   <SidebarCard />
+                                   <SidebarCard />
+                                   <SidebarCard />
                                 </section>
 
                                 {/* Section Two */}
                                 <section className="home__side__trending">
                                     <h4 className="home__side__trending__title">Trending</h4>
-                                    <div className="home__side__trending__content__container mb-3">
-                                        <div>
-                                            <h4 className="home__side__trending__title">Nigerian Art Festival 2020</h4>
-                                            <span className="home__side__trending__span">25 posts</span>
-                                        </div>
-                                        <div>
-                                            <Link to="#!">
-                                                <i className="fa fa-chevron-right home__side__trending__icon"></i>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <div className="home__side__trending__content__container mb-3">
-                                        <div>
-                                            <h4 className="home__side__trending__title">Nigerian Art Festival 2020</h4>
-                                            <span className="home__side__trending__span">25 posts</span>
-                                        </div>
-                                        <div>
-                                            <Link to="#!">
-                                                <i className="fa fa-chevron-right home__side__trending__icon"></i>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <div className="home__side__trending__content__container mb-3">
-                                        <div>
-                                            <h4 className="home__side__trending__title">Nigerian Art Festival 2020</h4>
-                                            <span className="home__side__trending__span">25 posts</span>
-                                        </div>
-                                        <div>
-                                            <Link to="#!">
-                                                <i className="fa fa-chevron-right home__side__trending__icon"></i>
-                                            </Link>
-                                        </div>
-                                    </div>
+                                    <SidebarTrending />
+                                    <SidebarTrending />
+                                    <SidebarTrending />
                                     <a href="#more" className="home__side__trending__btn-more">See more</a>
                                 </section>
 
