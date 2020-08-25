@@ -1,18 +1,86 @@
-import React from 'react';
+import React, {Component} from 'react';
+
+import artistData from '../artistData';
+
+import {Link} from 'react-router-dom';
+
+import Dropdown from '../Dropdown/Dropdown.component';
+
+import ArtWork from './ArtWork/ArtWork.component';
+
+import '../../Navbar/nav.css'
 
 import './ArtistMain.style.scss';
 
-const ArtistMain = ({match}) => {
-    const { params: { artistId } } = match;
-    console.log(artistId);
-    return (
-        <>
-            <p>
-                <strong>User ID: </strong>
-                {artistId}
-            </p>
-        </>
-    );
+
+
+class ArtistMain extends Component {
+    constructor(props){
+        super(props);
+
+        const { params: { artistId } } = this.props.match;
+        const artist = artistData.filter(artist => artist.id === Number(artistId));
+
+        this.state = {
+            artist: artist
+        }
+    }
+
+   
+    render() {
+        const {artist} = this.state;
+        const [selectedArtist] = artist;
+        return (
+       
+            <div className='main content blo'>
+                <Link to='/artist'>
+                    <i className="fas fa-arrow-left arrow-left"></i>
+                </Link>
+                <div className='artistMain container'>
+                    <h2 className='name'>{selectedArtist.name}</h2>
+
+                    <p className='artist-description'>
+                        {selectedArtist.name} is implicity synonymous with modern art, and it dosen't hurt that he fits the
+                        generaly held image of the fugitive genius whose goals are balanced by a taste for living big. He turned
+                        the field of art history with radical innovations that include college and Cubism, which destroyed the 
+                        stranglehold of representational material matter on art, and set the rate for other 20th-century artists.
+                    </p>
+
+                    <div className='categories'>
+                        <p>Category of works:</p>
+                        <p>
+                            <i className="fas fa-circle circle1"></i>
+                            Acrylic Painting
+                        </p>
+                        <p>
+                            <i className="fas fa-circle circle2"></i>
+                            Oil Painting
+                        </p>
+                        <p>
+                            <i className="fas fa-circle circle3"></i>
+                            Sculpture Painting
+                        </p>
+                    </div>
+
+                    <div className='dropdown-container'>
+                        <Dropdown placeholder='Filter by size, color'/>
+                        <Dropdown placeholder='Filter by price'/>
+                    </div>
+
+                    <div className='artistWorks'>
+                        {
+                            selectedArtist.works.map(work => {
+                                return (
+                                    <ArtWork key={work.id}  work={work}/>
+                                )
+                            })
+                        }
+                    </div>
+                </div>
+            </div>
+            
+        );
+    }
 }
 
 export default ArtistMain;
