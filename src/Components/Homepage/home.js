@@ -7,6 +7,7 @@ import CalendarIcon from '../../assets/images/Vector (2).png'
 import CardIcon from '../../assets/images/Vector.png'
 import EllipseIcon from '../../assets/images/Ellipse 26.png'
 import PaintPaletteIcon from '../../assets/images/paint-palette 1.png'
+import ElFriento from '../../assets/images/Rectangle 194.svg'
 import MonaLisa from '../../assets/images/mona-lisa-by-leonardo-da-vinci 1.png'
 import Painting from '../../assets/images/RTX6W7OQ-e1560441912537 1.png'
 import CommentIcon from '../../assets/images/comment.svg'
@@ -42,7 +43,7 @@ class home extends React.Component{
 
     render(){
         return(
-            <div>
+            <>
                 <div className="main content">
                     <div className="home__container">
                         <div className="home__main">
@@ -226,15 +227,124 @@ class home extends React.Component{
                             </section>
                         </div>
                         <div className="home__side">
-                            {/* <div className="form-group has-search">
-                                <span className="fa fa-search form-control-feedback"></span>
-                                <input type="text" className="form-control home__side__search-input" placeholder="Search Artist, Gallery or Artwork" />
-                            </div> */}
-                            Side bar
+                            <div class="home__side__search">
+                                <span class="fa fa-search"></span>
+                                <input className="form-control home__side__search-input" placeholder="Search Artist, Gallery or Artwork" />
+                            </div>
+
+                            <div className="home__side__card-container">
+                                <h1 className="home__side__title">Top Picks for You</h1>
+
+                                {/* Section One */}
+                                <section className="home__side__card__container">
+                                    <div className="card home__side__card__content">
+                                        <img src={ElFriento} className="card-img-top" alt="ElFriento" />
+                                        <div className="home__side__card__content__body">
+                                            <h5 className="home__side__card__content__title">El Friento</h5>
+                                            <p className="home__side__card__content__text">by artistgod</p>
+                                            <span className="home__side__card__content__like">13,000 likes</span>
+                                            <Link to="#!">
+                                                <button className="btn home__side__card__content__button">Purchase</button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className="card home__side__card__content">
+                                        <img src={ElFriento} className="card-img-top" alt="ElFriento" />
+                                        <div className="home__side__card__content__body">
+                                            <h5 className="home__side__card__content__title">El Friento</h5>
+                                            <p className="home__side__card__content__text">by artistgod</p>
+                                            <span className="home__side__card__content__like">13,000 likes</span>
+                                            <Link to="#!">
+                                                <button className="btn home__side__card__content__button">Purchase</button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className="card home__side__card__content">
+                                        <img src={ElFriento} className="card-img-top" alt="ElFriento" />
+                                        <div className="home__side__card__content__body">
+                                            <h5 className="home__side__card__content__title">El Friento</h5>
+                                            <p className="home__side__card__content__text">by artistgod</p>
+                                            <span className="home__side__card__content__like">13,000 likes</span>
+                                            <Link to="#!">
+                                                <button className="btn home__side__card__content__button">Purchase</button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className="card home__side__card__content">
+                                        <img src={ElFriento} className="card-img-top" alt="ElFriento" />
+                                        <div className="home__side__card__content__body">
+                                            <h5 className="home__side__card__content__title">El Friento</h5>
+                                            <p className="home__side__card__content__text">by artistgod</p>
+                                            <span className="home__side__card__content__like">13,000 likes</span>
+                                            <Link to="#!">
+                                                <button className="btn home__side__card__content__button">Purchase</button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                {/* Section Two */}
+                                <section className="home__side__trending">
+                                    <h4 className="home__side__trending__title">Trending</h4>
+                                    <div className="home__side__trending__content__container mb-3">
+                                        <div>
+                                            <h4 className="home__side__trending__title">Nigerian Art Festival 2020</h4>
+                                            <span className="home__side__trending__span">25 posts</span>
+                                        </div>
+                                        <div>
+                                            <Link to="#!">
+                                                <i className="fa fa-chevron-right home__side__trending__icon"></i>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className="home__side__trending__content__container mb-3">
+                                        <div>
+                                            <h4 className="home__side__trending__title">Nigerian Art Festival 2020</h4>
+                                            <span className="home__side__trending__span">25 posts</span>
+                                        </div>
+                                        <div>
+                                            <Link to="#!">
+                                                <i className="fa fa-chevron-right home__side__trending__icon"></i>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <div className="home__side__trending__content__container mb-3">
+                                        <div>
+                                            <h4 className="home__side__trending__title">Nigerian Art Festival 2020</h4>
+                                            <span className="home__side__trending__span">25 posts</span>
+                                        </div>
+                                        <div>
+                                            <Link to="#!">
+                                                <i className="fa fa-chevron-right home__side__trending__icon"></i>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                    <a href="#more" className="home__side__trending__btn-more">See more</a>
+                                </section>
+
+                                <footer className="home__side__footer">
+                                    <ul className="home__side__footer__list-left">
+                                        <Link to="#!">
+                                            <li className="home__side__footer__list-left__item">&copy;  2020 Qrate</li>
+                                        </Link>
+                                    </ul>
+                                    <ul className="home__side__footer__list-right">
+                                        <Link to="#!">
+                                            <li className="home__side__footer__list-right_item">Terms</li>
+                                        </Link>
+                                        <Link to="#!">
+                                            <li className="home__side__footer__list-right_item">Privacy</li>
+                                        </Link>
+                                        <Link to="#!">
+                                            <li className="home__side__footer__list-right_item">Info</li>
+                                        </Link>
+                                    </ul>
+                                </footer>
+                            </div>
                         </div>
                     </div>
                 </div>    
-            </div>
+            </>
         );
     }
 }
