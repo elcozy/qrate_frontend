@@ -1,0 +1,83 @@
+.blo{
+    p{
+        font-size: 1rem;
+    }
+
+    position: relative;
+
+    .arrow-left{
+        color: #212529;
+        position: absolute;
+        left: 15px;
+        top: 33px;
+    }
+
+    .artistMain{
+        padding: 2% 5%;
+    
+        .name{
+            margin-bottom: 2rem;
+        }
+
+        .artist-description{
+            width: 100%;
+            line-height: 1.7rem;
+        }
+    
+        .categories{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1.5rem 0;
+            
+
+            p{
+               margin-right: auto;
+               display: inline-block;
+            }
+            .fa-circle{
+                font-size: 10px;
+                position: relative;
+                bottom: 2px;
+                margin-right: 3px;
+            } 
+            .circle1{
+                color: #bc0272;
+            }
+
+            .circle2{
+                color: #6372c1;
+            }
+
+            .circle3{
+                color: #da4961 ;
+            }
+        }
+
+        .dropdown-container {
+            display: flex;
+            justify-content:  flex-start;
+            margin: 2rem 0;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .blo{
+        .name{
+            font-size: 2rem;
+        }
+        p, .artist-description{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .blo{
+        .dropdown-container{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './button.style.scss';
+import './Button.style.scss';
 
 const Button = ({text}) => {
     return (
-        <button>{text}</button>
+        <button className='view_button'>{text}</button>
     )
 }
 
