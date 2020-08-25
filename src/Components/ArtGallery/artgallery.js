@@ -28,36 +28,6 @@ export default class gallery extends React.Component {
       name: "Item " + (i + 1),
     }));
     const images = [...Array(50).keys()].map((i) => ({
-import React from "react";
-import "./artgallery.css";
-import { Pagination } from "./ArtGalleryPagination";
-import Skeleton from "react-loading-skeleton";
-
-const propTypes = {
-  //   items: React.PropTypes.array.isRequired,
-  //   onChangePage: React.PropTypes.func.isRequired,
-  //   initialPage: React.PropTypes.number,
-};
-
-const defaultProps = {
-  initialPage: 1,
-};
-
-Pagination.propTypes = propTypes;
-Pagination.defaultProps = defaultProps;
-
-/* App Component 
-  -------------------------------------------------*/
-
-export default class gallery extends React.Component {
-  constructor() {
-    super();
-    // an example array of items to be paged
-    var exampleItems = [...Array(50).keys()].map((i) => ({
-      id: i + 1,
-      name: "Item " + (i + 1),
-    }));
-    const images = [...Array(50).keys()].map((i) => ({
       id: i + 1,
       image: `/assets/img/artgallery/gallery (${(i % 16) + 1}).svg`,
       name: "Nike Art Gallery",
