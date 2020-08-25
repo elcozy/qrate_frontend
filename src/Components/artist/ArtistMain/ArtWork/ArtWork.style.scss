@@ -31,13 +31,7 @@
         }
 
         .ratings{
-            display: flex;
-            justify-content: space-between;
             justify-self: flex-end;
-
-            .star{
-                color: #f7931e;
-            }
         }
     }
     

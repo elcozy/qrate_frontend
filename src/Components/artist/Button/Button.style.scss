@@ -14,3 +14,15 @@
         color: #ffffff;
     }
 }
+
+.inverted{
+    background-color: #f7931e;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border:  1px solid #f7931e;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+}
