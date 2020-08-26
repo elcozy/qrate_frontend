@@ -2,6 +2,7 @@ body{
   background: 
   white !important;
 }
+
 .sidebar{
   overflow: hidden;
   position: fixed;
@@ -10,7 +11,7 @@ body{
   height: 100%;
   border-right: 1px solid #c4c4c4;
   background: white;
-  z-index: 9999;
+  z-index: 9998;
 
   }
   .icon-sidebar{
@@ -79,7 +80,7 @@ body{
 	  border-bottom: 1px solid #c4c4c4;
 	  right: 0;
     width: 83%;
-    z-index: 9999;
+    z-index: 9998;
   }
   .icon-nav-name{
     padding-left: 15px;
