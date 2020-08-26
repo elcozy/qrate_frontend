@@ -1,3 +1,4 @@
+import { FeaturedGalleryCollection } from "./FeaturedGalleryCollection";
 import React from "react";
 import "./artgallery.css";
 import "./ArtGalleryDetails.scss";
@@ -10,22 +11,42 @@ import { gallery_images } from "./ArtGalleryData";
 import "video-react/dist/video-react.css"; // import css
 import { Player } from "video-react";
 export default class ArtGalleryDetails extends React.Component {
+  constructor(props) {
+    super(props);
+    const {
+      //Get the gallery id from the url path
+      params: { artgalleryid },
+    } = this.props.match;
+
+    //Get the artist object that corresponds to the id
+    const artgallery = gallery_images.filter(
+      (artgallery) => artgallery.id === Number(artgalleryid)
+    );
+    this.state = {
+      artgallery: artgallery,
+    };
+  }
   render() {
+    //Destructuring artist off the state
+    const { artgallery } = this.state;
+
+    //Destructuring the object off the artist array.
+    const [selectedArtGallery] = artgallery;
     // const gallery_images = gallery_images;
-    console.log(gallery_images[1]);
+    console.log(selectedArtGallery.featuredCollections);
     return (
       <div className="main  mt-5 pt-4 mt-lg-5 pt-lg-5 container-fluid mb-5 pb-5 mb-lg-3 pb-lg-0 w-auto art-gallery-details">
-        <PageHeaderText text={`Nike Art Gallery`} />
+        <PageHeaderText text={selectedArtGallery.name} />
         <div className="header mb-4">
           <img alt=""></img>
         </div>
         <div className="location mb-4">
-          <i class="fas fa-map-marker-alt pr-2"></i>
-          No. 2 Oba Yekini Elegushi Rd, Lekki Phase I, Lekki, Lagos
+          <i className="fas fa-map-marker-alt pr-2"></i>
+          {selectedArtGallery.fullAddress}
         </div>
         <div className="gallery-description mb-5">
           <h5>
-            Nike Art Gallery is an art gallery in Lagos owned by Nike
+            {selectedArtGallery.name} is an art gallery in Lagos owned by Nike
             Davies-Okundaye. The gallery is arguably the largest of its kind in
             West Africa. Housed in a five-storey tall building, it boasts a
             collection of about 8,000 diverse artworks from various Nigerian
@@ -58,62 +79,9 @@ export default class ArtGalleryDetails extends React.Component {
             </a>
           </div>
         </div>
-        <div className="featured-collections mt-5">
-          <ArtGalleryHeaders text="Featured Collections" />
-          {/* <div className=" f-collections d-flex flex-wrap flex-row"> */}
-          <Splide
-            options={{
-              rewind: true,
-              type: "loop",
-              width: 800,
-              gap: "1rem",
-              autoWidth: true,
-              autoplay: true,
-            }}
-          >
-            <SplideSlide>
-              <div className="featured-collection w-auto bg-white d-flex flex-row justify-content-end pr-4 mb-4">
-                <img alt="" src={`/assets/img/cart/cart_image.png`} />
-                <div className="exhibition-details ml-3 mt-4">
-                  <h4 className="collection-name">Sculpture of Two</h4>
-                  <p className="collection-author">by artistgod</p>
-                  <h5 className="collection-price">150</h5>
-                  <a href="#">
-                    <button>Purchase</button>
-                  </a>
-                </div>
-              </div>
-            </SplideSlide>
-
-            <SplideSlide>
-              <div className="featured-collection w-auto bg-white d-flex flex-row justify-content-end pr-4 mb-4">
-                <img alt="" src={`/assets/img/cart/cart_image.png`} />
-                <div className="exhibition-details ml-3 mt-4">
-                  <h4 className="collection-name">Sculpture of Two</h4>
-                  <p className="collection-author">by artistgod</p>
-                  <h5 className="collection-price">150</h5>
-                  <a href="#">
-                    <button>Purchase</button>
-                  </a>
-                </div>
-              </div>
-            </SplideSlide>
-            <SplideSlide>
-              <div className="featured-collection w-auto bg-white d-flex flex-row justify-content-end pr-4 mb-4">
-                <img alt="" src={`/assets/img/cart/cart_image.png`} />
-                <div className="exhibition-details ml-3 mt-4">
-                  <h4 className="collection-name">Sculpture of Two</h4>
-                  <p className="collection-author">by artistgod</p>
-                  <h5 className="collection-price">150</h5>
-                  <a href="#">
-                    <button>Purchase</button>
-                  </a>
-                </div>
-              </div>
-            </SplideSlide>
-          </Splide>
-          {/* </div> */}
-        </div>
+        <FeaturedGalleryCollection
+          featuredCollection={selectedArtGallery.featuredCollections}
+        />
         <div className="featured-artists mt-5">
           <ArtGalleryHeaders text="Upcoming Exhibitions" />
           <div className="f-artists d-flex flex-row flex-wrap">
