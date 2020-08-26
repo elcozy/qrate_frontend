@@ -1,8 +1,12 @@
+import { PageHeaderText } from "../GeneralComp/Texts/GeneralTexts";
+import { ArtGalleryCollection } from "./ArtGalleryCollection";
 import React from "react";
 import "./artgallery.css";
 import { Pagination } from "./ArtGalleryPagination";
 import Skeleton from "react-loading-skeleton";
-
+import Input from "../GeneralComp/Input/Input";
+import { gallery_images } from "./ArtGalleryData";
+import { Dropdown } from "react-bootstrap";
 const propTypes = {
   //   items: React.PropTypes.array.isRequired,
   //   onChangePage: React.PropTypes.func.isRequired,
@@ -22,74 +26,65 @@ Pagination.defaultProps = defaultProps;
 export default class gallery extends React.Component {
   constructor() {
     super();
-    // an example array of items to be paged
-    var exampleItems = [...Array(50).keys()].map((i) => ({
-      id: i + 1,
-      name: "Item " + (i + 1),
-    }));
-    const images = [...Array(50).keys()].map((i) => ({
-      id: i + 1,
-      image: `/assets/img/artgallery/gallery (${(i % 16) + 1}).svg`,
-      name: "Nike Art Gallery",
-      location: "Lekki, Lagos",
-    }));
 
-    // const images = Array.from({ length: 3 }).fill(g_images).flat();
-    function shuffle(images) {
-      return images.sort(() => Math.random() - 0.5);
-    }
-    // shuffling the array
-    const s_images = shuffle(images);
-    console.log(s_images);
+    console.log(gallery_images[1]);
 
     this.state = {
-      s_images: s_images,
-      exampleItems: exampleItems,
+      gallery_images: gallery_images,
       pageOfItems: [],
+      input: "",
     };
 
-    this.onChangePage = this.onChangePage.bind(this);
+    // this.onChangePage = this.onChangePage.bind(this);
   }
 
-  onChangePage(pageOfItems) {
+  handleChange = (e) => {
+    e.preventDefault();
+    //set input vlaue to search input.
+    this.setState({ input: e.target.value });
+  };
+  onChangePage = (pageOfItems) => {
     // update state with new page of items
     this.setState({ pageOfItems: pageOfItems });
-  }
+  };
 
   render() {
+    const { gallery_images, pageOfItems, input } = this.state;
+    //filter gallery collection based on input value.
+    const filteredGalery = pageOfItems.filter((gallery) => {
+      return gallery.name.toLowerCase().includes(input.toLowerCase());
+    });
     return (
-      <div className="main my-5 pb-5">
+      <div className="main w-auto mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid mb-5 pb-5">
         <div className="r">
           <div className="text-center">
-            <h5 className="text-center">Art Galleries</h5>
-            <div className="pag-images d-flex flex-wrap justify-content-center mb-4">
-              {this.state.pageOfItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="position-relative images-g"
-                  style={{ height: 254, width: 252 }}
-                >
-                  <a href={`/gallery/${item.id}`}>
-                    {<img src={`${item.image}`} alt="" /> || (
-                      <Skeleton height={254} />
-                    )}
+            <PageHeaderText text={`Art Galleries`} />
+            <div className="gallery-search d-flex flex-row flex-wrap">
+              <Input
+                className="col-12 col-md-6 col-auto justify-content-center justify-content-md-start d-flex my-3"
+                inputName="search"
+                placeholder="Search"
+                onChange={this.handleChange}
+              />
+              <Dropdown className="my-auto col text-center text-md-left">
+                <Dropdown.Toggle id="dropdown-custom-components">
+                  Location
+                </Dropdown.Toggle>
 
-                    <div className="position-absolute overlay-gallery">
-                      <div className="gal-cont">
-                        <div className="gallery-name mb-4">{item.name}</div>
-                        <div className="gallery-location">{item.location}</div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              ))}
+                <Dropdown.Menu>
+                  <Dropdown.Item eventKey="1">Lekki, Lagos</Dropdown.Item>
+                  <Dropdown.Item eventKey="2">Lekki, Lagos</Dropdown.Item>
+                  <Dropdown.Item eventKey="3" active>
+                    Lekki, Lagos
+                  </Dropdown.Item>
+                  <Dropdown.Item eventKey="1">Lekki, Lagos</Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
+            <ArtGalleryCollection pageOfItems={filteredGalery} />
           </div>
         </div>
-        <Pagination
-          items={this.state.s_images}
-          onChangePage={this.onChangePage}
-        />
+        <Pagination items={gallery_images} onChangePage={this.onChangePage} />
       </div>
     );
   }

@@ -2,19 +2,28 @@ import React from "react";
 import "./artgallery.css";
 import "./ArtGalleryDetails.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { gallery_images, art_gallery_images } from "../Cart/data";
+import {
+  PageHeaderText,
+  ArtGalleryHeaders,
+} from "../GeneralComp/Texts/GeneralTexts";
+import { gallery_images } from "./ArtGalleryData";
+import "video-react/dist/video-react.css"; // import css
+import { Player } from "video-react";
 export default class ArtGalleryDetails extends React.Component {
   render() {
+    // const gallery_images = gallery_images;
+    console.log(gallery_images[1]);
     return (
       <div className="main  mt-5 pt-4 mt-lg-5 pt-lg-5 container-fluid mb-5 pb-5 mb-lg-3 pb-lg-0 w-auto art-gallery-details">
-        <h5>Nike Art Gallery</h5>
+        <PageHeaderText text={`Nike Art Gallery`} />
         <div className="header mb-4">
           <img alt=""></img>
         </div>
         <div className="location mb-4">
+          <i class="fas fa-map-marker-alt pr-2"></i>
           No. 2 Oba Yekini Elegushi Rd, Lekki Phase I, Lekki, Lagos
         </div>
-        <div className="gallery-description">
+        <div className="gallery-description mb-5">
           <h5>
             Nike Art Gallery is an art gallery in Lagos owned by Nike
             Davies-Okundaye. The gallery is arguably the largest of its kind in
@@ -24,10 +33,16 @@ export default class ArtGalleryDetails extends React.Component {
           </h5>
         </div>
         <div className="upcoming-exhibition">
-          <h4>Upcoming Exhibitions</h4>
+          <ArtGalleryHeaders text="Upcoming Exhibitions" />
           <div className="exhibition d-flex flex-row flex-wrap  justify-content-center justify-content-md-start pr-3 py-4 py-md-0 px-3 pl-md-0">
             <div className="img">
-              <img alt="" src={`/assets/img/cart/cart_image.png`} />
+              {/* <img alt="" src={`/assets/img/artgallery/galleryVideo.svg`} /> */}
+
+              <Player
+                playsInline
+                poster="/assets/img/artgallery/galleryVideo.svg"
+                src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+              />
             </div>
             <div className="exhibition-details col-12 col-md my-auto">
               <h4 className="exhibition-name">La Creme de Font 2020</h4>
@@ -44,7 +59,7 @@ export default class ArtGalleryDetails extends React.Component {
           </div>
         </div>
         <div className="featured-collections mt-5">
-          <h4>Featured Collections</h4>
+          <ArtGalleryHeaders text="Featured Collections" />
           {/* <div className=" f-collections d-flex flex-wrap flex-row"> */}
           <Splide
             options={{
@@ -100,7 +115,7 @@ export default class ArtGalleryDetails extends React.Component {
           {/* </div> */}
         </div>
         <div className="featured-artists mt-5">
-          <h4>Upcoming Exhibitions</h4>
+          <ArtGalleryHeaders text="Upcoming Exhibitions" />
           <div className="f-artists d-flex flex-row flex-wrap">
             <div className="featured-artist text-center ">
               <div className="artist-details">
@@ -132,6 +147,8 @@ export default class ArtGalleryDetails extends React.Component {
           </div>
         </div>
         <div className="see-photos">
+          <ArtGalleryHeaders text="See Photos" />
+
           <h5>See Photos</h5>
           <div>
             <Splide
@@ -144,7 +161,7 @@ export default class ArtGalleryDetails extends React.Component {
                 autoplay: true,
               }}
             >
-              {art_gallery_images.map((item, i) => (
+              {gallery_images[1].photos.map((item, i) => (
                 <SplideSlide key={i}>
                   <img alt="" src={item.image} />
                 </SplideSlide>
