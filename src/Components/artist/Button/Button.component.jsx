@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Button.style.scss';
 
-const Button = ({text}) => {
+const Button = ({text, children, inverted}) => {
     return (
-        <button className='view_button'>{text}</button>
+        <button className={inverted ? `inverted` : `view_button`}>{text} {children}</button>
     )
 }
 

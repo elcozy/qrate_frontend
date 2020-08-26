@@ -11,6 +11,7 @@ import supplies from "./Components/ArtSupplies/artsupplies";
 import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Cart/Checkout";
 import ArtistMain from "./Components/artist/ArtistMain/ArtistMain.component";
+import ArtWorkMain from "./Components/artist/ArtistMain/ArtWork/ArtWorkMain/ArtWorkMain.component";
 
 // IMPORTING REACT ROUTER DOM
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -36,7 +37,9 @@ class App extends React.Component {
 
           <Route exact path="/gallery" component={gallery}></Route>
 
-          <Route path={`/artist/:artistId`} component={ArtistMain} />
+          <Route exact path={`/artist/:artistId`} component={ArtistMain} />
+
+          <Route exact path={`/artist/:artistId/:workId`} component={ArtWorkMain} />
 
           <Route exact path="/supplies" component={supplies}></Route>
         </Switch>

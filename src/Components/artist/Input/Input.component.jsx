@@ -7,7 +7,7 @@ const Input = ({inputName, placeholder, onChange}) => {
         <input 
         className='input' 
         type={inputName} 
-        placeholder='Search'
+        placeholder={placeholder}
         onChange={onChange}
         />
     )

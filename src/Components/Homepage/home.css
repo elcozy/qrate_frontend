@@ -338,7 +338,7 @@ body {
 
 .home__side__footer {
     display: flex;
-    margin-top: 800px;
+    margin-top: 750px;
 }
 
 .home__side__footer__list{
@@ -346,6 +346,7 @@ body {
 }
 
 .home__side__footer__list-left__item{
+    list-style-type: none;
     font-size: 14px;
     line-height: 16px;
     color: #3E3E3E;
