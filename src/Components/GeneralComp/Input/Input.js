@@ -12,7 +12,7 @@ const Input = ({ inputName, placeholder, onChange, className }) => {
           placeholder={placeholder}
           onChange={onChange}
         />
-        <span class="fa fa-search form-control-feedback"></span>
+        <span className="fa fa-search form-control-feedback"></span>
       </div>
     </div>
   );
