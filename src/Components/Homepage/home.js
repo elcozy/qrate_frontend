@@ -55,8 +55,7 @@ class home extends React.Component{
                                     </Link>  
                                 </div>
                                 <div>
-                                    <textarea className="home__main__card1__text-area"  name="" rows="4" cols="50">
-                                        Any art buzz you want to share, feranmiolowo?
+                                    <textarea className="home__main__card1__text-area"  name="" rows="4" cols="50" placeholder="Any art buzz you want to share, feranmiolowo?">  
                                     </textarea>
                                     <div className="home__main__card1__lower">
                                         <div className="home__main__card1__lower__img-container">
