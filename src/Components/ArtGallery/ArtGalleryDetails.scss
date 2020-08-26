@@ -21,7 +21,7 @@
   .gallery-description {
     h5 {
       font-weight: normal;
-      font-size: 21px;
+      font-size: 1.3rem;
       line-height: 24px;
       color: #3e3e3e;
     }
@@ -30,12 +30,17 @@
 .exhibition {
   background: #ffffff;
   .img {
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 0.6;
+    // background-color: rgba(0, 0, 0, 0.6);
+    background-color: #000;
+    // background-image: url("/assets/img/artgallery/galleryVideo.svg");
+    // opacity: 0.6;
     width: 319px;
 
     height: fit-content;
+    // height: 182px;
     border-radius: 5px;
+    position: relative;
+    cursor: pointer;
   }
   .exhibition-details {
     .exhibition-name {
@@ -219,5 +224,71 @@
         }
       }
     }
+  }
+}
+.dropdown {
+  .dropdown-toggle {
+    color: #fff;
+    background-color: transparent !important;
+    border: none;
+    color: #6c6b6b !important;
+    &:focus {
+      color: #fff;
+      background-color: transparent;
+      border-color: #f7931e !important;
+      box-shadow: 0 0 0 0.2rem #f7931e !important;
+      color: #6c6b6b;
+    }
+    &:after {
+      border-style: solid;
+      margin-left: 0.755em;
+      border-color: #337ab7;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+  }
+}
+.dropdown.show {
+  > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: transparent;
+    border-color: #f7931e !important;
+    color: #6c6b6b;
+    box-shadow: 0 0 0 0.2rem #f7931e;
+  }
+}
+$col-auto: "only screen and (min-width : 768px)";
+@media #{$col-auto} {
+  .col-auto {
+    max-width: fit-content;
+  }
+}
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #f7931e;
+}
+.video-react {
+  &:hover .video-react-big-play-button {
+    color: #fff;
+    background-color: #000 !important;
+  }
+
+  .video-react-big-play-button {
+    font-size: 1.8em !important;
+    color: black;
+    height: 28px !important;
+    width: 28px !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    border: none;
+    background-color: #fff !important;
+    border-radius: 50% !important;
+    transition: all 0.4s;
   }
 }
