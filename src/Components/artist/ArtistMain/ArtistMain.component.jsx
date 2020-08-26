@@ -18,7 +18,10 @@ class ArtistMain extends Component {
     constructor(props){
         super(props);
 
+        //Get the artists id from the url path
         const { params: { artistId } } = this.props.match;
+
+        //Get the artist object that corresponds to the id
         const artist = artistData.filter(artist => artist.id === Number(artistId));
 
         this.state = {
@@ -28,8 +31,12 @@ class ArtistMain extends Component {
 
    
     render() {
+        //Destructuring artist off the state
         const {artist} = this.state;
+
+        //Destructuring the object off the artist array.
         const [selectedArtist] = artist;
+        
         return (
        
             <div className='main content blo'>
