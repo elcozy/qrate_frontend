@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1,
+        "imgSrc": "images/img-one.png",
+        "title": "Nigerian Art Festival 2020",
+        "tag": "Exhibition",
+        "text": "The event took place on the 25th of August, 2020. It was an event filled..",
+        "slug": "nigerian-art-festival-2020",
+        "class": "pink"
+    },
+    {
+        "id": 2,
+        "imgSrc": "images/img-two.png",
+        "title": null,
+        "tag": null,
+        "slug": "explore",
+        "class": "green"
+    },
+    {
+        "id": 3,
+        "imgSrc":"images/img-three.png",
+        "title": "Sculpture of Two",
+        "text": null,
+        "slug": "sculpture-of-two",
+        "class": "black"
+    },
+    {
+        "id": 4,
+        "imgSrc": "images/img-four.png",
+        "title": null,
+        "text": null,
+        "tag": null,
+        "class": "dark-blue"
+    },
+    {
+      "id": 5,
+      "imgSrc":"images/img-five.png",
+      "title":null,
+      "text":null,
+      "class": "blue"
+    },
+    {
+        "id": 6,
+        "imgSrc":"images/img-six.png",
+        "title":null,
+        "text":null,
+        "class": "light-danger"
+        
+    },
+    {
+        "id": 7,
+        "imgSrc":"images/img-seven.png",
+        "title":null,
+        "text":null,
+        "class": "orange"        
+    },
+    {
+        "id": 8,
+        "imgSrc":"images/img-eight.png",
+        "title":null,
+        "text":null,
+        "class": "dark-orange"       
+    }
+]

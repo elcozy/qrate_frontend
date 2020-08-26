@@ -1,10 +1,39 @@
 import React, { Component } from "react";
 // IMPORTING REACT ROUTER DOM
 import './explore.css'
+import like from './like.svg'
+import isLiked from './isLiked.svg'
+import data from './explore.json'
 
 export default class explore extends  Component{
+ 
+ 
+    constructor(props) {    
+        super(props)
+        this.state = {
+           Like: like,
+          likeCount: 0,
+          id: 1,
+        }
+        this.handleClick = this.handleClick.bind(this)
+      }
+      handleClick() {
+        if (this.state.Like === like){
+            this.setState({ Like: isLiked, likeCount: this.state.likeCount + 1 })
+        } else if(this.state.Like === isLiked){
+            this.setState({ Like: like, likeCount: this.state.likeCount - 1 })
+        }
+      }
+
+      id = () =>{
+          this.setState( this.state.i + 1 )
+      }
+
+
+   
 
     render(){
+        const detail = this.state
         return(
             <div  className="main content">
                 <nav className="nav nav-pills explore-nav">
@@ -18,106 +47,59 @@ export default class explore extends  Component{
                 </nav>
            <div className="explore-row container-fluid mt-3">
                <div className="explore-images-body">
-                   <div className="explore-content pink">
-                       <img src="images/img-one.png" alt="" className="explore-img"></img>
-                       <div className="explore-content-body"> 
+               {data.map((detail) => (
+                   <div className="explore-content" className={detail.class}>
+                      
+                         <div>
+                              <img src={detail.imgSrc} alt="" className="explore-img"></img> 
+                              <div className="explore-content-body"> 
                            <div className="explore-user-detail">
                                <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
                            </div>
                            <div className="explore-content-text">
                                <div className="explore-content-text-title">
-                               <h5>Nigerian Art Festival 2020</h5>
-                               <span className="tag">Exhibition</span>
+                               <h5>{detail.title}</h5>
+                               <span className="tag">{detail.tag}</span>
                                </div>
-                               <p>The event took place on the 25th of August, 2020. It was an event filled...</p>
+                               <p>{detail.text}</p>
                                <div className="user-reaction row container">
-                                   <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
+                                   <div  ><i  className="far fa-comment"></i></div>
+                                   <div onClick={this.handleClick} key={this.props.children}><img src={this.state.Like} alt=""></img> {this.state.likeCount}</div>
                                </div>
                            </div>
                        </div>
+                        </div>
+                       
                    </div>
-                   <div className="explore-content dark-blue">
-                       <img src="images/img-four.png" alt="" className="explore-img" ></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                              <div className="explore-content-text">
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
+                   ) )}
                    </div>
-                   <div className="explore-content light-danger">
-                       <img src="images/img-seven.png" alt=""  className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <button className="follow">Follow</button>
-                           </div>
-                           <div className="explore-content-text">
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-               </div>
+  
                <div className="explore-images-body">
-                   <div className="explore-content green">
-                       <img src="images/img-two.png" alt=""  className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                           <div className="explore-content-text">
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="explore-content blue">
-                       <img src="images/img-five.png" alt="" className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
+               {data.map((detail) => (
+                   <div className="explore-content" className={detail.class}>
+                      
+                         <div>
+                              <img src={detail.imgSrc} alt="" className="explore-img"></img> 
+                              <div className="explore-content-body"> 
+                           <div className="explore-user-detail">
                                <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
                            </div>
                            <div className="explore-content-text">
                                <div className="explore-content-text-title">
-                               <h5>The Face man</h5>
+                               <h5>{detail.title}</h5>
+                               <span className="tag">{detail.tag}</span>
                                </div>
-                               <p>Charcoal</p>
+                               <p>{detail.text}</p>
                                <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
+                                   <div  ><i  className="far fa-comment"></i></div>
+                                   <div onClick={this.handleClick} key={this.props.children}><img src={this.state.Like} alt=""></img> {this.state.likeCount}</div>
                                </div>
                            </div>
                        </div>
+                        </div>
+                       
                    </div>
-                   <div className="explore-content orange">
-                       <img src="images/img-eight.png" alt=""  className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                           <div className="explore-content-text">
-                           <div className="explore-content-text-title">
-                               <h5>Deception in disguise</h5>
-                               <span className="tag">Illustration</span>
-                               </div>
-                               <p>They say time eventually heals one’s wounds. But does it really? The illustration titled “Deception in ...</p>
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
+                   ) )}
                    
                </div>
                
