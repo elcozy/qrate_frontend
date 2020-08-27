@@ -7,6 +7,7 @@ import artist from "./Components/artist/artist";
 import explore from "./Components/explore/explore";
 import Navbar from "./Components/Navbar/nav";
 import gallery from "./Components/ArtGallery/artgallery";
+import galleryDetails from "./Components/ArtGallery/ArtGalleryDetails";
 import supplies from "./Components/ArtSupplies/artsupplies";
 import Cart from "./Components/Cart/Cart";
 import Checkout from "./Components/Cart/Checkout";
@@ -32,14 +33,20 @@ class App extends React.Component {
           <Route exact path="/explore" component={explore}></Route>
 
           <Route exact path="/cart" component={Cart} />
-          
+
           <Route exact path="/checkout" component={Checkout} />
 
           <Route exact path="/gallery" component={gallery}></Route>
 
+          <Route path={`/gallery/:artgalleryid`} component={galleryDetails} />
+
           <Route exact path={`/artist/:artistId`} component={ArtistMain} />
 
-          <Route exact path={`/artist/:artistId/:workId`} component={ArtWorkMain} />
+          <Route
+            exact
+            path={`/artist/:artistId/:workId`}
+            component={ArtWorkMain}
+          />
 
           <Route exact path="/supplies" component={supplies}></Route>
         </Switch>

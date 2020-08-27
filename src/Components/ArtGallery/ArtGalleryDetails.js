@@ -1,22 +1,52 @@
+import { FeaturedGalleryCollection } from "./FeaturedGalleryCollection";
 import React from "react";
 import "./artgallery.css";
 import "./ArtGalleryDetails.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { gallery_images, art_gallery_images } from "../Cart/data";
+import {
+  PageHeaderText,
+  ArtGalleryHeaders,
+} from "../GeneralComp/Texts/GeneralTexts";
+import { gallery_images } from "./ArtGalleryData";
+import "video-react/dist/video-react.css"; // import css
+import { Player } from "video-react";
 export default class ArtGalleryDetails extends React.Component {
+  constructor(props) {
+    super(props);
+    const {
+      //Get the gallery id from the url path
+      params: { artgalleryid },
+    } = this.props.match;
+
+    //Get the artist object that corresponds to the id
+    const artgallery = gallery_images.filter(
+      (artgallery) => artgallery.id === Number(artgalleryid)
+    );
+    this.state = {
+      artgallery: artgallery,
+    };
+  }
   render() {
+    //Destructuring artist off the state
+    const { artgallery } = this.state;
+
+    //Destructuring the object off the artist array.
+    const [selectedArtGallery] = artgallery;
+    // const gallery_images = gallery_images;
+    console.log(selectedArtGallery.featuredCollections);
     return (
       <div className="main  mt-5 pt-4 mt-lg-5 pt-lg-5 container-fluid mb-5 pb-5 mb-lg-3 pb-lg-0 w-auto art-gallery-details">
-        <h5>Nike Art Gallery</h5>
+        <PageHeaderText text={selectedArtGallery.name} />
         <div className="header mb-4">
           <img alt=""></img>
         </div>
         <div className="location mb-4">
-          No. 2 Oba Yekini Elegushi Rd, Lekki Phase I, Lekki, Lagos
+          <i className="fas fa-map-marker-alt pr-2"></i>
+          {selectedArtGallery.fullAddress}
         </div>
-        <div className="gallery-description">
+        <div className="gallery-description mb-5">
           <h5>
-            Nike Art Gallery is an art gallery in Lagos owned by Nike
+            {selectedArtGallery.name} is an art gallery in Lagos owned by Nike
             Davies-Okundaye. The gallery is arguably the largest of its kind in
             West Africa. Housed in a five-storey tall building, it boasts a
             collection of about 8,000 diverse artworks from various Nigerian
@@ -24,10 +54,16 @@ export default class ArtGalleryDetails extends React.Component {
           </h5>
         </div>
         <div className="upcoming-exhibition">
-          <h4>Upcoming Exhibitions</h4>
+          <ArtGalleryHeaders text="Upcoming Exhibitions" />
           <div className="exhibition d-flex flex-row flex-wrap  justify-content-center justify-content-md-start pr-3 py-4 py-md-0 px-3 pl-md-0">
             <div className="img">
-              <img alt="" src={`/assets/img/cart/cart_image.png`} />
+              {/* <img alt="" src={`/assets/img/artgallery/galleryVideo.svg`} /> */}
+
+              <Player
+                playsInline
+                poster="/assets/img/artgallery/galleryVideo.svg"
+                src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+              />
             </div>
             <div className="exhibition-details col-12 col-md my-auto">
               <h4 className="exhibition-name">La Creme de Font 2020</h4>
@@ -43,64 +79,11 @@ export default class ArtGalleryDetails extends React.Component {
             </a>
           </div>
         </div>
-        <div className="featured-collections mt-5">
-          <h4>Featured Collections</h4>
-          {/* <div className=" f-collections d-flex flex-wrap flex-row"> */}
-          <Splide
-            options={{
-              rewind: true,
-              type: "loop",
-              width: 800,
-              gap: "1rem",
-              autoWidth: true,
-              autoplay: true,
-            }}
-          >
-            <SplideSlide>
-              <div className="featured-collection w-auto bg-white d-flex flex-row justify-content-end pr-4 mb-4">
-                <img alt="" src={`/assets/img/cart/cart_image.png`} />
-                <div className="exhibition-details ml-3 mt-4">
-                  <h4 className="collection-name">Sculpture of Two</h4>
-                  <p className="collection-author">by artistgod</p>
-                  <h5 className="collection-price">150</h5>
-                  <a href="#">
-                    <button>Purchase</button>
-                  </a>
-                </div>
-              </div>
-            </SplideSlide>
-
-            <SplideSlide>
-              <div className="featured-collection w-auto bg-white d-flex flex-row justify-content-end pr-4 mb-4">
-                <img alt="" src={`/assets/img/cart/cart_image.png`} />
-                <div className="exhibition-details ml-3 mt-4">
-                  <h4 className="collection-name">Sculpture of Two</h4>
-                  <p className="collection-author">by artistgod</p>
-                  <h5 className="collection-price">150</h5>
-                  <a href="#">
-                    <button>Purchase</button>
-                  </a>
-                </div>
-              </div>
-            </SplideSlide>
-            <SplideSlide>
-              <div className="featured-collection w-auto bg-white d-flex flex-row justify-content-end pr-4 mb-4">
-                <img alt="" src={`/assets/img/cart/cart_image.png`} />
-                <div className="exhibition-details ml-3 mt-4">
-                  <h4 className="collection-name">Sculpture of Two</h4>
-                  <p className="collection-author">by artistgod</p>
-                  <h5 className="collection-price">150</h5>
-                  <a href="#">
-                    <button>Purchase</button>
-                  </a>
-                </div>
-              </div>
-            </SplideSlide>
-          </Splide>
-          {/* </div> */}
-        </div>
+        <FeaturedGalleryCollection
+          featuredCollection={selectedArtGallery.featuredCollections}
+        />
         <div className="featured-artists mt-5">
-          <h4>Upcoming Exhibitions</h4>
+          <ArtGalleryHeaders text="Upcoming Exhibitions" />
           <div className="f-artists d-flex flex-row flex-wrap">
             <div className="featured-artist text-center ">
               <div className="artist-details">
@@ -132,6 +115,8 @@ export default class ArtGalleryDetails extends React.Component {
           </div>
         </div>
         <div className="see-photos">
+          <ArtGalleryHeaders text="See Photos" />
+
           <h5>See Photos</h5>
           <div>
             <Splide
@@ -144,7 +129,7 @@ export default class ArtGalleryDetails extends React.Component {
                 autoplay: true,
               }}
             >
-              {art_gallery_images.map((item, i) => (
+              {gallery_images[1].photos.map((item, i) => (
                 <SplideSlide key={i}>
                   <img alt="" src={item.image} />
                 </SplideSlide>
