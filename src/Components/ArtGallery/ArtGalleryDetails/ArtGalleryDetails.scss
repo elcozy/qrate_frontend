@@ -1,3 +1,26 @@
+.modal {
+  background: rgba(0, 0, 0, 0.2) !important;
+}
+.modal-content,
+.modal-header {
+  background-color: transparent;
+  border: none;
+}
+.modal-header {
+  button {
+    outline: none;
+    span {
+      color: #f7931e;
+    }
+  }
+}
+.modal-backdrop {
+  background-color: #000 !important;
+  opacity: 0 !important;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
 .art-gallery-details {
   background-image: url("/assets/img/artgallery/bg-design.svg"),
     url("/assets/img/artgallery/bg-design2.svg");
@@ -6,7 +29,7 @@
   .header {
     background-color: #eee;
     background-image: linear-gradient(90deg, #eee, #f5f5f5, #eee);
-    background-image: url("/assets/img/artgallery/galleryHome.svg");
+    // background-image: url("/assets/img/artgallery/galleryHome.svg");
     border-radius: 10px;
     background-size: cover;
     height: 294px;
@@ -89,7 +112,7 @@
   height: 252px;
   display: flex;
   align-items: center;
-  background-image: url("/assets/img/cart/cart_image.png");
+  // background-image: url("/assets/img/cart/cart_image.png");
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.589);
   background-blend-mode: overlay;

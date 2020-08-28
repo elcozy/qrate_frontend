@@ -1,6 +1,6 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { ArtGalleryHeaders } from "../GeneralComp/Texts/GeneralTexts";
+import { ArtGalleryHeaders } from "../../../GeneralComp/Texts/GeneralTexts";
 
 export function FeaturedGalleryCollectionCards({ collection }) {
   return (
@@ -32,16 +32,16 @@ export function FeaturedGalleryCollection({ featuredCollection }) {
           autoplay: true,
           interval: 5000,
           breakpoints: {
-            "1000": {
+            1000: {
               autoWidth: true,
               perPage: 1,
             },
           },
         }}
       >
-        {featuredCollection.map((collection) => {
+        {featuredCollection.map((collection, i) => {
           return (
-            <SplideSlide>
+            <SplideSlide key={i}>
               <FeaturedGalleryCollectionCards
                 key={collection.id}
                 collection={collection}
