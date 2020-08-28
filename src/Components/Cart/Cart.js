@@ -5,7 +5,7 @@ import React, { Component } from "react";
 import "./cart.css";
 import { Table, Form } from "react-bootstrap";
 import { data } from "./data";
-
+import { NavLink } from "react-router-dom";
 export default class Cart extends Component {
   productTable = React.createRef();
   productPrice = React.createRef();
@@ -65,7 +65,7 @@ export default class Cart extends Component {
     // console.log(cartItems);
 
     return (
-      <div className="main mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid">
+      <div className="main mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid w-auto cart-all">
         <div className="px-2 px-lg-4 py-4 mb-3">
           <h1 className="cart-title m-0">Cart</h1>
           <div className="cart-item"></div>
@@ -164,11 +164,11 @@ export default class Cart extends Component {
               <a href="/explore">
                 <button className="explore mr-sm-2">CONTINUE EXPLORING</button>
               </a>
-              <a href="/checkout">
+              <NavLink to="/checkout">
                 <button className="checkout ml-sm-2">
                   PROCEED TO CHECKOUT
                 </button>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

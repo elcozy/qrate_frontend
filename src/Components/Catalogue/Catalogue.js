@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 // IMPORTING REACT ROUTER DOM
+import "./Catalogue.css";
 
-export default class supplies extends Component {
+export default class Catalogue extends Component {
   render() {
     return (
       <div className="main content">
-        <h1>Supplies Page</h1>
-        <h5>In progress...</h5>
+        <h1>Catalogue Page</h1>
+        <h5>In progress: @Webdot</h5>
       </div>
     );
   }

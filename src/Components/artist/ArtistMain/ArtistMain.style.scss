@@ -73,6 +73,17 @@
     }
 }
 
+@media screen and (max-width: 450px) {
+    .blo{
+        .arrow-left{
+            color: #212529;
+            position: absolute;
+            left: 9px;
+            top: 15px;
+        }
+    }
+}
+
 @media screen and (max-width: 400px) {
     .blo{
         .dropdown-container{
