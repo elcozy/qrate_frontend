@@ -10,6 +10,12 @@ import Gallery from "./Components/ArtGallery/artgallery";
 import galleryDetails from "./Components/ArtGallery/ArtGalleryDetails/ArtGalleryDetails";
 import supplies from "./Components/ArtSupplies/artsupplies";
 import Cart from "./Components/Cart/Cart";
+import Settings from "./Components/Settings/Settings";
+import Exhibition from "./Components/Exhibition/exhibition";
+import Catalogue from "./Components/Catalogue/Catalogue";
+import UserProfile from "./Components/UserProfile/UserProfile";
+import Logout from "./Components/Logout/Logout";
+import Categories from "./Components/Categories/Categories";
 import Checkout from "./Components/Cart/Checkout";
 import ArtistMain from "./Components/artist/ArtistMain/ArtistMain.component";
 import ArtWorkMain from "./Components/artist/ArtistMain/ArtWork/ArtWorkMain/ArtWorkMain.component";
@@ -35,6 +41,13 @@ class App extends React.Component {
           <Route exact path="/cart" component={Cart} />
 
           <Route exact path="/checkout" component={Checkout} />
+          <Route exact path="/settings" component={Settings} />
+          <Route exact path="/exhibition" component={Exhibition} />
+          <Route exact path="/catalogue" component={Catalogue} />
+          <Route exact path="/categories" component={Categories} />
+          <Route exact path="/logout" component={Logout} />
+          <Route exact path="/profile" component={UserProfile} />
+          <Route exact path="/Settings" component={Settings} />
 
           <Route exact path="/gallery" component={Gallery}></Route>
 

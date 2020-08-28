@@ -1,20 +1,17 @@
-import React from 'react';
+import React from "react";
 
-import ArtistPreview from './ArtistPreview/ArtistPreview.component';
+import ArtistPreview from "./ArtistPreview/ArtistPreview.component";
 
-import './ArtistCollection.style.scss';
+import "./ArtistCollection.style.scss";
 
-
-const ArtistCollection = ({artists}) => {
-    
-    return(
-        <div className='artistCollection'>
-        { artists.map(artist => (
-            <ArtistPreview artist={artist} key={artist.id}/>
-        ))
-        }
-        </div>
-    )
+const ArtistCollection = ({ artists }) => {
+  return (
+    <div className="artistCollection">
+      {artists.map((artist) => (
+        <ArtistPreview artist={artist} key={artist.id} />
+      ))}
+    </div>
+  );
 };
 
 export default ArtistCollection;

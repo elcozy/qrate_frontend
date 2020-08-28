@@ -9,14 +9,16 @@ const ArtGalleryCollection = ({ pageOfItems }) => {
       {pageOfItems.map((item) => (
         <div
           key={item.id}
-          className="position-relative images-g"
+          className="position-relative"
           style={{
             height: 254,
             width: 252,
           }}
         >
           <Link to={`/gallery/${item.id}`}>
-            {<img src={`${item.image}`} alt="" /> || <Skeleton height={254} />}
+            {(
+              <img src={`${item.image}`} alt="" className=" images-g h-100" />
+            ) || <Skeleton height={254} />}
 
             <div className="position-absolute overlay-gallery">
               <div className="gal-cont">

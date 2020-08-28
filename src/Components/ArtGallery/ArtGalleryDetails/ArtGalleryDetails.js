@@ -1,14 +1,15 @@
 import { ArtGalleryDetailsHero } from "./ArtGalleryDetailsComponents/ArtGalleryDetailsHero";
 import { FeaturedGalleryCollection } from "./ArtGalleryDetailsComponents/FeaturedGalleryCollection";
 import React from "react";
-import ".././artgallery.css";
-import "./ArtGalleryDetails.scss";
+
 import { PageHeaderText } from "../../GeneralComp/Texts/GeneralTexts";
 import { gallery_images } from "../ArtGalleryData";
 import "video-react/dist/video-react.css"; // import css
 import { FeaturedArtistsCards } from "./ArtGalleryDetailsComponents/FeaturedArtistsCards";
 import { SeeGalleryPhotos } from "./ArtGalleryDetailsComponents/SeeGalleryPhotos";
 import { UpcomingExhibition } from "./ArtGalleryDetailsComponents/UpcomingExhibition";
+import ".././artgallery.css";
+import "./ArtGalleryDetails.scss";
 
 export default class ArtGalleryDetails extends React.Component {
   constructor(props) {

@@ -16,7 +16,7 @@ export function FeaturedArtistsCards({ featuredArtists }) {
               }}
             >
               <div className="artist-details">
-                <img alt="" src={`${collection.image}`} />
+                <img alt="" src={`${collection.profileImg}`} />
                 <p className="artist-author">{collection.artist}</p>
                 <a href="/artist">
                   <button>View Artworks</button>
