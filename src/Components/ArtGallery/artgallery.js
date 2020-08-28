@@ -3,7 +3,6 @@ import ArtGalleryCollection from "./ArtGalleryCollection";
 import React from "react";
 import "./artgallery.css";
 import { Pagination } from "./ArtGalleryPagination";
-import Skeleton from "react-loading-skeleton";
 import Input from "../GeneralComp/Input/Input";
 import { gallery_images } from "./ArtGalleryData";
 import { Dropdown } from "react-bootstrap";
@@ -23,37 +22,43 @@ Pagination.defaultProps = defaultProps;
 /* App Component 
   -------------------------------------------------*/
 
-export default class gallery extends React.Component {
+export default class Gallery extends React.Component {
   constructor() {
     super();
-
-    console.log(gallery_images[1]);
-
     this.state = {
-      gallery_images: gallery_images,
       pageOfItems: [],
+      totalItems: 0,
       input: "",
     };
-
-    // this.onChangePage = this.onChangePage.bind(this);
   }
 
-  handleChange = (e) => {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.input !== this.state.input) {
+      this.onChangePage();
+    }
+  }
+
+  getCurrentItem = (page = 1, perPage = 10) => {
+    const { input } = this.state;
+    const validItems = gallery_images.filter((gallery) => {
+      return gallery.name.toLowerCase().includes(input.toLowerCase());
+    });
+    this.setState({ totalItems: validItems.length });
+    return validItems.slice((page - 1) * perPage, page * perPage);
+  };
+
+  onChangePage = (page, perPage) => {
+    this.setState({ pageOfItems: this.getCurrentItem(page, perPage) });
+  };
+
+  onSearch = (e) => {
     e.preventDefault();
     //set input vlaue to search input.
     this.setState({ input: e.target.value });
   };
-  onChangePage = (pageOfItems) => {
-    // update state with new page of items
-    this.setState({ pageOfItems: pageOfItems });
-  };
 
   render() {
-    const { gallery_images, pageOfItems, input } = this.state;
-    //filter gallery collection based on input value.
-    const filteredGalery = pageOfItems.filter((gallery) => {
-      return gallery.name.toLowerCase().includes(input.toLowerCase());
-    });
+    const { pageOfItems, totalItems } = this.state;
     return (
       <div className="main w-auto mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid mb-5 pb-5">
         <div className="r">
@@ -64,7 +69,7 @@ export default class gallery extends React.Component {
                 className="col-12 col-md-6 col-auto justify-content-center justify-content-md-start d-flex my-3"
                 inputName="search"
                 placeholder="Search"
-                onChange={this.handleChange}
+                onChange={this.onSearch}
               />
               <Dropdown className="my-auto col text-center text-md-left">
                 <Dropdown.Toggle id="dropdown-custom-components">
@@ -81,10 +86,15 @@ export default class gallery extends React.Component {
                 </Dropdown.Menu>
               </Dropdown>
             </div>
-            <ArtGalleryCollection pageOfItems={filteredGalery} />
+            <ArtGalleryCollection pageOfItems={pageOfItems} />
           </div>
         </div>
-        <Pagination items={gallery_images} onChangePage={this.onChangePage} />
+        <Pagination
+          totalItems={totalItems}
+          initialPage={1}
+          perPage={12}
+          onChangePage={this.onChangePage}
+        />
       </div>
     );
   }
