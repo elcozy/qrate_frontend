@@ -204,6 +204,8 @@ export default ArtWorkMain;
 
 
 
+//These are the remaining two modals after choosing catalogue to save to
+
 // {/* <Modal show={} close={}>
 //     <h5>New Catalogue</h5>
 
@@ -214,6 +216,7 @@ export default ArtWorkMain;
 //         <Button text='CREATE'/>
 //     </div>
 // </Modal> */}
+
 
 // {/* <Modal show={} close={}>
 //     <h5>New Catalogue</h5>
