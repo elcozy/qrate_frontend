@@ -23,9 +23,9 @@ class Navbar extends React.Component {
               <img src="/images/qrate logo1-02 2.png" alt="" />
             </a>
           </div>
-          <div className="sidebar-properties">
+          <div className="sidebar-properties mt-4 pt-2">
             <NavLink
-              className="navLink"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/"
               exact
@@ -50,7 +50,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/explore"
             >
@@ -78,7 +78,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/gallery"
             >
@@ -114,7 +114,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/artist"
             >
@@ -138,7 +138,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/supplies"
             >
@@ -165,7 +165,7 @@ class Navbar extends React.Component {
                 <span className="sidebar-name">Art Supplies</span>
               </div>
             </NavLink>
-            <a href="#" className="navLink">
+            <NavLink to="/logout" className="navLink py-lg-3">
               <div className="sidebar-item out justify-content-center justify-content-xl-start">
                 {" "}
                 {/* <img src="/images/logout.svg" className="sidebar-icon" alt="" /> */}
@@ -185,7 +185,7 @@ class Navbar extends React.Component {
                 </svg>
                 <span className="sidebar-name">Log Out</span>
               </div>
-            </a>
+            </NavLink>
           </div>
         </div>
         {this.state.show ? (
@@ -250,7 +250,11 @@ class Navbar extends React.Component {
           <div>
             <nav className="navbar icon-nav navbar-expand">
               <div className="nav navbar-nav icon-navbar">
-                <NavLink className="nav-item nav-link" to="/exhibition">
+                <NavLink
+                  className="nav-item nav-link"
+                  activeClassName="active-link"
+                  to="/exhibition"
+                >
                   {/* <img src="/images/exhibition.svg" alt="" /> */}
                   <svg
                     width="42"
@@ -278,7 +282,11 @@ class Navbar extends React.Component {
 
                   <span className="icon-nav-name">Exhibition</span>
                 </NavLink>
-                <NavLink className="nav-item nav-link " to="/catalogue">
+                <NavLink
+                  className="nav-item nav-link"
+                  activeClassName="active-link"
+                  to="/catalogue"
+                >
                   {/* <img src="/images/catalogue.svg" alt="" /> */}
                   <svg
                     width="24"
@@ -296,7 +304,11 @@ class Navbar extends React.Component {
 
                   <span className="icon-nav-name">My Catalogue</span>
                 </NavLink>
-                <NavLink className="nav-item nav-link" to="/categories">
+                <NavLink
+                  className="nav-item nav-link"
+                  activeClassName="active-link"
+                  to="/categories"
+                >
                   {/* <img src="/images/categories.svg" alt="" /> */}
                   <svg
                     width="23"
@@ -336,9 +348,10 @@ class Navbar extends React.Component {
 
                   <span className="icon-nav-name">Cart</span>
                 </NavLink>
-                <a
+                <NavLink
+                  activeClassName="active-link"
                   className="nav-item nav-link mobile user position-relative"
-                  to="#"
+                  to="/profile"
                 >
                   <img src="/images/user.png" alt="" />
                   <span className="user-notification-icon">1</span>
@@ -353,7 +366,7 @@ class Navbar extends React.Component {
                       <path d="M16 1L8.49998 6L0.999981 1" stroke="#3E3E3E" />
                     </svg>
                   </p>
-                </a>
+                </NavLink>
               </div>
               <div className="row container-fluid two">
                 <a

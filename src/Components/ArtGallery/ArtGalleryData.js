@@ -21,19 +21,19 @@ export const gallery_images = [...Array(50).keys()]
       {
         name: "Twice As Tall",
         artist: "Reynolds",
-        image: "/assets/img/cart/cart_image.png",
+        image: "/assets/img/artgallery/f-collection.svg",
         price: 550,
       },
       {
         name: "Sculpture of Two",
         artist: "artistgod",
-        image: "/assets/img/cart/cart_image.png",
+        image: "/assets/img/artgallery/f-collection.svg",
         price: 150,
       },
       {
         name: "Sculpture",
         artist: "Summy",
-        image: "/assets/img/cart/cart_image.png",
+        image: "/assets/img/artgallery/f-collection.svg",
         price: 560,
       },
     ],
@@ -41,14 +41,17 @@ export const gallery_images = [...Array(50).keys()]
       {
         artist: "artistgod",
         image: "/assets/img/cart/cart_image.png",
+        profileImg: "/assets/img/artgallery/f-collection-img.svg",
       },
       {
         artist: "Rey",
         image: "/assets/img/cart/cart_image.png",
+        profileImg: "/assets/img/artgallery/f-collection-img.svg",
       },
       {
         artist: "Webgod",
         image: "/assets/img/cart/cart_image.png",
+        profileImg: "/assets/img/artgallery/f-collection-img.svg",
       },
     ],
     photos: [...Array(5).keys()].map((i) => ({

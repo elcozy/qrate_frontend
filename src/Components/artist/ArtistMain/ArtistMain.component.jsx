@@ -4,7 +4,7 @@ import artistData from '../artistData';
 
 import {Link} from 'react-router-dom';
 
-import Dropdown from '../Dropdown/Dropdown.component';
+import Drop from '../Dropdown/Dropdown.component';
 
 import ArtWork from './ArtWork/ArtWork.component';
 
@@ -40,10 +40,10 @@ class ArtistMain extends Component {
         return (
        
             <div className='main content blo'>
-                <Link to='/artist'>
-                    <i className="fas fa-arrow-left arrow-left"></i>
-                </Link>
                 <div className='artistMain container'>
+                    <Link to='/artist'>
+                        <i className="fas fa-arrow-left arrow-left"></i>
+                    </Link>
                     <h2 className='name'>{selectedArtist.name}</h2>
 
                     <p className='artist-description'>
@@ -70,8 +70,8 @@ class ArtistMain extends Component {
                     </div>
 
                     <div className='dropdown-container'>
-                        <Dropdown placeholder='Filter by size, color'/>
-                        <Dropdown placeholder='Filter by price'/>
+                        <Drop placeholder='Filter by size, color'/>
+                        <Drop placeholder='Filter by price'/>
                     </div>
 
                     <div className='artistWorks'>
