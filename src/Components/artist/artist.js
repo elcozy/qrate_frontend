@@ -7,7 +7,7 @@ import artistData from "./artistData";
 import ArtistCollection from "./ArtistCollection/ArtistCollection.component";
 
 // Importing Input
-import Input from "./Input/Input.component";
+import Input from "../GeneralComp/Input/Input";
 
 //importing style
 import "./artist.css";
