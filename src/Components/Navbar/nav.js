@@ -24,9 +24,9 @@ class Navbar extends React.Component {
               <img src="/images/qrate logo1-02 2.png" alt="" />
             </a>
           </div>
-          <div className="sidebar-properties mt-4 pt-2">
+          <div className="sidebar-properties  pt-2">
             <NavLink
-              className="navLink py-lg-3"
+              className="navLink mb-2"
               activeClassName="active-link"
               to="/"
               exact
@@ -51,7 +51,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink py-lg-3"
+              className="navLink mb-3"
               activeClassName="active-link"
               to="/explore"
             >
@@ -79,7 +79,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink py-lg-3"
+              className="navLink mb-3"
               activeClassName="active-link"
               to="/gallery"
             >
@@ -115,7 +115,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink py-lg-3"
+              className="navLink mb-2"
               activeClassName="active-link"
               to="/artist"
             >
@@ -139,7 +139,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink py-lg-3"
+              className="navLink mb-3"
               activeClassName="active-link"
               to="/supplies"
             >
@@ -166,7 +166,7 @@ class Navbar extends React.Component {
                 <span className="sidebar-name">Art Supplies</span>
               </div>
             </NavLink>
-            <NavLink to="/logout" className="navLink py-lg-3">
+            <NavLink to="/logout" className="navLink">
               <div className="sidebar-item out justify-content-center justify-content-xl-start">
                 {" "}
                 {/* <img src="/images/logout.svg" className="sidebar-icon" alt="" /> */}
