@@ -6,12 +6,15 @@ export default class exhibition extends Component{
     render(){
         return(
             <div className="main content">
-                <div className="exhibition-image container bg-info mt-5">
-                    <div className="filter"></div>
-                    <div className="exhibition-text">
-                        <h5>Art De Supreme 2020</h5>
+                <div className="hero jumbotron-fluid">
+                       <div className="container">
+                             <h1 className="display-3">Fluid jumbo heading</h1>
+                               <p className="lead">Jumbo helper text</p>
+                               <hr className="my-2" />
+                               <p>More info</p>
+                        </div>
                     </div>
-                </div>
+   
             </div>
         )
     }

@@ -95,10 +95,12 @@ class Navbar extends React.Component {
                   <img src="/images/profile.svg" alt="" />
                   <span className="icon-sidebar-name">Profile</span>
                 </div>
+                <Link to="./exhibition">
                 <div className="icon-sidebar-item">
                   <img src="/images/mobile-exhibition.svg" alt="" />
                   <span className="icon-sidebar-name">Exhibition</span>
                 </div>
+                </Link>
                 <div className="icon-sidebar-item">
                   <img src="/images/catalogue.svg" alt="" />
                   <span className="icon-sidebar-name">My Catalogue</span>
