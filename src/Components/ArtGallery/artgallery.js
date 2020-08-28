@@ -1,5 +1,5 @@
 import { PageHeaderText } from "../GeneralComp/Texts/GeneralTexts";
-import { ArtGalleryCollection } from "./ArtGalleryCollection";
+import ArtGalleryCollection from "./ArtGalleryCollection";
 import React from "react";
 import "./artgallery.css";
 import { Pagination } from "./ArtGalleryPagination";
