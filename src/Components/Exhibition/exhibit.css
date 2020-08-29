@@ -1,3 +1,90 @@
-.jumbotron{
-    background-image: url(/public/images/rect-380.png);
+.ex-bg{
+  /*  background: url(/public/images/banner.png);*/
+  padding-top: 100px;
+  padding-bottom: 100px !important; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.ex-bg::before{
+    background: #000000;
+    opacity: 0.3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    content: '';
+    top: 0;
+    left: 0;    
+}
+.filter-text{
+    color: white;
+}
+.filter-text h4{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 41px;
+    
+    color: #FFFFFF;
+}
+.filter-text .attend{
+    padding-top: 16px;
+}
+.filter-text  span{
+ padding-right: 30px;
+ margin-right: 20px;
+ font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 21px;
+
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+.live{
+    padding-top: 20px;
+}
+.filter-text .button{
+    padding-top: 20px;
+}
+.filter-text .watch{
+    font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 28px;
+padding: 11px 30px;
+border: 1px solid #F7931E;
+
+color: #F7931E;
+}
+.filter-text .watch-later{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+   background: #F7931E;
+    color: #FFFFFF;
+    padding: 11px 40px;
+    
+}
+@media only screen and (max-width: 992px){
+    .filter-text{
+        left: 300px;
+    }
+}
+@media only screen and (max-width: 768px){
+   .ex-bg{
+       background-size: cover;
+       height: 600px;
+       background-repeat: no-repeat !important;
+       background-size: cover !important;
+   }
+   .filter-text{
+       top: 250px;
+       left: 50%;
+       transition: translate(-50%, -50%);
+   }
 }
