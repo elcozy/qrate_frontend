@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "imgSrc": "images/img-one.png",
+        "authorImg": "images/user-img.png",
+        "authorName": "realgallery",
+        "title": "Nigerian Art Festival 2020",
+        "tag": "Exhibition",
+        "text": "The event took place on the 25th of August, 2020. It was an event filled..",
+        "slug": "nigerian-art-festival-2020",
+        "class": "pink card-body"
+    },
+    {
+        "id": 2,
+        "authorImg": "images/user-img.png",
+        "authorName": "realgallery",
+        "imgSrc": "images/img-two.png",
+        "title": null,
+        "tag": null,
+        "slug": "explore",
+        "class": "green card-body"
+    },
+    {
+        "id": 3,
+        "authorImg": "images/user-img.png",
+        "authorName": "realgallery",
+        "imgSrc":"images/img-three.png",
+        "title": "Sculpture of Two",
+        "text": null,
+        "slug": "sculpture-of-two",
+        "class": "black card-body"
+    },
+    {
+        "id": 4,
+        "authorImg": "images/user-img.png",
+        "authorName": "realgallery",
+        "imgSrc": "images/img-four.png",
+        "title": null,
+        "text": null,
+        "tag": null,
+        "class": "dark-blue card-body"
+    },
+    {
+      "id": 5,
+      "authorImg": "images/user-img.png",
+      "authorName": "realgallery",
+      "imgSrc":"images/img-five.png",
+      "title":null,
+      "text":null,
+      "class": "blue card-body"
+    },
+    {
+        "id": 6,
+        "imgSrc":"images/img-six.png",
+        "authorImg": "images/user-img.png",
+        "authorName": "realgallery",
+        "title":null,
+        "text":null,
+        "class": "light-danger card-body"
+        
+    },
+    {
+        "id": 7,
+        "imgSrc":"images/img-seven.png",
+        "authorImg": "images/user-img.png",
+        "authorName": "realgallery",
+        "title":null,
+        "text":null,
+        "class": "orange card-body"        
+    },
+    {
+        "id": 8,
+        "imgSrc":"images/img-eight.png",
+        "authorImg": "images/user-img.png",
+        "authorName": "realgallery",
+        "title":null,
+        "text":null,
+        "class": "dark-orange card-body"       
+    }
+]
