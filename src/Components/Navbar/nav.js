@@ -31,7 +31,7 @@ class Navbar extends React.Component {
               to="/"
               exact
             >
-              <div className="sidebar-item justify-content-center justify-content-xl-start">
+              <div className="sidebar-item ">
                 {/* <img src="/images/home.svg" className="sidebar-icon" alt="" /> */}
                 <svg
                   width="28"
@@ -55,7 +55,7 @@ class Navbar extends React.Component {
               activeClassName="active-link"
               to="/explore"
             >
-              <div className="sidebar-item justify-content-center justify-content-xl-start">
+              <div className="sidebar-item">
                 {/* <img
                   src="/images/safari 1.svg"
                   className="sidebar-icon"
@@ -83,7 +83,7 @@ class Navbar extends React.Component {
               activeClassName="active-link"
               to="/gallery"
             >
-              <div className="sidebar-item justify-content-center justify-content-xl-start">
+              <div className="sidebar-item">
                 {/* <img
                   src="/images/artgallery.svg"
                   className="sidebar-icon"
@@ -119,7 +119,7 @@ class Navbar extends React.Component {
               activeClassName="active-link"
               to="/artist"
             >
-              <div className="sidebar-item justify-content-center justify-content-xl-start">
+              <div className="sidebar-item">
                 {/* <img src="/images/paint.svg" className="sidebar-icon" alt="" /> */}
                 <svg
                   width="24"
@@ -167,7 +167,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink to="/logout" className="navLink">
-              <div className="sidebar-item out justify-content-center justify-content-xl-start">
+              <div className="sidebar-item out">
                 {" "}
                 {/* <img src="/images/logout.svg" className="sidebar-icon" alt="" /> */}
                 <svg

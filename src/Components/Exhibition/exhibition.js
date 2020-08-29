@@ -7,7 +7,7 @@ export default class exhibition extends Component{
         return(
             <div className="main content">
                 <div>
-                 <div className="ex-bg container-lg" style={{backgroundImage: "url(images/banner.png)"}}>
+                 <div className="ex-bg " style={{backgroundImage: "url(images/banner.png)"}}>
         <div className="filter"></div>
         <div className="filter-text  container-md">
         <h4 className="text-white">Art De Supreme 2020</h4>
@@ -18,9 +18,9 @@ export default class exhibition extends Component{
         <div className="live">
           <img src="images/live.svg" alt=""/>  Live
         </div>
-        <div className=" button row">
-          <div className="col-md"><button className="btn watch">Watch Live Video</button></div>
-          <div className="col-md"><button className="btn watch-later">Watch In 3D</button></div>
+        <div className=" button">
+          <div className=""><button className="btn watch">Watch Live Video</button></div>
+          <div className=""><button className="btn watch-later">Watch In 3D</button></div>
         </div>
         </div>
         </div>

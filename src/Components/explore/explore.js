@@ -36,7 +36,7 @@ export default class explore extends  Component{
                 </nav>
            
            
-               <div className="explore-card-columns mt-4 container-lg">
+               <div className="explore-card-columns mt-4 container-fluid">
                    {
                        data.map((detail) => (
                            <div  className="card" key={detail.id}>
