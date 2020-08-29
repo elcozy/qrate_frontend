@@ -1,14 +1,32 @@
 /* Global settings */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+.cart-all {
+  background: #f8f8f8;
+}
 .product-image {
   float: left;
   width: 20%;
 }
-
+.product tr td {
+  border-right: 1px solid rgba(108, 107, 107, 0.3);
+  border-top: none;
+}
+.product tr {
+  box-shadow: 2px 2px 2px rgba(196, 196, 196, 0.3);
+}
+.product-quantity * {
+  font-size: 24px;
+  color: #3e3e3e;
+}
 .product-line-price {
-  float: left;
-  /* width: 12%; */
-  text-align: right;
+  font-weight: bold;
+  font-size: 32px;
+  color: #000000;
+}
+.product-price {
+  font-weight: normal;
+  font-size: 24px;
+  color: #3e3e3e;
 }
 .order-item .row {
   overflow: scroll;
@@ -191,20 +209,17 @@ thead * {
 }
 /* Totals section */
 .totals .totals-item {
-  float: right;
-  clear: both;
   width: 100%;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 .totals .totals-item label {
-  /* float: left; */
-  /* clear: both; */
-  /* width: 79%; */
-  text-align: right;
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 32px;
   color: #3e3e3e;
-  margin: 0;
+  text-align: right;
 }
 .cart-title {
   font-weight: 500;
@@ -213,11 +228,10 @@ thead * {
   color: #000000;
 }
 .totals .totals-item .totals-value {
-  /* float: right; */
-  /* width: 21%; */
-  /* text-align: right; */
-  font-size: 32px;
-  line-height: 37px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 55px;
+
   color: #f7931e;
 }
 .totals .totals-item-total {
@@ -231,6 +245,7 @@ thead * {
   padding: 10px 25px;
   font-size: 1rem;
   line-height: 28px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
 
   color: #ffffff;
   background: #f7931e;
@@ -242,14 +257,16 @@ thead * {
   margin-top: 20px;
   padding: 10px 25px;
 
-  background: #ffffff;
+  background: transparent;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
   font-size: 1rem;
   line-height: 28px;
-
-  color: #f7931e;
+  border: 1px solid #979797;
+  border-radius: 5px;
   cursor: pointer;
+
+  font-weight: 500;
+  color: #979797;
 }
 
 .checkout:hover,

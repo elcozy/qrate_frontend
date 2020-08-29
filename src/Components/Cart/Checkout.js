@@ -14,7 +14,7 @@ export default class Checkout extends Component {
 
   render() {
     return (
-      <div className="main">
+      <div className="main mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid w-auto cart-all">
         <div className="px-2 px-lg-4 py-4 mb-3">
           <div className="row">
             <div className="col-12 col-md-7">

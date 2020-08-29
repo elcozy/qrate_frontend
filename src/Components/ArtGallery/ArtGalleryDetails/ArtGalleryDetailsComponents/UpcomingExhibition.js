@@ -21,11 +21,11 @@ export const UpcomingExhibition = ({ upcomingExhibition }) => (
             <div className="exhibition-details col-12 col-md my-auto">
               <h4 className="exhibition-name">{collection.name}</h4>
               <p className="exhibition-date">{collection.date}</p>
-              <h5 className="exhibition-detail">{collection.details}</h5>
+              <h5 className="exhibition-detail w-75">{collection.details}</h5>
+              <a href="#" className=" text-center">
+                <button>Register</button>
+              </a>
             </div>
-            <a href="#" className="my-auto col-12 col-md-2 text-center">
-              <button>Register</button>
-            </a>
           </>
         </div>
       );
