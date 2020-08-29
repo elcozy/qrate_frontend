@@ -2,7 +2,7 @@ import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { ArtGalleryHeaders } from "../../../GeneralComp/Texts/GeneralTexts";
 import "../ArtGalleryDetails.scss";
-import { Modal } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 // import { gallery_images } from "./ArtGalleryData";
 
 const MyVerticallyCenteredModal = ({ imageSrc, ...props }) => {

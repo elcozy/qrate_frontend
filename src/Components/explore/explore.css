@@ -24,88 +24,108 @@ body{
 .explore-nav-link:focus{
     color: #F7931E;
 }
+.explore-row{
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
 
-.explore-user-detail{
-  padding-top: 20px;
 }
-.explore-user-detail img{
-  height: 30px;
-  width: 30px;
+.explore-images-body{
+    -ms-flex: 33%; /* IE10 */
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 4px;
 }
-.explore-username{
-  padding-left: 15px;
-  padding-right: 30px;
-  font-family: Ubuntu;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 21px; 
+.explore-img{
+    vertical-align: middle;
+    width: 100%;    
 }
-.follow{
-  font-family: Ubuntu;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 21px;
- background: none;
- outline: none;
- border: none;
+.explore-content{
+    margin-right: 10px;
+    margin-top: 20px;
+    color: #3E3E3E;    
+}
+.explore-content-body{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
   
 }
-.explore-body .card-body:hover{
-  color: #ffffff;
+.explore-user-detail{
+    padding-top: 20px;
 }
+.explore-user-detail img{
+    height: 30px;
+    width: 30px;
+}
+.explore-username{
+    padding-left: 15px;
+    padding-right: 30px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px; 
+}
+.follow{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+   background: none;
+   outline: none;
+   border: none;
+    
+}
+.explore-content-text{
+    padding-top: 20px;
+    margin-top: 10px;
+}
+.explore-content-text h5{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+   
+    /* identical to box height */
 
+}
+.explore-content-text .tag{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+
+}
+.explore-content-text p{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
 .user-reaction div{
     padding-right: 20px;
 }
-/*@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .explore-images-body {
       -ms-flex: 50%;
       flex: 50%;
       max-width: 50%;
     }
-  }*/
+  }
   
   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
- /* @media screen and (max-width: 600px) {
+  @media screen and (max-width: 600px) {
     .explore-images-body {
       -ms-flex: 100%;
       flex: 100%;
       max-width: 100%;
-    }
-  }*/
-  .explore-card-columns .card{
-    margin-bottom: 0.79rem;
-  }
-  @media screen and (min-width: 992px){
-    .explore-card-columns{
-      -webkit-column-count: 3;
-      -moz-column-count: 3;
-      column-count: 3;
-      -webkit-column-gap: 1.25rem;
-      -moz-column-gap: 1.25rem;
-      column-gap: 1.25rem;
-      orphans: 1;
-      widows: 1;
-    }
-    .explore-card-columns .card{
-      display: inline-block;
-      width: 100%;
-    }
-  }
-  @media screen and (max-width: 992px){
-    .explore-card-columns{
-      -webkit-column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
-    }
-  }
-  @media screen and (max-width: 600px){
-    .explore-card-columns{
-      -webkit-column-count: 1;
-      -moz-column-count: 1;
-      column-count: 1;
     }
   }
   .explore-content:hover{
@@ -116,7 +136,6 @@ body{
   }
   .pink{
     border: 1px solid #BC0272;
-    width: 100%;
   }
   .pink:hover{
    background: #BC0272;
@@ -167,5 +186,3 @@ body{
   .dark-orange:hover{
       background: #B58657;
   }
-
- 

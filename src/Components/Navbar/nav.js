@@ -3,7 +3,6 @@ import "./nav.css";
 
 // IMPORTING REACT ROUTER DOM
 import { NavLink } from "react-router-dom";
-import { Link } from "react-router-dom"
 
 class Navbar extends React.Component {
   constructor() {
@@ -24,14 +23,14 @@ class Navbar extends React.Component {
               <img src="/images/qrate logo1-02 2.png" alt="" />
             </a>
           </div>
-          <div className="sidebar-properties  pt-2">
+          <div className="sidebar-properties mt-4 pt-2">
             <NavLink
-              className="navLink mb-2"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/"
               exact
             >
-              <div className="sidebar-item ">
+              <div className="sidebar-item justify-content-center justify-content-xl-start">
                 {/* <img src="/images/home.svg" className="sidebar-icon" alt="" /> */}
                 <svg
                   width="28"
@@ -51,11 +50,11 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink mb-3"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/explore"
             >
-              <div className="sidebar-item">
+              <div className="sidebar-item justify-content-center justify-content-xl-start">
                 {/* <img
                   src="/images/safari 1.svg"
                   className="sidebar-icon"
@@ -79,11 +78,11 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink mb-3"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/gallery"
             >
-              <div className="sidebar-item">
+              <div className="sidebar-item justify-content-center justify-content-xl-start">
                 {/* <img
                   src="/images/artgallery.svg"
                   className="sidebar-icon"
@@ -115,11 +114,11 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink mb-2"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/artist"
             >
-              <div className="sidebar-item">
+              <div className="sidebar-item justify-content-center justify-content-xl-start">
                 {/* <img src="/images/paint.svg" className="sidebar-icon" alt="" /> */}
                 <svg
                   width="24"
@@ -139,7 +138,7 @@ class Navbar extends React.Component {
               </div>
             </NavLink>
             <NavLink
-              className="navLink mb-3"
+              className="navLink py-lg-3"
               activeClassName="active-link"
               to="/supplies"
             >
@@ -166,8 +165,8 @@ class Navbar extends React.Component {
                 <span className="sidebar-name">Art Supplies</span>
               </div>
             </NavLink>
-            <NavLink to="/logout" className="navLink">
-              <div className="sidebar-item out">
+            <NavLink to="/logout" className="navLink py-lg-3">
+              <div className="sidebar-item out justify-content-center justify-content-xl-start">
                 {" "}
                 {/* <img src="/images/logout.svg" className="sidebar-icon" alt="" /> */}
                 <svg
@@ -212,12 +211,10 @@ class Navbar extends React.Component {
                   <img src="/images/profile.svg" alt="" />
                   <span className="icon-sidebar-name">Profile</span>
                 </div>
-                <Link to="./exhibition">
                 <div className="icon-sidebar-item">
                   <img src="/images/mobile-exhibition.svg" alt="" />
                   <span className="icon-sidebar-name">Exhibition</span>
                 </div>
-                </Link>
                 <div className="icon-sidebar-item">
                   <img src="/images/catalogue.svg" alt="" />
                   <span className="icon-sidebar-name">My Catalogue</span>

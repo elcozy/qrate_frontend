@@ -14,13 +14,11 @@ body {
   color: #f7931e !important;
   fill: #f7931e !important;
 }
-.bg-grey {
-  background: #f8f8f8 !important;
-}
 .sidebar {
   overflow: hidden;
   position: fixed;
   bottom: 0;
+  width: 17%;
   height: 100%;
   border-right: 1px solid #c4c4c4;
   background: white;
@@ -62,7 +60,10 @@ body {
   text-align: center;
 }
 .sidebar-item {
-  
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
   width: -webkit-fill-available;
 }
 .sidebar-item:hover {
@@ -122,7 +123,7 @@ body {
   text-decoration: none;
 }
 
-/*.sidebar-name {
+.sidebar-name {
   padding-left: 40px;
 
   font-style: normal;
@@ -132,9 +133,11 @@ body {
   color: #3e3e3e;
 
   opacity: 0.6;
-}*/
+}
 
-
+.main {
+  margin-left: 17%;
+}
 .icon-nav {
   padding-top: 20px;
   background: #ffffff;
@@ -143,7 +146,7 @@ body {
   padding-bottom: 20px;
   border-bottom: 1px solid #c4c4c4;
   right: 0;
-  width: 90%;
+  width: 83%;
   z-index: 9998;
 }
 .icon-nav-name {
@@ -174,12 +177,14 @@ body {
 }
 .content {
   margin-top: 100px;
-  min-height: 90vh;
 }
 
-
+@media only screen and (min-width: 992px) {
+}
 @media only screen and (max-width: 1200px) {
- 
+  .sidebar {
+    width: 12%;
+  }
   .icon-nav {
     width: 88%;
   }
@@ -187,22 +192,18 @@ body {
     margin-right: 5px !important;
   }
 
-  
+  .sidebar-item {
+    text-align: center;
+    padding-left: 0px;
+  }
+  .sidebar-name {
+    display: none;
+  }
+  .main {
+    margin-left: 12%;
+  }
 }
 @media only screen and (min-width: 993px) {
-  .sidebar .navLink{
-    width: 100%;
-    text-align: center !important;
-  }
-  .sidebar-item{
-    margin: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
-  }
-
-  .sidebar {
-    width: 12%;
-  }
   .two {
     display: none !important;
   }
@@ -211,13 +212,6 @@ body {
   }
   .sidebar {
     display: inline;
-  }
-  
-  .sidebar-name {
-    display: none;
-  }
-  .main {
-    margin-left: 12%;
   }
 }
 
@@ -250,9 +244,16 @@ body {
   }
 
   .sidebar-name {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 0px;
+    padding-top: 5px;
+  }
+  .out {
     display: none;
   }
-  
 
   .icon-navbar {
     display: none;
@@ -322,10 +323,13 @@ body {
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
   }
-  
-  .sidebar-properties .navLink {
+  .sidebar-properties * {
+    flex: 1 1 0px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   /* .sidebar-properties *:hover {
     background: #f7921e70;
