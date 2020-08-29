@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 
 // import $ from "jquery";
-import $ from "jquery";
 // IMPORTING CSS
 import "./cart.css";
 import { Table, Form } from "react-bootstrap";
 import { data } from "./data";
-
+import { NavLink } from "react-router-dom";
 export default class Cart extends Component {
   productTable = React.createRef();
   productPrice = React.createRef();
@@ -22,20 +21,13 @@ export default class Cart extends Component {
   }
 
   allData = () => {
-    // const { image, title_art, artist, description, quantity, unit_cost } = data;
-    // console.log(image, data, artist);
-
-    // const cartItems = data.map((c) => {
-    //   c.unit_total = c.unit_cost * c.quantity;
-    //   return c;
-    // });
     this.setState({
       cartItems: data.map((c) => ({
         ...c,
         unit_total: c.unit_cost * c.quantity,
       })),
     });
-    console.log(this.state.cartItems);
+    // console.log(this.state.cartItems);
   };
 
   /* Update quantity */
@@ -51,18 +43,17 @@ export default class Cart extends Component {
   }
 
   selectElement(quantity, valueToSelect) {
-    var quantity = quantity;
-    var valueToSelect = 3;
+    // var valueToSelect = 3;
     let element = document.getElementsByName(quantity);
     element.value = valueToSelect;
-    console.log(element);
+    // console.log(element);
   }
   //      Remove item from cart
   removeItem(id) {
     var cart = this.state.cartItems.filter((c) => c.id !== id);
     // var cartTotal = cart.slice(0, e).concat(cart.slice(1 + e, cart.length + 1));
     this.setState({ cartItems: cart });
-    console.log(cart);
+    // console.log(cart);
   }
 
   render() {
@@ -71,10 +62,10 @@ export default class Cart extends Component {
       (accumulator, currentValue) => accumulator + +currentValue.unit_total,
       0
     );
-    console.log(cartItems);
+    // console.log(cartItems);
 
     return (
-      <div className="main">
+      <div className="main mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid w-auto cart-all">
         <div className="px-2 px-lg-4 py-4 mb-3">
           <h1 className="cart-title m-0">Cart</h1>
           <div className="cart-item"></div>
@@ -98,7 +89,7 @@ export default class Cart extends Component {
 
                     <td className="w-1">
                       <div className="product-image">
-                        <img src={item.image} />
+                        <img alt="" src={item.image} />
                       </div>
                     </td>
 
@@ -173,11 +164,11 @@ export default class Cart extends Component {
               <a href="/explore">
                 <button className="explore mr-sm-2">CONTINUE EXPLORING</button>
               </a>
-              <a href="/checkout">
+              <NavLink to="/checkout">
                 <button className="checkout ml-sm-2">
                   PROCEED TO CHECKOUT
                 </button>
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

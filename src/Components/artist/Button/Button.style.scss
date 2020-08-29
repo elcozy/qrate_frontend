@@ -1,0 +1,45 @@
+.view_button{
+    background-color: #ffffff;
+    color: #f7931e;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border:  1px solid #f7931e;
+    border-radius: 3px;
+    padding: 0.5rem 2.2rem;
+
+    &:hover{
+        background-color: #f7931e;
+        color: #ffffff;
+    }
+
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 0 0.2rem #f7931e;
+    }
+}
+
+.inverted{
+    background-color: #f7931e;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border:  1px solid #f7931e;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 0 0.2rem #f7931e;
+    }
+}
+
+.cancel{
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 0 0.2rem #f7931e;
+    }
+}
