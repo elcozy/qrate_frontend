@@ -5,6 +5,7 @@ import "./artgallery.css";
 import { Pagination } from "./ArtGalleryPagination";
 import Input from "../GeneralComp/Input/Input";
 import { gallery_images } from "./ArtGalleryData";
+import { Content } from "../GeneralComp/Content";
 import { Dropdown } from "react-bootstrap";
 const propTypes = {
   //   items: React.PropTypes.array.isRequired,
@@ -60,7 +61,7 @@ export default class Gallery extends React.Component {
   render() {
     const { pageOfItems, totalItems } = this.state;
     return (
-      <div className="main w-auto mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid mb-5 pb-5">
+      <Content className="container-fluid ">
         <div className="r">
           <div className="text-center">
             <PageHeaderText text={`Art Galleries`} />
@@ -95,7 +96,7 @@ export default class Gallery extends React.Component {
           perPage={12}
           onChangePage={this.onChangePage}
         />
-      </div>
+      </Content>
     );
   }
 }

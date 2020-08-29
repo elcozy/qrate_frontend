@@ -1,10 +1,10 @@
-import { Checkout2 } from "./Checkout2";
 import React, { Component } from "react";
 
 // import $ from "jquery";
 // IMPORTING CSS
 import "./cart.css";
 import { Form } from "react-bootstrap";
+import { Content } from "../GeneralComp/Content";
 
 export default class Checkout extends Component {
   state = {
@@ -14,7 +14,7 @@ export default class Checkout extends Component {
 
   render() {
     return (
-      <div className="main mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid w-auto cart-all">
+      <Content className="cart-all">
         <div className="px-2 px-lg-4 py-4 mb-3">
           <div className="row">
             <div className="col-12 col-md-7">
@@ -155,12 +155,11 @@ export default class Checkout extends Component {
               </div>
             </div>
           </div>
-          <a href="/">
+          <a href="/billing">
             <button className="checkout ml-sm-2">CONFIRM ORDER</button>
           </a>
         </div>
-        <Checkout2 />
-      </div>
+      </Content>
     );
   }
 }
