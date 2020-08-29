@@ -10,6 +10,7 @@ import { SeeGalleryPhotos } from "./ArtGalleryDetailsComponents/SeeGalleryPhotos
 import { UpcomingExhibition } from "./ArtGalleryDetailsComponents/UpcomingExhibition";
 import ".././artgallery.css";
 import "./ArtGalleryDetails.scss";
+import { Content } from "../../GeneralComp/Content";
 
 export default class ArtGalleryDetails extends React.Component {
   constructor(props) {
@@ -35,7 +36,7 @@ export default class ArtGalleryDetails extends React.Component {
     const [selectedArtGallery] = artgallery;
     console.log(selectedArtGallery.featuredCollections);
     return (
-      <div className="main  mt-5 pt-4 mt-lg-5 pt-lg-5 container-fluid mb-5 pb-5 mb-lg-3 pb-lg-0 w-auto art-gallery-details">
+      <Content className="art-gallery-details container-fluid">
         <PageHeaderText text={selectedArtGallery.name} />
         <ArtGalleryDetailsHero selectedArtGallery={selectedArtGallery} />
         <UpcomingExhibition
@@ -48,7 +49,7 @@ export default class ArtGalleryDetails extends React.Component {
           featuredArtists={selectedArtGallery.featuredArtists}
         />
         <SeeGalleryPhotos galleryPhotos={selectedArtGallery.photos} />
-      </div>
+      </Content>
     );
   }
 }

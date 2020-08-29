@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Content } from "../GeneralComp/Content";
 import "./Settings.scss";
 // IMPORTING CSS
 
@@ -7,10 +8,10 @@ export default class Settings extends Component {
 
   render() {
     return (
-      <div className="main mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid w-auto settings">
+      <Content className="container-fluid settings">
         <h1>Settings Page... building in progress</h1>
         <h5>In progress...: @reynolds</h5>
-      </div>
+      </Content>
     );
   }
 }

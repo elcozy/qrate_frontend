@@ -17,14 +17,16 @@ import UserProfile from "./Components/UserProfile/UserProfile";
 import Logout from "./Components/Logout/Logout";
 import Categories from "./Components/Categories/Categories";
 import Checkout from "./Components/Cart/Checkout";
+import Checkout2 from "./Components/Cart/Checkout2";
 import ArtistMain from "./Components/artist/ArtistMain/ArtistMain.component";
 import ArtWorkMain from "./Components/artist/ArtistMain/ArtWork/ArtWorkMain/ArtWorkMain.component";
 
 // IMPORTING REACT ROUTER DOM
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // IMPORTING FROM REACT ROUTER
-import { Redirect } from "react-router-dom";
+// import { Redirect } from "react-router-dom";
 
 class App extends React.Component {
   render() {
@@ -41,6 +43,7 @@ class App extends React.Component {
           <Route exact path="/cart" component={Cart} />
 
           <Route exact path="/checkout" component={Checkout} />
+          <Route exact path="/billing" component={Checkout2} />
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/exhibition" component={Exhibition} />
           <Route exact path="/catalogue" component={Catalogue} />
