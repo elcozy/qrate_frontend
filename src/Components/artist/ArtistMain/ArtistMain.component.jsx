@@ -70,8 +70,7 @@ class ArtistMain extends Component {
                     </div>
 
                     <div className='dropdown-container'>
-                        <Drop placeholder='Filter by size, color'/>
-                        <Drop placeholder='Filter by price'/>
+                        <Drop placeholder='Sort By'/>
                     </div>
 
                     <div className='artistWorks'>
