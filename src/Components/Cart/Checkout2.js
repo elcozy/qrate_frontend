@@ -3,10 +3,12 @@ import React from "react";
 // IMPORTING CSS
 import "./cart.css";
 import { Form } from "react-bootstrap";
-export function Checkout2() {
+import MainWrapper from "../Shared/MainWrapper";
+
+export default function Checkout2() {
   return (
-    <div className="mafin">
-      <div className="px-2 px-lg-4 py-4 mb-3">
+    <MainWrapper className="cart-all">
+      <div className="">
         <div className="row">
           <div className="col-12 col-md-7">
             <div className="delivery-address p-4 mb-4">
@@ -112,6 +114,6 @@ export function Checkout2() {
           <button className="checkout ml-sm-2">CONFIRM ORDER</button>
         </a>
       </div>
-    </div>
+    </MainWrapper>
   );
 }
