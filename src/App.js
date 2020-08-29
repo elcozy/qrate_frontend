@@ -10,12 +10,13 @@ import Gallery from "./Components/ArtGallery/artgallery";
 import GalleryDetails from "./Components/ArtGallery/ArtGalleryDetails/ArtGalleryDetails";
 import Supplies from "./Components/ArtSupplies/artsupplies";
 import Cart from "./Components/Cart/Cart";
+import Categories from "./Components/Categories/Categories.component";
+import CategoryMain from "./Components/Categories/CategoryMain/CategoryMain.component";
 import Settings from "./Components/Settings/Settings";
 import Exhibition from "./Components/Exhibition/exhibition";
 import Catalogue from "./Components/Catalogue/Catalogue";
 import UserProfile from "./Components/UserProfile/UserProfile";
 import Logout from "./Components/Logout/Logout";
-import Categories from "./Components/Categories/Categories";
 import Checkout from "./Components/Cart/Checkout";
 import Checkout2 from "./Components/Cart/Checkout2";
 import ArtistMain from "./Components/artist/ArtistMain/ArtistMain.component";
@@ -42,14 +43,20 @@ class App extends React.Component {
 
           <Route exact path="/cart" component={Cart} />
 
+          <Route exact path="/categories" component={Categories} />
+
           <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/billing" component={Checkout2} />
+
           <Route exact path="/settings" component={Settings} />
+
+          <Route exact path="/exhibition" component={Exhibition} />
+
           <Route exact path="/catalogue" component={Catalogue} />
-          <Route exact path="/categories" component={Categories} />
+
           <Route exact path="/logout" component={Logout} />
+
           <Route exact path="/profile" component={UserProfile} />
-          <Route exact path="/Settings" component={Settings} />
 
           <Route exact path="/gallery" component={Gallery}></Route>
 
@@ -58,6 +65,12 @@ class App extends React.Component {
           <Route path={`/gallery/:artgalleryid`} component={GalleryDetails} />
 
           <Route exact path={`/artist/:artistId`} component={ArtistMain} />
+
+          <Route
+            exact
+            path={`/categories/:categoryId`}
+            component={CategoryMain}
+          />
 
           <Route
             exact
