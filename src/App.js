@@ -74,6 +74,12 @@ class App extends React.Component {
 
           <Route
             exact
+            path={`/categories/:categoryId`}
+            component={CategoryMain}
+          />
+
+          <Route
+            exact
             path={`/artist/:artistId/:workId`}
             component={ArtWorkMain}
           />
