@@ -17,6 +17,7 @@ import UserProfile from "./Components/UserProfile/UserProfile";
 import Logout from "./Components/Logout/Logout";
 import Categories from "./Components/Categories/Categories";
 import Checkout from "./Components/Cart/Checkout";
+import exhibition from "./Components/Exhibition/exhibition";
 import ArtistMain from "./Components/artist/ArtistMain/ArtistMain.component";
 import ArtWorkMain from "./Components/artist/ArtistMain/ArtWork/ArtWorkMain/ArtWorkMain.component";
 
@@ -50,6 +51,8 @@ class App extends React.Component {
           <Route exact path="/Settings" component={Settings} />
 
           <Route exact path="/gallery" component={Gallery}></Route>
+
+          <Route exact path="/exhibition" component={exhibition}></Route>
 
           <Route path={`/gallery/:artgalleryid`} component={galleryDetails} />
 

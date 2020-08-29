@@ -1,12 +1,30 @@
 import React, { Component } from "react";
 // IMPORTING REACT ROUTER DOM
 import './explore.css'
+import like from './like.svg'
+//import isLiked from './isLiked.svg'
+import data from './explore.json'
+//import Skeleton from "react-loading-skeleton";
 
 export default class explore extends  Component{
+ 
+ 
+    constructor(props) {    
+        super(props)
+        this.state = {
+           Like: like,
+          likeCount: 0,
+          id: 1,
+        }
+      }
+     
+     
+   
 
     render(){
+        const detail = this.state
         return(
-            <div  className="main content">
+            <div  className="main content explore-body">
                 <nav className="nav nav-pills explore-nav">
                     <a className="explore-nav-link" href="#">Recommended For You</a>
                     <a className="explore-nav-link" href="#">Trending</a>
@@ -16,161 +34,29 @@ export default class explore extends  Component{
                     <a className="explore-nav-link" href="#">Ceramics</a>
                     <a className="explore-nav-link" href="#">Pastel Art</a>
                 </nav>
-           <div className="explore-row container-fluid mt-3">
-               <div className="explore-images-body">
-                   <div className="explore-content pink">
-                       <img src="images/img-one.png" alt="" className="explore-img"></img>
-                       <div className="explore-content-body"> 
-                           <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
+           
+           
+               <div className="explore-card-columns mt-4 container-fluid">
+                   {
+                       data.map((detail) => (
+                           <div  className="card" key={detail.id}>
+                               <img src={detail.imgSrc} className="card-img-top"></img>
+                               <div className={detail.class}>
+                               <div className="explore-user-detail">
+                               <img src={detail.authorImg}></img><span className="explore-username">{detail.authorName}</span> <input className="follow" value="Follow" type="button" ></input>
                            </div>
-                           <div className="explore-content-text">
-                               <div className="explore-content-text-title">
-                               <h5>Nigerian Art Festival 2020</h5>
-                               <span className="tag">Exhibition</span>
+                                   <h5 className="card-title mt-4">{detail.title}</h5>
+                                   <small>{detail.tag}</small>
+                                   <p className="card-title mt-3" style={{lineHeight: "20px"}}>{detail.text}</p>
+                                   <div className="user-reaction row container mt-1">
+                                       <div> <i className="far fa-comment"></i> </div>
+                                       <div><i className="far fa-heart"></i></div>
+                                   </div>
                                </div>
-                               <p>The event took place on the 25th of August, 2020. It was an event filled...</p>
-                               <div className="user-reaction row container">
-                                   <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
                                </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="explore-content dark-blue">
-                       <img src="images/img-four.png" alt="" className="explore-img" ></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                              <div className="explore-content-text">
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="explore-content light-danger">
-                       <img src="images/img-seven.png" alt=""  className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <button className="follow">Follow</button>
-                           </div>
-                           <div className="explore-content-text">
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
+                       ))
+                   }
                </div>
-               <div className="explore-images-body">
-                   <div className="explore-content green">
-                       <img src="images/img-two.png" alt=""  className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                           <div className="explore-content-text">
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="explore-content blue">
-                       <img src="images/img-five.png" alt="" className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                           <div className="explore-content-text">
-                               <div className="explore-content-text-title">
-                               <h5>The Face man</h5>
-                               </div>
-                               <p>Charcoal</p>
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="explore-content orange">
-                       <img src="images/img-eight.png" alt=""  className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                           <div className="explore-content-text">
-                           <div className="explore-content-text-title">
-                               <h5>Deception in disguise</h5>
-                               <span className="tag">Illustration</span>
-                               </div>
-                               <p>They say time eventually heals one’s wounds. But does it really? The illustration titled “Deception in ...</p>
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-               </div>
-               
-               <div className="explore-images-body">
-               <div className="explore-content black">
-                       <img src="images/img-three.png" alt=""  className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                           <div className="explore-content-text">
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="explore-content dark-orange">
-                       <img src="images/img-six.png" alt=""  className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span>  <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                           <div className="explore-content-text">
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   <div className="explore-content blue">
-                       <img src="images/img-five.png" alt="" className="explore-img"></img>
-                       <div className="explore-content-body">
-                       <div className="explore-user-detail">
-                               <img src="images/user-img.png"></img><span className="explore-username">realgallery</span> <input className="follow" value="Follow" type="button" ></input>
-                           </div>
-                           <div className="explore-content-text">
-                               <div className="explore-content-text-title">
-                               <h5>The Face man</h5>
-                               </div>
-                               <p>Charcoal</p>
-                               <div className="user-reaction row container">
-                               <div><i className="far fa-comment"></i></div>
-                                   <div><i className="far fa-heart"></i></div>
-                               </div>
-                           </div>
-                       </div>
-                   </div>
-                   
-               </div>
-           </div>
             </div>
         )
     }
