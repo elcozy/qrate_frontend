@@ -2,13 +2,13 @@ import React from "react";
 
 //IMPORTING FOLDERS
 
-import home from "./Components/Homepage/home";
-import artist from "./Components/artist/artist";
-import explore from "./Components/explore/explore";
+import Home from "./Components/Homepage/home";
+import Artist from "./Components/artist/artist";
+import Explore from "./Components/explore/explore";
 import Navbar from "./Components/Navbar/nav";
 import Gallery from "./Components/ArtGallery/artgallery";
-import galleryDetails from "./Components/ArtGallery/ArtGalleryDetails/ArtGalleryDetails";
-import supplies from "./Components/ArtSupplies/artsupplies";
+import GalleryDetails from "./Components/ArtGallery/ArtGalleryDetails/ArtGalleryDetails";
+import Supplies from "./Components/ArtSupplies/artsupplies";
 import Cart from "./Components/Cart/Cart";
 import Settings from "./Components/Settings/Settings";
 import Exhibition from "./Components/Exhibition/exhibition";
@@ -34,18 +34,17 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route exact path="/" component={home}></Route>
+          <Route exact path="/" component={Home}></Route>
 
-          <Route exact path="/artist" component={artist}></Route>
+          <Route exact path="/artist" component={Artist}></Route>
 
-          <Route exact path="/explore" component={explore}></Route>
+          <Route exact path="/explore" component={Explore}></Route>
 
           <Route exact path="/cart" component={Cart} />
 
           <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/billing" component={Checkout2} />
           <Route exact path="/settings" component={Settings} />
-          <Route exact path="/exhibition" component={Exhibition} />
           <Route exact path="/catalogue" component={Catalogue} />
           <Route exact path="/categories" component={Categories} />
           <Route exact path="/logout" component={Logout} />
@@ -54,7 +53,9 @@ class App extends React.Component {
 
           <Route exact path="/gallery" component={Gallery}></Route>
 
-          <Route path={`/gallery/:artgalleryid`} component={galleryDetails} />
+          <Route exact path="/exhibition" component={Exhibition}></Route>
+
+          <Route path={`/gallery/:artgalleryid`} component={GalleryDetails} />
 
           <Route exact path={`/artist/:artistId`} component={ArtistMain} />
 
@@ -64,7 +65,7 @@ class App extends React.Component {
             component={ArtWorkMain}
           />
 
-          <Route exact path="/supplies" component={supplies}></Route>
+          <Route exact path="/supplies" component={Supplies}></Route>
         </Switch>
       </div>
     );
