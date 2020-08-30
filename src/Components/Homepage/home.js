@@ -16,6 +16,7 @@ import "./home.css";
 import MainCard from "./mainCard";
 import SidebarCard from "./sidebarCard";
 import SidebarTrending from "./sidebarTrending";
+import EmojiPicker from "./emojiPicker";
 
 class home extends React.Component {
   state = {
@@ -24,7 +25,13 @@ class home extends React.Component {
     comment: CommentIcon,
     commentCount: 2,
     share: ShareIcon,
+    emoji: null,
+    displayEmoji: true
   };
+
+  emoji =(selectedEmoji)=>{
+    this.setState({ emoji: selectedEmoji })
+  }
 
   onCommentClick = () => {
     this.setState({ commentCount: this.state.commentCount + 1 });
@@ -40,6 +47,11 @@ class home extends React.Component {
       });
     }
   };
+
+  toggleEmoji = ()=>{
+    this.setState({ displayEmoji: !this.state.displayEmoji})
+    // console.log(this.state.displayEmoji)
+  }
 
   render() {
     return (
@@ -77,6 +89,7 @@ class home extends React.Component {
                       </Link>
                       <Link to="#!">
                         <img
+                          onClick={this.toggleEmoji}
                           className="home__main__card1__lower__img"
                           src={FaceIcon}
                           alt="FaceIcon"
@@ -95,6 +108,9 @@ class home extends React.Component {
                         POST
                       </button>
                     </Link>
+                  </div>
+                  <div className={` ${ !this.state.displayEmoji ? 'mt-5' : 'emojiContainer' } `}>
+                      <EmojiPicker/>
                   </div>
                 </div>
               </section>

@@ -14,7 +14,7 @@ import Categories from "./Components/Categories/Categories.component";
 import CategoryMain from "./Components/Categories/CategoryMain/CategoryMain.component";
 import Settings from "./Components/Settings/Settings";
 import Exhibition from "./Components/Exhibition/exhibition";
-import Catalogue from "./Components/Catalogue/Catalogue";
+import Catalogue from "./Components/Catalogue/Catalogue.component";
 import UserProfile from "./Components/UserProfile/UserProfile";
 import Logout from "./Components/Logout/Logout";
 import Checkout from "./Components/Cart/Checkout";
