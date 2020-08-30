@@ -366,6 +366,17 @@ body {
     color: #3E3E3E;
 }
 
+
+/* Emoji */
+
+
+.emojiContainer {
+    display: none;
+}
+
+
+
+
 @media(max-width: 1280px){
 
     .home__container {
