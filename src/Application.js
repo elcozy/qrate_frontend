@@ -8,7 +8,7 @@ import Homepage from "./Homepage";
 // import Categories from "./Components/Dashboard/Categories/index";
 import App from "./App";
 // CSS
-import "./css/styles.css";
+// import "./css/styles.css";
 
 export default class Application extends Component {
   render() {

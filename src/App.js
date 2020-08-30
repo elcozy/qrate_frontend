@@ -64,7 +64,7 @@ class App extends React.Component {
           <Route exact path="/home/exhibition" component={Exhibition}></Route>
 
           <Route
-            path={`home/gallery/:artgalleryid`}
+            path={`/home/gallery/:artgalleryid`}
             component={GalleryDetails}
           />
 

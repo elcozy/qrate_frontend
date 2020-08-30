@@ -11,46 +11,53 @@ import HomepageNavigator from "./Components/Homepage/HomepageNavigator";
 import HomepageHeader from "./Components/Homepage/HomepageHeader";
 import FirstHomepage from "./Components/Homepage/FirstHomepage";
 
-
+import "./styles.scss";
 
 const Homepage = () => {
-	const [showComponent, setWhichComponentToShow] = useState("StartPage");
-	const [displayNext, setDisplayNext] = useState("FirstPage");
+  const [showComponent, setWhichComponentToShow] = useState("StartPage");
+  const [displayNext, setDisplayNext] = useState("FirstPage");
 
-	document.title = "Qrate";
+  document.title = "Qrate";
 
-	return (
-		<div className="homepage">
-			<HomepageHeader
-				onClick={(value, route) => {
-					setWhichComponentToShow(value);
-					setDisplayNext(route);
-				}}
-			/>
+  return (
+    <div className="homepage">
+      <HomepageHeader
+        onClick={(value, route) => {
+          setWhichComponentToShow(value);
+          setDisplayNext(route);
+        }}
+      />
 
-			<FirstHomepage showComponent={showComponent} onClick={(value) => setWhichComponentToShow(value)} display={displayNext} />
+      <FirstHomepage
+        showComponent={showComponent}
+        onClick={(value) => setWhichComponentToShow(value)}
+        display={displayNext}
+      />
 
-			<SecondHomepage display={displayNext} />
+      <SecondHomepage display={displayNext} />
 
-			<ThirdHomepage display={displayNext} />
+      <ThirdHomepage display={displayNext} />
 
-			<FourthHomepage display={displayNext} />
+      <FourthHomepage display={displayNext} />
 
-			<FifthHomepage display={displayNext} />
+      <FifthHomepage display={displayNext} />
 
-			<SixthHomepage display={displayNext} />
+      <SixthHomepage display={displayNext} />
 
-			<SeventhHomepage
-				display={displayNext}
-				onClick={(value, route) => {
-					setWhichComponentToShow(value);
-					setDisplayNext(route);
-				}}
-			/>
+      <SeventhHomepage
+        display={displayNext}
+        onClick={(value, route) => {
+          setWhichComponentToShow(value);
+          setDisplayNext(route);
+        }}
+      />
 
-			<HomepageNavigator display={displayNext} onClick={(value) => setDisplayNext(value)} />
-		</div>
-	);
+      <HomepageNavigator
+        display={displayNext}
+        onClick={(value) => setDisplayNext(value)}
+      />
+    </div>
+  );
 };
 
 export default Homepage;
