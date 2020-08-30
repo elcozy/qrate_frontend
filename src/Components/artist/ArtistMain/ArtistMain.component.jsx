@@ -40,7 +40,7 @@ class ArtistMain extends Component {
         return (
        
             <div className='main content blo'>
-                <div className='artistMain container'>
+                <div className='artistMain container-fluid'>
                     <Link to='/artist'>
                         <i className="fas fa-arrow-left arrow-left"></i>
                     </Link>

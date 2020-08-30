@@ -90,14 +90,14 @@ class ArtWorkMain extends Component {
         })
        
         return(
-            <div className='main content'>
-                <div className='artwork-main'>
+            <div className='main'>
+                <div className='artwork-main content'>
                     <div className='banner'>
                         <Link to={`/artist/${artistId}`}>
                             <i className="fas fa-arrow-left arrow-left"></i>
                         </Link>
 
-                        <div className='content'>
+                        <div className='banner-content'>
                             <div className='left'>
                                 <h4>{work.name}</h4>
                                 <p>by {work.artist}</p>
