@@ -182,7 +182,7 @@ class ArtWorkMain extends Component {
                                 <div>
                                     <textarea type='text' placeholder='Write a comment'/>
                                     <Button inverted>
-                                        <i class="fas fa-paper-plane"></i>
+                                        <i className="fas fa-paper-plane"></i>
                                     </Button>
                                 </div>
                             </div>

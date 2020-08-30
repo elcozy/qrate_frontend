@@ -62,7 +62,7 @@ class Categories extends Component {
             {filteredCategories
               .filter((category) => category.name[0] === "A")
               .map((category) => (
-                <div className="category">
+                <div className="category" key={category.id}>
                   <div className="heading">
                     <h4>
                       <i className={`fas fa-circle circle${category.id}`}></i>
@@ -74,7 +74,7 @@ class Categories extends Component {
                     </Link>
                   </div>
 
-                  <CategoryCollection category={category} key={category.id} />
+                  <CategoryCollection category={category} />
                 </div>
               ))}
           </div>
@@ -85,7 +85,7 @@ class Categories extends Component {
             {filteredCategories
               .filter((category) => category.name[0] === "C")
               .map((category) => (
-                <div className="category">
+                <div className="category" key={category.id}>
                   <div className="heading">
                     <h4>
                       <i className={`fas fa-circle circle${category.id}`}></i>
@@ -107,7 +107,7 @@ class Categories extends Component {
             {filteredCategories
               .filter((category) => category.name[0] === "O")
               .map((category) => (
-                <div className="category">
+                <div className="category" key={category.id}>
                   <div className="heading">
                     <h4>
                       <i className={`fas fa-circle circle${category.id}`}></i>
