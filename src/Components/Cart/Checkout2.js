@@ -17,7 +17,17 @@ export default function Checkout2() {
               <Form>
                 <Form.Group>
                   <Form.Label>Card Number</Form.Label>
-                  <Form.Control type="password" />
+                  <Form.Control
+                    type="number"
+                    autocomplete="off"
+                    id="ccn"
+                    type="tel"
+                    inputmode="numeric"
+                    pattern="[0-9\s]{13,19}"
+                    autocomplete="cc-number"
+                    maxlength="19"
+                    placeholder="XXXX XXXX XXXX XXXX"
+                  />
                 </Form.Group>
                 <div className="checkout-line">
                   <span className="d-flex">
@@ -30,6 +40,7 @@ export default function Checkout2() {
                           min="01"
                           max="12"
                           placeholder="MM"
+                          autocomplete="off"
                         />
                         <Form.Control
                           type="number"
@@ -37,6 +48,7 @@ export default function Checkout2() {
                           max="2028"
                           className="w-50 ml-2"
                           placeholder="YYYY"
+                          autocomplete="off"
                         />
                       </span>
                     </Form.Group>
@@ -48,6 +60,7 @@ export default function Checkout2() {
                         size="4"
                         className="w-50"
                         required
+                        autocomplete="false"
                       />
                     </Form.Group>
                   </span>

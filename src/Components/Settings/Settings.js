@@ -1,3 +1,4 @@
+import { ToggleSlider } from "../Shared/CustomToggleSlider/ToggleSlider";
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import MainWrapper from "../Shared/MainWrapper";
@@ -68,16 +69,7 @@ const Notifications = () => (
             Turn On/Off All Notifications
           </span>
         </div>
-        <div class="custom--checkbox">
-          <input
-            type="checkbox"
-            id="off-notification"
-            style={{ display: "none" }}
-          />
-          <label for="off-notification" class="toggle">
-            <span></span>
-          </label>
-        </div>
+        <ToggleSlider id="off-notification" />
       </div>
       <div className="settings-notification-item">
         <div className="d-flex flex-column">
@@ -85,16 +77,7 @@ const Notifications = () => (
             Notify me about latest posts
           </span>
         </div>
-        <div class="custom--checkbox">
-          <input
-            type="checkbox"
-            id="notify-new-posts"
-            style={{ display: "none" }}
-          />
-          <label for="notify-new-posts" class="toggle">
-            <span></span>
-          </label>
-        </div>
+        <ToggleSlider id="notify-new-posts" />
       </div>
       <div className="settings-notification-item">
         <a href="#" className="notification-sub-name">

@@ -1,5 +1,5 @@
 import React from "react";
-import "../Shared.scss";
+import "./RadioButton.scss";
 export function LeftRadioButton({ buttonLabel }) {
   return (
     <label className="form-check-label radio">
