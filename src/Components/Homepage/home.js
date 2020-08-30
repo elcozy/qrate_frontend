@@ -9,6 +9,7 @@ import CommentIcon from "../../assets/images/comment.svg";
 import HeartIcon from "../../assets/images/heart.svg";
 import faHeart from "../../assets/images/fa-heart.png";
 import ShareIcon from "../../assets/images/share.svg";
+import MainWrapper from "../Shared/MainWrapper";
 
 import "./home.css";
 
@@ -42,8 +43,8 @@ class home extends React.Component {
 
   render() {
     return (
-      <>
-        <div className="main content">
+      <MainWrapper>
+        <div className="">
           <div className="home__container">
             <div className="home__main">
               {/* Section One */}
@@ -195,7 +196,7 @@ class home extends React.Component {
             </div>
           </div>
         </div>
-      </>
+      </MainWrapper>
     );
   }
 }

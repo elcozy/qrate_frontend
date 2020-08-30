@@ -1,6 +1,6 @@
 import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import { ArtGalleryHeaders } from "../../../GeneralComp/Texts/GeneralTexts";
+import { ArtGalleryHeaders } from "../../../Shared/Texts/GeneralTexts";
 
 export function FeaturedGalleryCollectionCards({ collection }) {
   return (

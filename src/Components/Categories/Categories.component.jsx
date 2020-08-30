@@ -7,10 +7,10 @@ import categoryData from "./categoryData";
 import CategoryCollection from "./CategoryCollection/CategoryCollection.component";
 
 // Importing Input
-import Input from "../GeneralComp/Input/Input";
+import Input from "../Shared/Input/Input";
 
 //Importing Link and withRouter
-import {Link, withRouter} from 'react-router-dom';
+import { Link, withRouter } from "react-router-dom";
 
 //importing style
 import "./Categories.style.scss";
@@ -34,7 +34,7 @@ class Categories extends Component {
   };
 
   render() {
-    const {match} = this.props;
+    const { match } = this.props;
 
     const { categoryData, input } = this.state;
 
@@ -46,96 +46,83 @@ class Categories extends Component {
     return (
       <div className="main">
         <div className="categories content">
-          
-            <h2 className='page-title'>Categories</h2>
+          <h2 className="page-title">Categories</h2>
 
-            <div className="search-section">
-                <Input
-                inputName="search"
-                placeholder="Search for Category"
-                onChange={this.handleChange}
-                />
-            </div>
+          <div className="search-section">
+            <Input
+              inputName="search"
+              placeholder="Search for Category"
+              onChange={this.handleChange}
+            />
+          </div>
 
-            <div className='alphabets'>
-                <h2>A</h2>
+          <div className="alphabets">
+            <h2>A</h2>
 
-                { filteredCategories
-                    .filter(category => category.name[0] === 'A')
-                    .map(category => (
-                        <div className='category'>
-                            <div className='heading'>
-                                <h4>
-                                    <i className={`fas fa-circle circle${category.id}`}></i>
-                                    {category.name}
-                                </h4>
+            {filteredCategories
+              .filter((category) => category.name[0] === "A")
+              .map((category) => (
+                <div className="category">
+                  <div className="heading">
+                    <h4>
+                      <i className={`fas fa-circle circle${category.id}`}></i>
+                      {category.name}
+                    </h4>
 
-                                <Link to={`${match.url}/${category.routeName}`}>
-                                    <h5 className='see-all'>
-                                        SEE ALL &#65310;
-                                    </h5>
-                                </Link>
-                            </div>
+                    <Link to={`${match.url}/${category.routeName}`}>
+                      <h5 className="see-all">SEE ALL &#65310;</h5>
+                    </Link>
+                  </div>
 
-                            <CategoryCollection  category={category} key={category.id}/>
-                        </div>
-                    ))
-                }
-            </div>
+                  <CategoryCollection category={category} key={category.id} />
+                </div>
+              ))}
+          </div>
 
+          <div className="alphabets">
+            <h2>C</h2>
 
-            <div className='alphabets'>
-                <h2>C</h2>
+            {filteredCategories
+              .filter((category) => category.name[0] === "C")
+              .map((category) => (
+                <div className="category">
+                  <div className="heading">
+                    <h4>
+                      <i className={`fas fa-circle circle${category.id}`}></i>
+                      {category.name}
+                    </h4>
 
-                { filteredCategories
-                    .filter(category => category.name[0] === 'C')
-                    .map(category => (
-                        <div className='category'>
-                            <div className='heading'>
-                                <h4>
-                                    <i className={`fas fa-circle circle${category.id}`}></i>
-                                    {category.name}
-                                </h4>
+                    <Link to={`${match.url}/${category.routeName}`}>
+                      <h5 className="see-all">SEE ALL &#65310;</h5>
+                    </Link>
+                  </div>
 
-                                <Link to={`${match.url}/${category.routeName}`}>
-                                    <h5 className='see-all'>
-                                        SEE ALL &#65310;
-                                    </h5>
-                                </Link>
-                            </div>
+                  <CategoryCollection category={category} key={category.id} />
+                </div>
+              ))}
+          </div>
 
-                            <CategoryCollection  category={category} key={category.id}/>
-                        </div>
-                    ))
-                }
+          <div className="alphabets">
+            <h2>O</h2>
+            {filteredCategories
+              .filter((category) => category.name[0] === "O")
+              .map((category) => (
+                <div className="category">
+                  <div className="heading">
+                    <h4>
+                      <i className={`fas fa-circle circle${category.id}`}></i>
+                      {category.name}
+                    </h4>
 
-            </div>
+                    <Link to={`${match.url}/${category.routeName}`}>
+                      <h5 className="see-all">SEE ALL &#65310;</h5>
+                    </Link>
+                  </div>
 
-            <div className='alphabets'>
-                <h2>O</h2>
-                { filteredCategories
-                    .filter(category => category.name[0] === 'O')
-                    .map(category => (
-                        <div className='category'>
-                            <div className='heading'>
-                                <h4>
-                                    <i className={`fas fa-circle circle${category.id}`}></i>
-                                    {category.name}
-                                </h4>
-
-                                <Link to={`${match.url}/${category.routeName}`}>
-                                    <h5 className='see-all'>
-                                        SEE ALL &#65310;
-                                    </h5>
-                                </Link>
-                            </div>
-
-                            <CategoryCollection  category={category} key={category.id}/>
-                        </div>
-                    ))
-                }
-            </div>
-
+                  <CategoryCollection category={category} key={category.id} />
+                </div>
+              ))}
+          </div>
         </div>
       </div>
     );

@@ -14,6 +14,9 @@ body {
   color: #f7931e !important;
   fill: #f7931e !important;
 }
+.bg-grey {
+  background: #f8f8f8 !important;
+}
 .sidebar {
   overflow: hidden;
   position: fixed;
@@ -171,6 +174,7 @@ body {
 }
 .content {
   margin-top: 100px;
+  min-height: 90vh;
 }
 
 
