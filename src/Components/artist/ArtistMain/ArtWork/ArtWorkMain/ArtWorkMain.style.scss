@@ -96,7 +96,7 @@
                 .ratings{
                     justify-content: flex-start;
 
-                    i{
+                    .fa-comment, .fa-share, .fa-heart{
                         margin-right: 0.3rem;
                     }
                 }

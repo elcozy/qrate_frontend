@@ -109,7 +109,7 @@ class ArtWorkMain extends Component {
                                     <p> '{work.name}' artwork by {work.artist} was added to your cart </p>
 
                                     <div className='buttons'>
-                                        <Button text='Continue'/>
+                                        <Button text='Continue' click={() => this.hideModal('cartModal')}/>
                                         <Button text='View cart and checkout'/>
                                     </div>
                                 </Modal>
@@ -117,9 +117,9 @@ class ArtWorkMain extends Component {
                                 <Button inverted  text='ADD TO CART' click={() => this.showModal('cartModal')}/>
 
                                 <div className='options'>
-                                    <i class="far fa-comment"></i>
-                                    <i class="fas fa-share-alt"></i>
-                                    <i class="far fa-heart"></i>
+                                    <i class="far fa-comment mr-3"></i>
+                                    <i class="fas fa-share-alt mr-3"></i>
+                                    <i class="far fa-heart mr-3"></i>
                                 </div>
                             </div>
 
@@ -169,7 +169,7 @@ class ArtWorkMain extends Component {
                             </div>
 
                             <div className='buttons'>
-                                <Button text='CANCEL' cancel/>
+                                <Button text='CANCEL' cancel click={() => this.hideModal('catalogueModal')}/>
                                 <Button text='SAVE'/>
                             </div>
                         </Modal>

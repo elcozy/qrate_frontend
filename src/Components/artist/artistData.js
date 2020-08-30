@@ -1,12 +1,12 @@
 const artistData = [
   {
     name: "VAN GOGH",
-    imgUrl: "/images/artist_1.svg",
+    imgUrl: "/images/artist_1.png",
     works: [
       {
         name: "THE STORY OF THE EYES",
         artist: "Van Goch",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -36,7 +36,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Van Goch",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -48,7 +48,7 @@ const artistData = [
   },
   {
     name: "JACKSON POLLOCK",
-    imgUrl: "/images/artist_2.svg",
+    imgUrl: "/images/artist_2.png",
     works: [
       {
         name: "THE STORY OF THE EYES",
@@ -63,7 +63,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Jackson Pollock",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -83,7 +83,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Jackson Pollock",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -100,7 +100,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "ARTISTGOD",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -110,7 +110,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "ARTISTGOD",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -167,7 +167,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Ron Lawson",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -177,7 +177,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Ron Lawson",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -189,12 +189,12 @@ const artistData = [
   },
   {
     name: "VAN GOGH",
-    imgUrl: "/images/artist_1.svg",
+    imgUrl: "/images/artist_1.png",
     works: [
       {
         name: "THE STORY OF THE EYES",
         artist: "Van Goch",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -224,7 +224,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Van Goch",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -236,12 +236,12 @@ const artistData = [
   },
   {
     name: "JACKSON POLLOCK",
-    imgUrl: "/images/artist_2.svg",
+    imgUrl: "/images/artist_2.png",
     works: [
       {
         name: "THE STORY OF THE EYES",
         artist: "Jackson Pollock",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -251,7 +251,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Jackson Pollock",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -298,7 +298,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "ARTISTGOD",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -308,7 +308,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "ARTISTGOD",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -335,7 +335,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Ron Lawson",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -345,7 +345,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Ron Lawson",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -377,12 +377,12 @@ const artistData = [
   },
   {
     name: "VAN GOGH",
-    imgUrl: "/images/artist_1.svg",
+    imgUrl: "/images/artist_1.png",
     works: [
       {
         name: "THE STORY OF THE EYES",
         artist: "Van Goch",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -392,7 +392,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Van Goch",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -424,7 +424,7 @@ const artistData = [
   },
   {
     name: "JACKSON POLLOCK",
-    imgUrl: "/images/artist_2.svg",
+    imgUrl: "/images/artist_2.png",
     works: [
       {
         name: "THE STORY OF THE EYES",
@@ -449,7 +449,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Jackson Pollock",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -459,7 +459,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Jackson Pollock",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -496,7 +496,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "ARTISTGOD",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -506,7 +506,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "ARTISTGOD",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -533,7 +533,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Ron Lawson",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -553,7 +553,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Ron Lawson",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -565,7 +565,7 @@ const artistData = [
   },
   {
     name: "VAN GOGH",
-    imgUrl: "/images/artist_1.svg",
+    imgUrl: "/images/artist_1.png",
     works: [
       {
         name: "THE STORY OF THE EYES",
@@ -580,7 +580,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Van Goch",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -590,7 +590,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Van Goch",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -612,12 +612,12 @@ const artistData = [
   },
   {
     name: "JACKSON POLLOCK",
-    imgUrl: "/images/artist_2.svg",
+    imgUrl: "/images/artist_2.png",
     works: [
       {
         name: "THE STORY OF THE EYES",
         artist: "Jackson Pollock",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -637,7 +637,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Jackson Pollock",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -664,7 +664,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "ARTISTGOD",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -674,7 +674,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "ARTISTGOD",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -711,7 +711,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Ron Lawson",
-        imgUrl: "/images/artist_1.svg",
+        imgUrl: "/images/artist_1.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
@@ -721,7 +721,7 @@ const artistData = [
       {
         name: "THE STORY OF THE EYES",
         artist: "Ron Lawson",
-        imgUrl: "/images/artist_2.svg",
+        imgUrl: "/images/artist_2.png",
         type: "Glossed art print",
         size: "70 x 45 cm",
         price: "150",
