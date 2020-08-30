@@ -7,7 +7,8 @@ import artistData from "./artistData";
 import ArtistCollection from "./ArtistCollection/ArtistCollection.component";
 
 // Importing Input
-import Input from "../GeneralComp/Input/Input";
+import Input from "../Shared/Input/Input";
+import MainWrapper from "../Shared/MainWrapper";
 
 //importing style
 import "./artist.css";
@@ -39,8 +40,8 @@ class artist extends Component {
     });
 
     return (
-      <div className="main">
-        <div className="artist content">
+      <MainWrapper className="">
+        <div className="artist container-fluid">
           <h2>Artists</h2>
 
           <div className="page-description">
@@ -57,7 +58,7 @@ class artist extends Component {
 
           <ArtistCollection artists={filteredArtists} />
         </div>
-      </div>
+      </MainWrapper>
     );
   }
 }

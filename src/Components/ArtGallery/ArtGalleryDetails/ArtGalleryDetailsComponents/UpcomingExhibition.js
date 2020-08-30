@@ -1,5 +1,5 @@
 import React from "react";
-import { ArtGalleryHeaders } from "../../../GeneralComp/Texts/GeneralTexts";
+import { ArtGalleryHeaders } from "../../../Shared/Texts/GeneralTexts";
 import { Player } from "video-react";
 export const UpcomingExhibition = ({ upcomingExhibition }) => (
   <div className="upcoming-exhibition">

@@ -32,21 +32,6 @@
   overflow: scroll;
 }
 
-/* This is used as the traditional .clearfix class */
-/* .group:before,
-.shopping-cart:before,
-.column-labels:before,
-.product:before,
-.totals-item:before,
-.group:after,
-.shopping-cart:after,
-.column-labels:after,
-.product:after,
-.totals-item:after {
-  content: "";
-  display: table;
-} */
-
 .group:after,
 .shopping-cart:after,
 .column-labels:after,
@@ -63,7 +48,6 @@
   zoom: 1;
 }
 
-/* Apply clearfix in a few places */
 /* Apply dollar signs */
 .product .product-price:before,
 .product .product-line-price:before,
@@ -91,8 +75,6 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  /* identical to box height */
-
   color: #3e3e3e;
 }
 .fee .text {
@@ -123,15 +105,12 @@ label {
   font-size: 16px;
   line-height: 18px;
   margin: 0;
-
   color: #6c6b6b;
 }
 
 /* Product entries */
 .product {
   margin-bottom: 20px;
-  /* padding-bottom: 10px; */
-  /* border-bottom: 1px solid #eee; */
   background: #ffffff;
 }
 .product .product-image {
@@ -168,16 +147,8 @@ label {
   width: 40px;
 }
 .remove-product {
-  /* border: 0;
-  padding: 4px 8px;
-  background-color: #c66;
-  color: #fff;
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
-  font-size: 12px;
-  border-radius: 3px; */
   height: 24px;
   width: 100px;
-  /* margin-left: 11px; */
   background: url(/assets/img/cart/remove.png) no-repeat;
   cursor: pointer;
 }
@@ -231,11 +202,7 @@ thead * {
   font-weight: bold;
   font-size: 48px;
   line-height: 55px;
-
   color: #f7931e;
-}
-.totals .totals-item-total {
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
 }
 
 .checkout {
@@ -246,7 +213,6 @@ thead * {
   font-size: 1rem;
   line-height: 28px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-
   color: #ffffff;
   background: #f7931e;
   border-radius: 5px;
@@ -256,7 +222,6 @@ thead * {
   border: 0;
   margin-top: 20px;
   padding: 10px 25px;
-
   background: transparent;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   font-size: 1rem;
@@ -264,7 +229,6 @@ thead * {
   border: 1px solid #979797;
   border-radius: 5px;
   cursor: pointer;
-
   font-weight: 500;
   color: #979797;
 }
@@ -379,12 +343,10 @@ thead * {
 .checkout-br {
   border: 1.5px solid #3e3e3e;
 }
-/* Make adjustments for tablet */
+/* adjustments for tablet */
 @media screen and (max-width: 650px) {
   .shopping-cart {
     margin: 0;
-    /* padding-top: 20px;
-    border-top: 1px solid #eee; */
   }
 
   .column-labels {
@@ -395,15 +357,6 @@ thead * {
     float: right;
     width: 142px;
   }
-  .product-image img {
-    /* margin: 0 0 10px 10px; */
-  }
-
-  /* .product-details {
-    float: none;
-    margin-bottom: 10px;
-    width: auto;
-  } */
 
   .product-price {
     clear: both;
@@ -418,10 +371,6 @@ thead * {
     margin-left: 20px;
   }
 
-  .product-quantity:before {
-    content: "x";
-  }
-
   .product-removal {
     width: auto;
   }
@@ -431,7 +380,7 @@ thead * {
     width: 70px;
   }
 }
-/* Make more adjustments for phone */
+/* more adjustments for phone */
 @media screen and (max-width: 350px) {
   .product-removal {
     float: right;
