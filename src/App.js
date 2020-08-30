@@ -48,7 +48,7 @@ class App extends React.Component {
           <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/billing" component={Checkout2} />
 
-          <Route exact path="/settings" component={Settings} />
+          <Route path="/settings" component={Settings} />
 
           <Route exact path="/exhibition" component={Exhibition} />
 

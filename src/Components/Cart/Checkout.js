@@ -1,3 +1,4 @@
+import { LeftRadioButton } from "../Shared/Button/RadioButton";
 import React, { Component } from "react";
 
 // import $ from "jquery";
@@ -54,17 +55,7 @@ export default class Checkout extends Component {
                 <p>Complete your payment through the following means:</p>
 
                 <div className="pay-card">
-                  <label className="form-check-label radio">
-                    Pay by Card
-                    <input
-                      type="radio"
-                      id="pay-card"
-                      name="payment-method"
-                      checked="checked"
-                      value="card"
-                    />
-                    <span className="checkround"></span>
-                  </label>
+                  <LeftRadioButton buttonLabel={"Pay by Card"} />
 
                   <div className="card-cont mt-2">
                     <p class="m-0">Card payments are supported by all banks</p>
@@ -88,16 +79,7 @@ export default class Checkout extends Component {
                   </div>
                 </div>
 
-                <label className="form-check-label radio">
-                  Pay on Delivery
-                  <input
-                    type="radio"
-                    id="pay-delivery"
-                    name="payment-method"
-                    value="delivery"
-                  />
-                  <span className="checkround"></span>
-                </label>
+                <LeftRadioButton buttonLabel={"Pay on Delivery"} />
               </div>
             </div>
 

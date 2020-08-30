@@ -66,7 +66,7 @@ export default class Cart extends Component {
     // console.log(cartItems);
 
     return (
-      <MainWrapper className="hi cart-all container-fluid bg-grey">
+      <MainWrapper className="hi cart-all container-fluid bg-grey pr-md-5">
         <div className="">
           <h1 className="cart-title m-0">Cart</h1>
           <div className="cart-item"></div>
