@@ -13,12 +13,12 @@ const Drop = ({placeholder}) => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
-                  <Dropdown.Item eventKey="1">Price: Low to High</Dropdown.Item>
-                  <Dropdown.Item eventKey="2">Price: High to Low</Dropdown.Item>
+                  <Dropdown.Item eventKey="1">1</Dropdown.Item>
+                  <Dropdown.Item eventKey="2">2</Dropdown.Item>
                   <Dropdown.Item eventKey="3" active>
-                    Size: Smallest to Largest
+                    3
                   </Dropdown.Item>
-                  <Dropdown.Item eventKey="1">Size: Largest to Smallest</Dropdown.Item>
+                  <Dropdown.Item eventKey="1">4</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
 
