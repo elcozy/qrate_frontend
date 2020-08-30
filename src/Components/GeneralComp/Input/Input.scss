@@ -38,6 +38,8 @@
   .form-control-feedback {
     position: absolute;
     z-index: 2;
+    display: block;
+    width: 2.95rem;
     height: 2.95rem;
     line-height: 2.95rem;
     text-align: center;

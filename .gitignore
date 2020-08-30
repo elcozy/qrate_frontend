@@ -1,6 +1,7 @@
 node_modules
-.vscode/
-.netlify/
-build/
-public/static
-pnpm-lock.yaml
+/.vscode
+/.vscode/settings.json
+/.netlify
+build
+# Local Netlify folder
+.netlify

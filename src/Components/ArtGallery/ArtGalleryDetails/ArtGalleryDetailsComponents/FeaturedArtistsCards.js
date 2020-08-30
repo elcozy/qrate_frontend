@@ -1,5 +1,5 @@
 import React from "react";
-import { ArtGalleryHeaders } from "../../../Shared/Texts/GeneralTexts";
+import { ArtGalleryHeaders } from "../../../GeneralComp/Texts/GeneralTexts";
 export function FeaturedArtistsCards({ featuredArtists }) {
   return (
     <div className="featured-artists mt-5">

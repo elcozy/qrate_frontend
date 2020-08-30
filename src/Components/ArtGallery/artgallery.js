@@ -1,11 +1,10 @@
-import { PageHeaderText } from "../Shared/Texts/GeneralTexts";
+import { PageHeaderText } from "../GeneralComp/Texts/GeneralTexts";
 import ArtGalleryCollection from "./ArtGalleryCollection";
 import React from "react";
 import "./artgallery.css";
 import { Pagination } from "./ArtGalleryPagination";
-import Input from "../Shared/Input/Input";
+import Input from "../GeneralComp/Input/Input";
 import { gallery_images } from "./ArtGalleryData";
-import MainWrapper from "../Shared/MainWrapper";
 import { Dropdown } from "react-bootstrap";
 const propTypes = {
   //   items: React.PropTypes.array.isRequired,
@@ -61,7 +60,7 @@ export default class Gallery extends React.Component {
   render() {
     const { pageOfItems, totalItems } = this.state;
     return (
-      <MainWrapper className="container-fluid ">
+      <div className="main w-auto mt-5 pt-3 mt-lg-5 pt-lg-5 container-fluid mb-5 pb-5">
         <div className="r">
           <div className="text-center">
             <PageHeaderText text={`Art Galleries`} />
@@ -96,7 +95,7 @@ export default class Gallery extends React.Component {
           perPage={12}
           onChangePage={this.onChangePage}
         />
-      </MainWrapper>
+      </div>
     );
   }
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import Skeleton from "react-loading-skeleton";
 
@@ -8,21 +8,23 @@ import { withRouter } from "react-router-dom";
 
 import "./ArtistPreview.style.scss";
 
-const ArtistPreview = ({ artist, match }) => {
+class ArtistPreview extends Component {
+  render() {
+    const { artist, match } = this.props;
     return (
       <div className="artistPreview">
         <Link to={`${match.url}/${artist.id}`}>
           <div className="artistImage">
             {<img src={artist.imgUrl} alt="" /> || (
-              <Skeleton height={230} width={230} />
+              <Skeleton count={1} duration={5} />
             )}
           </div>
           <h4>VIEW</h4>
         </Link>
-        <p>{artist.name || <Skeleton />}</p>
+        <p>{artist.name || <Skeleton count={1} duration={5} />}</p>
       </div>
     );
-  
+  }
 }
 
 export default withRouter(ArtistPreview);
