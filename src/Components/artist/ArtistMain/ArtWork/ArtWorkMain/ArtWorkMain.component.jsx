@@ -117,9 +117,9 @@ class ArtWorkMain extends Component {
                                 <Button inverted  text='ADD TO CART' click={() => this.showModal('cartModal')}/>
 
                                 <div className='options'>
-                                    <i class="far fa-comment mr-3"></i>
-                                    <i class="fas fa-share-alt mr-3"></i>
-                                    <i class="far fa-heart mr-3"></i>
+                                    <i className="far fa-comment mr-3"></i>
+                                    <i className="fas fa-share-alt mr-3"></i>
+                                    <i className="far fa-heart mr-3"></i>
                                 </div>
                             </div>
 
