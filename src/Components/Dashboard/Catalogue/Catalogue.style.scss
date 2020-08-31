@@ -1,0 +1,85 @@
+.catalogue-page{
+    padding: 1rem 2rem;
+
+    .page-title{
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+    }
+    
+    button{
+        margin: 0 1rem;
+    }
+    
+    .catalogue{
+        margin-top: 1.5rem;
+
+        .heading{
+            margin: 1rem 1rem;
+            border-bottom: 1px solid #979797;
+            padding: 0.5rem 0;
+            text-transform: uppercase;
+        }
+    }
+    
+    .modal {
+        .modal-main{
+            
+            width: 40%;
+            min-width: 320px;
+
+            h5{
+                margin-bottom: 2rem;
+            }
+
+            .buttons{
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 2.3rem;
+
+                button:first-child{
+                    border: none;
+                    padding: 0 2rem;
+                    font-size: 0.9rem;
+
+                    &:hover{
+                        background-color: transparent;
+                        color: #f7931e;
+                        border: none;
+                    }
+
+                    &.cancel{
+                        color: #000000;
+                        background-color: transparent;
+                        font-weight: bold;
+                        border: none;
+                        border-width: 1px;
+                        padding: 0.5rem 1rem;
+                        padding-top: 1.3rem;
+                        height: auto;
+                        
+                        &:hover{
+                            color: #000000; 
+                            border-color: #000000;
+                        }
+                    }
+                }
+
+                button:nth-child(2){
+                    background-color: #048b04;
+                    color: #ffffff;
+                    border: none;
+                    padding: 0 2.3rem;
+                    font-size: 0.9rem;
+
+                    &:hover{
+                        background-color: #048b04;
+                        color: #ffffff;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
