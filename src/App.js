@@ -68,23 +68,23 @@ class App extends React.Component {
             component={GalleryDetails}
           />
 
-          <Route exact path={`/artist/:artistId`} component={ArtistMain} />
+          <Route exact path={`/home/artist/:artistId`} component={ArtistMain} />
 
           <Route
             exact
-            path={`/categories/:categoryId`}
+            path={`/home/categories/:categoryId`}
             component={CategoryMain}
           />
 
           <Route
             exact
-            path={`/categories/:categoryId`}
+            path={`/home/categories/:categoryId`}
             component={CategoryMain}
           />
 
           <Route
             exact
-            path={`/artist/:artistId/:workId`}
+            path={`/home/artist/:artistId/:workId`}
             component={ArtWorkMain}
           />
 

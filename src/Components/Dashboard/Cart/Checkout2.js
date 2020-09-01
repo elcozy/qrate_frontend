@@ -18,13 +18,11 @@ export default function Checkout2() {
                 <Form.Group>
                   <Form.Label>Card Number</Form.Label>
                   <Form.Control
-                    type="number"
                     autocomplete="off"
                     id="ccn"
                     type="tel"
                     inputmode="numeric"
                     pattern="[0-9\s]{13,19}"
-                    autocomplete="cc-number"
                     maxlength="19"
                     placeholder="XXXX XXXX XXXX XXXX"
                   />
