@@ -1,0 +1,246 @@
+@mixin form-group-styling {
+  input {
+    border: none;
+    border-bottom: 0.4px solid #4f4f4f;
+    border-radius: inherit;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: #2e384d;
+    margin-bottom: 2rem;
+    &:focus {
+      box-shadow: 0 4px 2px -2px #f7931e;
+      border-bottom-color: #f7931e;
+    }
+  }
+
+  ::placeholder {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: #2e384d;
+  }
+}
+@mixin card-signin {
+  height: 197px;
+
+  padding: 2rem 1rem;
+  border: 1px solid;
+  border-color: #e0e7ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .signin-icon {
+    width: 48px;
+    height: 48px;
+    background: #feefdd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      text-align: center;
+    }
+  }
+  .choose-person {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #2e384d;
+  }
+  .choose-describe {
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #8798ad;
+  }
+}
+.signin {
+  > div {
+    min-height: 100vh;
+  }
+  .signup-left {
+    .signup-logo {
+      text-align: center;
+    }
+    .signin-choice {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      .signin-client.active,
+      .signin-artist.active {
+        border: 2px solid;
+        border-color: #f7931e;
+      }
+      .signin-client {
+        @include card-signin;
+      }
+      .check-mark.active {
+        display: flex;
+      }
+      .check-mark {
+        border-radius: 50%;
+        background: #f7931e;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        position: absolute;
+        right: 7px;
+        font-size: 12px;
+        top: -10px;
+        color: #fff;
+        display: none;
+      }
+      .signin-artist {
+        @include card-signin;
+      }
+    }
+
+    .get-started {
+      span {
+        &:nth-child(1) {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 34px;
+          line-height: 36px;
+          color: #4f4f4f;
+        }
+        &:nth-child(2) {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 31px;
+          color: #8798ad;
+        }
+      }
+    }
+    .signup-form {
+      form {
+        .form-group.username,
+        .form-group.password {
+          @include form-group-styling;
+        }
+        button {
+          background: #f7931e;
+          border: none;
+          border-radius: 1px;
+          font-weight: bold;
+          font-size: 15px;
+          line-height: 21px;
+          text-align: center;
+          letter-spacing: 2px;
+          color: #ffffff;
+          padding: 0.7rem 0.75rem;
+          margin-top: 5rem;
+          margin-bottom: 1rem;
+          &:hover {
+            opacity: 0.8;
+          }
+          &:active {
+            color: #f7931e;
+            border: 1px solid #f7931e;
+            background: transparent;
+          }
+        }
+        p {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 22px;
+          /* or 147% */
+
+          text-align: right;
+
+          color: #b0bac9;
+          a {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+
+            color: #14af49;
+          }
+        }
+      }
+    }
+  }
+  .signup-right {
+    background: url("/assets/img/signup/signup-right.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    .contents {
+      .art-quote {
+        span {
+          &:nth-child(1) {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 31.7821px;
+            line-height: 61px;
+            letter-spacing: 0.873727px;
+            color: #6c6b6b;
+          }
+          &:nth-child(2) {
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 45px;
+            letter-spacing: 0.873727px;
+            text-transform: uppercase;
+            color: #6c6b6b;
+          }
+        }
+      }
+      .artwork-by {
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 45px;
+          /* or 249% */
+
+          letter-spacing: 0.873727px;
+          text-transform: uppercase;
+
+          color: #6c6b6b;
+          span {
+            color: #f7931e;
+          }
+        }
+      }
+      .bottom-nav {
+        margin-top: 1.5rem;
+
+        margin-right: 30%;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        .nav-links {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 42px;
+          text-align: center;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          color: #6c6b6b;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+@mixin form-group-styling {
+  input {
+    border: none;
+    border-bottom: 0.4px solid #4f4f4f;
+    border-radius: inherit;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: #2e384d;
+    margin-bottom: 2rem;
+    &:focus {
+      box-shadow: 0 4px 2px -2px #f7931e;
+      border-bottom-color: #f7931e;
+    }
+  }
+
+  ::placeholder {
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    color: #2e384d;
+  }
+}
+
+.signup {
+  > div {
+    min-height: 100vh;
+  }
+  .signup-left {
+    border-right: 6px solid #939292;
+    .signup-logo {
+      text-align: center;
+    }
+    .get-started {
+      span {
+        &:nth-child(1) {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 34px;
+          line-height: 36px;
+          color: #4f4f4f;
+        }
+        &:nth-child(2) {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 31px;
+          color: #8798ad;
+        }
+      }
+    }
+    .signup-form {
+      form {
+        .form-group.name,
+        .form-group.number,
+        .form-group.email,
+        .form-group.password {
+          @include form-group-styling;
+        }
+        .form-group.dropdown-select {
+          select {
+            border: none;
+            border-bottom: 0.4px solid #4f4f4f;
+            border-radius: inherit;
+            font-size: 15px;
+            line-height: 18px;
+            margin-bottom: 2rem;
+            letter-spacing: 1px;
+            color: #2e384d;
+            &:focus {
+              box-shadow: 0 4px 2px -2px #f7931e;
+              border-bottom-color: #f7931e;
+            }
+          }
+        }
+        button {
+          background: #f7931e;
+          border: none;
+          border-radius: 1px;
+          font-weight: bold;
+          font-size: 15px;
+          line-height: 21px;
+          text-align: center;
+          letter-spacing: 2px;
+          color: #ffffff;
+          padding: 0.7rem 0.75rem;
+          margin-top: 5rem;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 22px;
+          /* or 147% */
+
+          text-align: right;
+
+          color: #b0bac9;
+          a {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+
+            color: #14af49;
+          }
+        }
+      }
+    }
+  }
+  .signup-right {
+    background: url("/assets/img/signup/signup-right.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    .contents {
+      .art-quote {
+        span {
+          &:nth-child(1) {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 31.7821px;
+            line-height: 61px;
+            letter-spacing: 0.873727px;
+            color: #6c6b6b;
+          }
+          &:nth-child(2) {
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 45px;
+            letter-spacing: 0.873727px;
+            text-transform: uppercase;
+            color: #6c6b6b;
+          }
+        }
+      }
+      .artwork-by {
+        span {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 45px;
+          /* or 249% */
+
+          letter-spacing: 0.873727px;
+          text-transform: uppercase;
+
+          color: #6c6b6b;
+          span {
+            color: #f7931e;
+          }
+        }
+      }
+      .bottom-nav {
+        margin-top: 1.5rem;
+
+        margin-right: 30%;
+
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        .nav-links {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 42px;
+          text-align: center;
+          letter-spacing: 0.07em;
+          text-transform: uppercase;
+          color: #6c6b6b;
+        }
+      }
+    }
+  }
+}
