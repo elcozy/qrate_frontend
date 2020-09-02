@@ -34,16 +34,9 @@
         }
 
         .like{
-            .fill{
-                display: none;
-                color: red;
-            }
-            &:hover{
-                .empty{
-                    display: none;
-                }
-                .fill{
-                    display: block;
+            i, span{
+                &:hover{
+                    cursor: pointer;
                 }
             }
         }

@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-
-// IMPORTING REACT ROUTER DOM
-
 import catalogueData from './catalogueData';
 
 import CatalogueCollection from './CatalogueCollection/CatalogueCollection.component';

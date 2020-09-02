@@ -12,7 +12,7 @@ import "./CataloguePreview.style.scss";
 const CataloguePreview = ({ work }) => {
     return (
       <div className="cataloguePreview">
-          <Link to={`/artist/${work.artistId}/${work.routeName}`}>
+          <Link to={`/home/artist/${work.artistId}/${work.routeName}`}>
             <div className="catalogueImage">
               {<img src={work.imgUrl} alt="" /> ||  (<Skeleton height={230} width={230}/>)}
               <h4>VIEW</h4>

@@ -111,8 +111,11 @@
                     display: flex;
                     justify-content: flex-start;
 
-                    i{
+                    i, span{
                         margin-right: 0.9rem;
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                 }
             }

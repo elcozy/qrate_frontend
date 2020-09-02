@@ -57,7 +57,12 @@ class Categories extends Component {
           </div>
 
           <div className="alphabets">
-            <h2>A</h2>
+            <h2>
+              {filteredCategories
+                .map(category => category.name[0] === 'A')
+                .includes(true) ? 'A' : null
+              }
+            </h2>
 
             {filteredCategories
               .filter((category) => category.name[0] === "A")
@@ -74,13 +79,18 @@ class Categories extends Component {
                     </Link>
                   </div>
 
-                  <CategoryCollection category={category} />
+                  <CategoryCollection category={category} key={category.id} preview/>
                 </div>
               ))}
           </div>
 
           <div className="alphabets">
-            <h2>C</h2>
+            <h2>
+              {filteredCategories
+                .map(category => category.name[0] === 'C')
+                .includes(true) ? 'C' : null
+              }
+            </h2>
 
             {filteredCategories
               .filter((category) => category.name[0] === "C")
@@ -97,13 +107,19 @@ class Categories extends Component {
                     </Link>
                   </div>
 
-                  <CategoryCollection category={category} key={category.id} />
+                  <CategoryCollection category={category} key={category.id} preview/>
                 </div>
               ))}
           </div>
 
           <div className="alphabets">
-            <h2>O</h2>
+            <h2>
+              {filteredCategories
+                .map(category => category.name[0] === 'O')
+                .includes(true) ? 'O' : null
+              }
+            </h2>
+
             {filteredCategories
               .filter((category) => category.name[0] === "O")
               .map((category) => (
@@ -119,7 +135,7 @@ class Categories extends Component {
                     </Link>
                   </div>
 
-                  <CategoryCollection category={category} key={category.id} />
+                  <CategoryCollection category={category} key={category.id} preview/>
                 </div>
               ))}
           </div>
