@@ -218,14 +218,26 @@ class Navbar extends React.Component {
                     <span className="icon-sidebar-name">Exhibition</span>
                   </div>
                 </Link>
-                <div className="icon-sidebar-item">
-                  <img src="/images/catalogue.svg" alt="" />
-                  <span className="icon-sidebar-name">My Catalogue</span>
-                </div>
-                <div className="icon-sidebar-item">
-                  <img src="/images/categories.svg" alt="" />
-                  <span className="icon-sidebar-name">Categories</span>
-                </div>
+                <NavLink 
+                  className="navLink"
+                  activeClassName="active-link"
+                  to="/home/catalogue" >
+
+                  <div className="icon-sidebar-item">
+                    <img src="/images/catalogue.svg" alt="" />
+                    <span className="icon-sidebar-name">My Catalogue</span>
+                  </div>
+                </NavLink>
+                <NavLink 
+                  className="navLink"
+                  activeClassName="active-link"
+                  to="/home/categories" >
+
+                  <div className="icon-sidebar-item">
+                    <img src="/images/categories.svg" alt="" />
+                    <span className="icon-sidebar-name">Categories</span>
+                  </div>
+                </NavLink>
                 <NavLink
                   className="navLink"
                   activeClassName="active-link"
@@ -236,10 +248,16 @@ class Navbar extends React.Component {
                     <span className="icon-sidebar-name">Cart</span>
                   </div>
                 </NavLink>
-                <div className="icon-sidebar-item">
-                  <img src="/images/settings.svg" alt="" />{" "}
-                  <span className="icon-sidebar-name"> Settings</span>
-                </div>
+                <NavLink 
+                  className="navLink"
+                  activeClassName="active-link"
+                  to="/home/settings">
+
+                  <div className="icon-sidebar-item">
+                    <img src="/images/settings.svg" alt="" />{" "}
+                    <span className="icon-sidebar-name"> Settings</span>
+                  </div>
+                </NavLink>
               </div>
               <div className="icon-sidebar-item logout">
                 <img src="/images/logout-icon.svg" alt="" />
