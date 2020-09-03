@@ -9,7 +9,7 @@ export default class supplies extends Component {
     return (
       <MainWrapper className="container-fluid">
         <h1>Supplies Page</h1>
-        <h5>In progress...</h5>
+        <h5>In progress... @Mavewrick</h5>
         <Input placeholder="Search" />
         <br />
         <CustomCheckbox name={"Art Desks & Easels"} id={"art-desk"} />

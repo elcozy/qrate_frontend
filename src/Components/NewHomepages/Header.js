@@ -1,5 +1,5 @@
 import React from "react";
-export function Header(props) {
+export default function Header(props) {
   return (
     <div className="w-100">
       <header className="d-flex justify-content-between align-items-center fixed-top mw pt-4 pt-md-5 px-3 px-sm-5">

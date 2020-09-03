@@ -1,15 +1,15 @@
-import { Slide2 } from "./Components/NewHomepages/Slide2";
-import { Slide3 } from "./Components/NewHomepages/Slide3";
-import { Slide4 } from "./Components/NewHomepages/Slide4";
-import { Slide5 } from "./Components/NewHomepages/Slide5";
-import { Slide6 } from "./Components/NewHomepages/Slide6";
-import { Slide7 } from "./Components/NewHomepages/Slide7";
-import { Header } from "./Components/NewHomepages/Header";
+import Slide2 from "./Components/NewHomepages/Slide2";
+import Slide3 from "./Components/NewHomepages/Slide3";
+import Slide4 from "./Components/NewHomepages/Slide4";
+import Slide5 from "./Components/NewHomepages/Slide5";
+import Slide6 from "./Components/NewHomepages/Slide6";
+import Slide7 from "./Components/NewHomepages/Slide7";
+import Header from "./Components/NewHomepages/Header";
 
-import React, { Component, useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import FirstHomepage from "./Components/NewHomepages/FistHome";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import "./styles.scss";
 import { FullPage, Slide } from "react-full-page";
 
@@ -51,7 +51,7 @@ class CustomControls extends React.Component {
   }
 
   render() {
-    const { getCurrentSlideIndex, slidesCount, style, className } = this.props;
+    const { getCurrentSlideIndex, style, className } = this.props;
     const currentSlideIndex = getCurrentSlideIndex();
 
     return (

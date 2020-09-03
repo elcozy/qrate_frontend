@@ -15,7 +15,7 @@ const Account = () => (
     <NavLink
       className="subSettingsLink mb-2"
       activeClassName="active-link"
-      to="/settings/account/username"
+      to="/home/settings/account/username"
       exact
     >
       <div className="settings-account-item">
@@ -30,7 +30,7 @@ const Account = () => (
     <NavLink
       className="subSettingsLink mb-2"
       activeClassName="active-link"
-      to="/settings/account/username"
+      to="/home/settings/account/username"
       exact
     >
       <div className="settings-account-item">
@@ -45,7 +45,7 @@ const Account = () => (
     <NavLink
       className="subSettingsLink mb-2"
       activeClassName="active-link"
-      to="/settings/account/username"
+      to="/home/settings/account/username"
       exact
     >
       <div className="settings-account-item">
@@ -131,7 +131,7 @@ export default class Settings extends Component {
           <NavLink
             className="settingsLink mb-2"
             activeClassName="active-link"
-            to="/settings"
+            to="/home/settings"
             exact
           >
             <div className="settings-item pl-4">
@@ -142,7 +142,7 @@ export default class Settings extends Component {
           <NavLink
             className="settingsLink mb-3"
             activeClassName="active-link"
-            to="/settings/notifications"
+            to="/home/settings/notifications"
           >
             <div className="settings-item pl-4">
               <span>Notifications</span>
@@ -152,7 +152,7 @@ export default class Settings extends Component {
           <NavLink
             className="settingsLink mb-3"
             activeClassName="active-link"
-            to="/settings/privacy"
+            to="/home/settings/privacy"
           >
             <div className="settings-item pl-4">
               <span>Privacy and Security</span>
@@ -162,7 +162,7 @@ export default class Settings extends Component {
           <NavLink
             className="settingsLink mb-2"
             activeClassName="active-link"
-            to="/settings/theme"
+            to="/home/settings/theme"
           >
             <div className="settings-item pl-4">
               <span>Theme</span>
@@ -172,7 +172,7 @@ export default class Settings extends Component {
           <NavLink
             className="settingsLink mb-3"
             activeClassName="active-link"
-            to="/settings/help"
+            to="/home/settings/help"
           >
             <div className="settings-item pl-4">
               <span>Help</span>
@@ -180,7 +180,7 @@ export default class Settings extends Component {
             </div>
           </NavLink>
           <NavLink
-            to="/settings/about"
+            to="/home/settings/about"
             className="settingsLink"
             activeClassName="active-link"
           >
@@ -192,16 +192,16 @@ export default class Settings extends Component {
         </div>
 
         <Switch>
-          <Route exact path="/settings" component={Account}></Route>
+          <Route exact path="/home/settings" component={Account}></Route>
           <Route
             exact
-            path="/settings/notifications"
+            path="/home/settings/notifications"
             component={Notifications}
           ></Route>
-          <Route path="/settings/privacy" component={Privacy}></Route>
-          <Route path="/settings/theme" component={Theme}></Route>
-          <Route path="/settings/help" component={Help}></Route>
-          <Route path="/settings/about" component={About}></Route>
+          <Route path="/home/settings/privacy" component={Privacy}></Route>
+          <Route path="/home/settings/theme" component={Theme}></Route>
+          <Route path="/home/settings/help" component={Help}></Route>
+          <Route path="/home/settings/about" component={About}></Route>
         </Switch>
       </MainWrapper>
     );

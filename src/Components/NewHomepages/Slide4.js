@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export function Slide4({}) {
+export default function Slide4() {
   return (
     <div className="wrapper bg-black" id="14">
       <div className="mw py-5 px-3 px-sm-5 py-5 h-100 galleryDiv">

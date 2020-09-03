@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
-export function Slide7({ props }) {
+export default function Slide7(props) {
   return (
     <div className="wrapper bg-black" id="17">
       <div className="mx-auto py-5 px-3 px-sm-5 banner">

@@ -1,5 +1,5 @@
 import React from "react";
-export function Slide5({}) {
+export default function Slide5() {
   return (
     <div className="wrapper bg-indigo" id="15">
       <div className="mw py-5 px-3 px-sm-5 py-5 h-100 works">
