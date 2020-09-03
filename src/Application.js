@@ -18,10 +18,10 @@ export default class Application extends Component {
     return (
       <div>
         <Switch>
-          {/* <Route exact path="/" component={Homepage}></Route> */}
+          <Route exact path="/" component={Homepage}></Route>
           <Route exact path="/signin" component={Signin}></Route>
           <Route exact path="/signup" component={Signup}></Route>
-          <Route exact path="/" component={BetterHomepage}></Route>
+          {/* <Route exact path="/" component={BetterHomepage}></Route> */}
           <Route path="/home" component={App}></Route>
         </Switch>
 
