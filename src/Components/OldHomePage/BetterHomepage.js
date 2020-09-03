@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Homepage.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import PropTypes from "prop-types";
+
 // import { FullPage, Slide } from "react-full-page";
 const categories_data = [
   { name: "Animation", icon: "A" },

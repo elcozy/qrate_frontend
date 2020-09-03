@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 // Components
-import Homepage from "./Homepage";
-import BetterHomepage from "./Components/NewHomePage/BetterHomepage";
+import Homepage from "./NewHomepage";
+import BetterHomepage from "./Components/OldHomePage/BetterHomepage";
 import Signup from "./Components/Sign/Signup";
 import Signin from "./Components/Sign/Signin";
 // import Dashboard from "./Components/Dashboard/index";
