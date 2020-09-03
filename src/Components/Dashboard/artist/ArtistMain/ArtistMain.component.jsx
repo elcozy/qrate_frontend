@@ -41,7 +41,7 @@ class ArtistMain extends Component {
        
             <div className='main content blo'>
                 <div className='artistMain container-fluid'>
-                    <Link to='/artist'>
+                    <Link to='/home/artist'>
                         <i className="fas fa-arrow-left arrow-left"></i>
                     </Link>
                     <h2 className='name'>{selectedArtist.name}</h2>

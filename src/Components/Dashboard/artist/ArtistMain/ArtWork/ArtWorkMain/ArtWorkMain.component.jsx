@@ -31,6 +31,8 @@ class ArtWorkMain extends Component {
 
         this.state = {
             work: work,
+            isLiked: false,
+            counter: 0,
             showCartModal: false,
             showCatalogueModal: false,
         }
@@ -76,10 +78,17 @@ class ArtWorkMain extends Component {
         }
     } 
 
+    toggleLike = () => {
+        this.setState({
+            isLiked: !this.state.isLiked,
+            counter: 0 ? 1 : 0,
+        })
+    }
+
 
     render () {
-        //Destructuring work off the state
-        const {work} = this.state;
+        //Destructuring keys off the state
+        const {work, isLiked, counter, showCartModal, showCatalogueModal} = this.state;
 
         //Destructuring artistId off Params off the match props
         const { params: { artistId} } = this.props.match;
@@ -93,7 +102,7 @@ class ArtWorkMain extends Component {
             <div className='main'>
                 <div className='artwork-main content'>
                     <div className='banner'>
-                        <Link to={`/artist/${artistId}`}>
+                        <Link to={`/home/artist/${artistId}`}>
                             <i className="fas fa-arrow-left arrow-left"></i>
                         </Link>
 
@@ -103,7 +112,7 @@ class ArtWorkMain extends Component {
                                 <p>by {work.artist}</p>
                                 <Ratings />
 
-                                <Modal show={this.state.showCartModal} close={() => this.hideModal('cartModal')}>
+                                <Modal show={showCartModal} close={() => this.hideModal('cartModal')}>
                                     <h5>Added to Cart</h5>
 
                                     <p> '{work.name}' artwork by {work.artist} was added to your cart </p>
@@ -119,7 +128,19 @@ class ArtWorkMain extends Component {
                                 <div className='options'>
                                     <i className="far fa-comment mr-3"></i>
                                     <i className="fas fa-share-alt mr-3"></i>
-                                    <i className="far fa-heart mr-3"></i>
+                                    {
+                                        isLiked===false && counter===0 ?
+                                        <i className="far fa-heart mr-3" onClick={this.toggleLike}></i> :
+                                        <span>
+                                            <img
+                                            className="liked mb-2" 
+                                            src='/images/isLiked.svg' 
+                                            alt='like'
+                                            height={19}
+                                            width={18}
+                                            onClick={this.toggleLike}/>
+                                        </span>
+                                    }
                                 </div>
                             </div>
 
@@ -157,7 +178,7 @@ class ArtWorkMain extends Component {
                         </div>
 
 
-                        <Modal show={this.state.showCatalogueModal} close={() => this.hideModal('catalogueModal')}>
+                        <Modal show={showCatalogueModal} close={() => this.hideModal('catalogueModal')}>
                             <h5>Save To Catalogue</h5>
 
                             <p> Which catalogue do you want to save it to? </p>

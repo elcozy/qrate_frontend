@@ -26,21 +26,29 @@ class categoryMain extends Component {
 
     this.state = {
       category: category,
+      input: "",
     };
   }
 
+  handleChange = (e) => {
+    e.preventDefault();
+    //set input vlaue to search input.
+    this.setState({ input: e.target.value });
+  };
+
   render() {
     //Destructuring category off the state
-    const { category } = this.state;
+    const { category, input } = this.state;
 
     //Destructuring the object off the category array.
     const [selectedCategory] = category;
+    
 
     return (
       <div className="main">
         <div className="categoryMain content">
           <div className="title-container">
-            <Link to="/categories">
+            <Link to="/home/categories">
               <i className="fas fa-arrow-left arrow-left"></i>
             </Link>
 
@@ -50,7 +58,7 @@ class categoryMain extends Component {
           <div className="search-section">
             <Input
               inputName="search"
-              placeholder="Search for Category"
+              placeholder="Search for Work"
               onChange={this.handleChange}
             />
           </div>
@@ -67,7 +75,7 @@ class categoryMain extends Component {
                   </h4>
                 </div>
 
-                <CategoryCollection category={selectedCategory} seeAll />
+                <CategoryCollection category={selectedCategory} seeAll searchResult={input}/>
               </div>
             }
           </div>
