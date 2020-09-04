@@ -2,7 +2,7 @@ import React from "react";
 
 //IMPORTING FOLDERS
 
-import Home from "./Components/Dashboard/Homepage/home";
+//import Home from "./Components/Dashboard/Homepage/home";
 import Artist from "./Components/Dashboard/artist/artist";
 import Explore from "./Components/Dashboard/explore/explore";
 import Navbar from "./Components/Dashboard/Navbar/nav";
@@ -35,7 +35,7 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route exact path="/home" component={Home}></Route>
+{/*}          <Route exact path="/home" component={Home}></Route> */}
 
           <Route exact path="/home/artist" component={Artist}></Route>
 
