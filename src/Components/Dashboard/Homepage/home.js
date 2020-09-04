@@ -16,7 +16,7 @@ import "./home.css";
 import MainCard from "./mainCard";
 import SidebarCard from "./sidebarCard";
 import SidebarTrending from "./sidebarTrending";
-//import EmojiPicker from "./emojiPicker";
+import EmojiPicker from "./emojiPicker";
 
 class home extends React.Component {
   state = {
