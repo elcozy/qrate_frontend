@@ -3,16 +3,22 @@
     flex-wrap: wrap;
 }
 .video-section{
-    flex: 70%; 
+    flex: 68%; 
 }
 
 .comment-section{
-    flex: 30%;
+    flex: 32%;
     border-left: 0.6px solid #C4C4C4;
-    padding-top: 58.02px;
+    position: relative;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-bottom: 20px;
+    
 }
 .discussion-forum{
-    padding-top: 20px;
+    padding-top: 60px;
+    padding-bottom: 50px;
+
 }
 .live-vid{
     padding: 20px 43px;
@@ -106,6 +112,76 @@
   padding-right: 43px;
    border-bottom: 1px solid #C4C4C4;
 }
+.date{
+    line-height: 24px;
+}
+.joining{
+    border-top: 0.6px solid #C4C4C4;
+    padding-left: 43px;
+    padding-top: 25px;
+}
+.joining .user{
+    padding-bottom: 15px;
+}
+.user-detail{
+    padding-left: 19px;
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 17px;
+    color: #3E3E3E;  
+    opacity: 0.5;    
+}
+.text-area{
+    position: fixed;
+    padding-bottom: 16px;
+    bottom: 43px;
+    border-bottom: 1px solid #C4C4C4;
+    background: #ffff;
+}
+.chat{
+    padding-top: 42px;
+}
+.message .text{
+font-family: Ubuntu;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: px;
+padding-top: 13px;
+padding-bottom: 13px;
+color: #6C6B6B;
+border-radius: 50px;
+background: #F7F7F7;
+}
+.message{
+    width: 100%;
+    margin-bottom: 30px;
+    display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.submit{
+    padding: 12px 15px;
+    background: #F7931E;
+    border-radius: 5px;
+}
+.send-input{
+    border: none !important;
+    outline: none !important;
+    padding-left: 20px;
+}
+.video-nav-icon{
+    filter: none;
+    text-decoration: none !important;
+    color: #f7931e !important;
+    fill: #f7931e !important;
+}
+
 @media screen and (max-width: 992px){
     .row-section{
         flex-direction: column;
@@ -115,8 +191,26 @@
     }
     .comment-section{
         width: 100%;
+        display: none;
     }
     .live-vid{
-        padding: 28px 0px;
+        padding: 28px 20px;
+    }
+    .attendess span{
+        font-family: Ubuntu;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 21px;
+        /* identical to box height */
+        
+        
+        color: #6C6B6B;    
+    }
+    .exhibition-link{
+        display: none;
+    }
+    .joining{
+        padding-left: 20px;
     }
 }
