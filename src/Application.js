@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 // Components
-import Homepage from "./Homepage";
-import BetterHomepage from "./Components/NewHomePage/BetterHomepage";
+import Homepage from "./NewHomepage";
+import BetterHomepage from "./Components/OldHomePage/BetterHomepage";
 import Signup from "./Components/Sign/Signup";
 import Signin from "./Components/Sign/Signin";
 import Video from "./Components/ExhibitionVideo/video"
@@ -21,9 +21,10 @@ export default class Application extends Component {
         <Switch>
           {/* <Route exact path="/" component={Homepage}></Route> */}
           <Route exact path="/livevideo" component={Video}></Route>
+          <Route exact path="/" component={Homepage}></Route>
           <Route exact path="/signin" component={Signin}></Route>
           <Route exact path="/signup" component={Signup}></Route>
-          <Route exact path="/" component={BetterHomepage}></Route>
+          {/* <Route exact path="/" component={BetterHomepage}></Route> */}
           <Route path="/home" component={App}></Route>
         </Switch>
 

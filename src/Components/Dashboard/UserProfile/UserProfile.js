@@ -9,7 +9,7 @@ export default class UserProfile extends Component {
     return (
       <MainWrapper className="container-fluid">
         <h1>User Profile Page</h1>
-        <h5>In progress:...</h5>
+        <h5>In progress:...@Summy</h5>
         <NavLink to="/home/settings">
           <button className="checkout ml-sm-2">GO TO SETTING</button>
         </NavLink>

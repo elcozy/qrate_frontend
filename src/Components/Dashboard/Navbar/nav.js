@@ -208,24 +208,39 @@ class Navbar extends React.Component {
                 </span>
               </div>
               <div className="main-properties">
-                <div className="icon-sidebar-item">
-                  <img src="/images/profile.svg" alt="" />
-                  <span className="icon-sidebar-name">Profile</span>
-                </div>
-                <Link to="./exhibition">
+                <Link to="/home/profile">
+                  <div className="icon-sidebar-item">
+                    <img src="/images/profile.svg" alt="" />
+                    <span className="icon-sidebar-name">Profile</span>
+                  </div>
+                </Link>
+
+                <Link to="/home/exhibition">
                   <div className="icon-sidebar-item">
                     <img src="/images/mobile-exhibition.svg" alt="" />
                     <span className="icon-sidebar-name">Exhibition</span>
                   </div>
                 </Link>
-                <div className="icon-sidebar-item">
-                  <img src="/images/catalogue.svg" alt="" />
-                  <span className="icon-sidebar-name">My Catalogue</span>
-                </div>
-                <div className="icon-sidebar-item">
-                  <img src="/images/categories.svg" alt="" />
-                  <span className="icon-sidebar-name">Categories</span>
-                </div>
+                <NavLink
+                  className="navLink"
+                  activeClassName="active-link"
+                  to="/home/catalogue"
+                >
+                  <div className="icon-sidebar-item">
+                    <img src="/images/catalogue.svg" alt="" />
+                    <span className="icon-sidebar-name">My Catalogue</span>
+                  </div>
+                </NavLink>
+                <NavLink
+                  className="navLink"
+                  activeClassName="active-link"
+                  to="/home/categories"
+                >
+                  <div className="icon-sidebar-item">
+                    <img src="/images/categories.svg" alt="" />
+                    <span className="icon-sidebar-name">Categories</span>
+                  </div>
+                </NavLink>
                 <NavLink
                   className="navLink"
                   activeClassName="active-link"
@@ -236,15 +251,23 @@ class Navbar extends React.Component {
                     <span className="icon-sidebar-name">Cart</span>
                   </div>
                 </NavLink>
-                <div className="icon-sidebar-item">
-                  <img src="/images/settings.svg" alt="" />{" "}
-                  <span className="icon-sidebar-name"> Settings</span>
+                <NavLink
+                  className="navLink"
+                  activeClassName="active-link"
+                  to="/home/settings"
+                >
+                  <div className="icon-sidebar-item">
+                    <img src="/images/settings.svg" alt="" />{" "}
+                    <span className="icon-sidebar-name"> Settings</span>
+                  </div>
+                </NavLink>
+              </div>
+              <Link to="/home/logout">
+                <div className="icon-sidebar-item logout">
+                  <img src="/images/logout-icon.svg" alt="" />
+                  <span className="icon-sidebar-name">Log out</span>
                 </div>
-              </div>
-              <div className="icon-sidebar-item logout">
-                <img src="/images/logout-icon.svg" alt="" />
-                <span className="icon-sidebar-name">Log out</span>
-              </div>
+              </Link>
             </div>
           </div>
         ) : null}
@@ -373,7 +396,7 @@ class Navbar extends React.Component {
               </div>
               <div className="row container-fluid two">
                 <a
-                  className="nav-item nav-link mobile user"
+                  className="nav-item nav-link mobile user cursor-pointer"
                   onClick={() => {
                     this.setState({ show: !this.state.show });
                   }}

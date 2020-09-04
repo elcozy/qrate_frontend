@@ -1,6 +1,5 @@
 import React from "react";
-
-const HomepageHeader = (props) => {
+export default function Header(props) {
   return (
     <div className="w-100">
       <header className="d-flex justify-content-between align-items-center fixed-top mw pt-4 pt-md-5 px-3 px-sm-5">
@@ -26,14 +25,16 @@ const HomepageHeader = (props) => {
           <button
             className="btn bg-transparent text-light px-4"
             id="login"
-            onClick={() => props.onClick("ConfirmEmail", "FirstPage")}
+            value="ConfirmEmail"
+            onClick={(e) => props.onClick(e.target.value)}
           >
             Log In
           </button>
           <button
             className="btn btn-light text-black px-4"
             id="signup"
-            onClick={() => props.onClick("GetStarted", "FirstPage")}
+            value="GetStarted"
+            onClick={(e) => props.onClick(e.target.value)}
           >
             Sign up
           </button>
@@ -41,6 +42,4 @@ const HomepageHeader = (props) => {
       </header>
     </div>
   );
-};
-
-export default HomepageHeader;
+}
