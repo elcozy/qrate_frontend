@@ -10,7 +10,7 @@
 }
 .filter{
     background: #000000;
-    opacity: 0.3;
+    opacity: 0.7;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -81,9 +81,158 @@ color: #F7931E;
     padding: 11px 40px;
     
 }
-@media only screen and (max-width: 992px){
-  
+.seeAll{
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom: 1px solid  #c4c4c4;
 }
+.seeAll span{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 24px;
+    
+    color: #3E3E3E;
+}
+.seeAll span a{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    
+    color: #3E3E3E;    
+}
+.upcoming{
+    position: relative;  
+}
+.upcoming-vids{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.upcoming-exhibitions{
+    margin-top: 30px;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 7px rgba(196, 196, 196, 0.2);
+    border-radius: 5px;    
+}
+.filter-img{
+   background: #000000;
+    opacity: 0.6;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;       
+}
+.exhibition-title{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #3E3E3E;    
+}
+.upcoming-exhibition-details{
+    padding-left: 30px;
+    padding-top: 20px;
+    margin-bottom: 50px;
+}
+.exhibition-time{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    
+    color: #3E3E3E;    
+}
+.exhibition-caption{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 20px;
+    color: #3E3E3E;  
+}
+.register-exhibition{
+    background: #F7931E;
+    border-radius: 5px ;  
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    padding: 11px 40px;
+}
+.recent{
+    position: relative;
+}
+.recent-exhibitions{
+    margin-top: 60px !important;
+    background: #2E384D;
+}
+.recent-exhibition-text{
+    color: #FFFFFF !important;
+    padding-top: 62px;
+    padding-left: 43px;
+}
+.exhibition-tag{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: uppercase;    
+}
+.exhibition-name{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    padding-top: 12px;    
+    
+}
+.recent-exhibition-caption{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 20px;    
+    line-height: 24px;
+}
+.recent-img{
+    height: 416px;
+}
+.doc{
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    text-decoration-line: underline;
+    
+    color: #F7931E;
+    
+}
+
+@media only screen and (max-width: 1200px){
+    .recent-img{
+        height: 100%;
+    }
+}
+
 @media only screen and (max-width: 768px){
    .ex-bg{
        background-size: cover;
@@ -93,8 +242,6 @@ color: #F7931E;
    }
    .filter-text{
        top: 250px;
-     
-
    }
    .filter-text span{
     line-height: 40px;   
@@ -108,5 +255,18 @@ color: #F7931E;
    }
    .filter-text .button button{
        width: 100%;
+   }
+   .upcoming-vids{
+       padding-left: 0px;
+       padding-right: 0px;
+   }
+   .upcoming-exhibition-details{
+       padding-left: 10px;
+       padding-right: 10px;
+   }
+   .recent-exhibition-text{
+       padding-left: 10px;
+       padding-right: 10px;
+       padding-bottom: 40px;
    }
 }
