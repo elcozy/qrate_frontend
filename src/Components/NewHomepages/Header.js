@@ -16,12 +16,12 @@ export default function Header(props) {
               placeholder="Search Qrate"
               aria-label="Search"
             />
-            <div className="input-group-append p-2 border border-left-0 light-bg">
+            <div className="input-group-appended border-left-0 light-bg">
               <i className="fa fa-search text-light"></i>
             </div>
           </div>
         </div>
-        <div className="d-none d-md-flex">
+        {/* <div className="d-none d-md-flex">
           <button
             className="btn bg-transparent text-light px-4"
             id="login"
@@ -39,6 +39,7 @@ export default function Header(props) {
             Sign up
           </button>
         </div>
+       */}
       </header>
     </div>
   );

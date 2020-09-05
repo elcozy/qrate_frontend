@@ -1,7 +1,7 @@
 import React from "react";
 export default function Slide5() {
   return (
-    <div className="wrapper bg-indigo" id="15">
+    <div className="wrapper bg-pynk" id="15">
       <div className="mw py-5 px-3 px-sm-5 py-5 h-100 works">
         <div className="about d-flex flex-column justify-content-center align-items-center text-light text-center px-4 px-sm-5 px-md-auto">
           <h3 className="font-weight-bold mb-4 mb-md-5">

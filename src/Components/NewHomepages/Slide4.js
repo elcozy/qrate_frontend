@@ -7,7 +7,7 @@ export default function Slide4() {
         <div className="about d-flex justify-content-center align-items-center text-light px-4 px-sm-5 px-md-auto">
           <div className="row align-items-stretch">
             <div className="col-lg-4 mt-5 d-flex flex-column justify-content-center">
-              <h3>Qrate is Galleries!</h3>
+              <h3 className="mb-2">Qrate is Galleries!</h3>
               <p className="text-justify text-md-left">
                 Qrate connects visual artists, calligraphy artists,
                 photographers, etc. to clients who can purchase their work or

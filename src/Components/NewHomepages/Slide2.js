@@ -632,7 +632,7 @@ export default function Slide2() {
             </div>
           </div>
 
-          <p className="lead font-weight-bold explore">
+          <p className="lead font-weight-bold explorer">
             You've Come to Explore The Beauty of Art
           </p>
           <p className="p2">

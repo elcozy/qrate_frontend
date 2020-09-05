@@ -82,11 +82,12 @@ const NewHomepage = () => {
           />
         </Slide>
         <Slide>
-          <Slide2 />
-        </Slide>
-        <Slide>
           <Slide3 />
         </Slide>
+        <Slide>
+          <Slide2 />
+        </Slide>
+
         <Slide>
           <Slide4 />
         </Slide>
