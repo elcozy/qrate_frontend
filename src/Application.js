@@ -5,6 +5,7 @@ import Homepage from "./NewHomepage";
 import BetterHomepage from "./Components/OldHomePage/BetterHomepage";
 import Signup from "./Components/Sign/Signup";
 import Signin from "./Components/Sign/Signin";
+import Video from "./Components/ExhibitionVideo/video"
 // import Dashboard from "./Components/Dashboard/index";
 // import ArtDetails from "./Components/Dashboard/ArtDetails/index";
 // import Gallery from "./Components/Dashboard/Gallery/index";
@@ -18,6 +19,8 @@ export default class Application extends Component {
     return (
       <div>
         <Switch>
+          {/* <Route exact path="/" component={Homepage}></Route> */}
+          <Route exact path="/livevideo" component={Video}></Route>
           <Route exact path="/" component={Homepage}></Route>
           <Route exact path="/signin" component={Signin}></Route>
           <Route exact path="/signup" component={Signup}></Route>
