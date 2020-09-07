@@ -8,7 +8,7 @@ export class Pagination extends React.Component {
   };
 
   componentDidMount() {
-    console.log(this.state);
+    // console.log(this.state);
     this.setupPagination();
     // this.onPageChange(currentPage);
   }
@@ -21,7 +21,7 @@ export class Pagination extends React.Component {
   }
 
   setupPagination = () => {
-    console.log(">>>>", this.props);
+    // console.log(">>>>", this.props);
     const { initialPage = 1, totalItems = 0, perPage = 10 } = this.props;
     const totalPages = Math.ceil(totalItems / perPage);
     const settings = {

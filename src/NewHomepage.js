@@ -92,13 +92,15 @@ const NewHomepage = () => {
           <Slide4 />
         </Slide>
         <Slide>
-          <Slide5 />
-        </Slide>
-        <Slide>
           <Slide6 />
         </Slide>
         <Slide>
+          <Slide5 />
+        </Slide>
+
+        <Slide>
           <Slide7
+            showComponent={showComponent}
             onClick={(value) => {
               setWhichComponentToShow(value);
             }}

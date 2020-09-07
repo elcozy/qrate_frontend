@@ -166,7 +166,7 @@ class Navbar extends React.Component {
                 <span className="sidebar-name">Art Supplies</span>
               </div>
             </NavLink>
-            <NavLink to="/home/logout" className="navLink">
+            <NavLink to="/" className="navLink">
               <div className="sidebar-item out">
                 {" "}
                 {/* <img src="/images/logout.svg" className="sidebar-icon" alt="" /> */}
@@ -262,7 +262,7 @@ class Navbar extends React.Component {
                   </div>
                 </NavLink>
               </div>
-              <Link to="/home/logout">
+              <Link to="/">
                 <div className="icon-sidebar-item logout">
                   <img src="/images/logout-icon.svg" alt="" />
                   <span className="icon-sidebar-name">Log out</span>

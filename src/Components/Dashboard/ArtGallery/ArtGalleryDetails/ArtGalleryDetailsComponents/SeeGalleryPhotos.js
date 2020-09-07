@@ -32,7 +32,7 @@ export const SeeGalleryPhotos = ({ galleryPhotos }) => {
           options={{
             rewind: true,
             width: 800,
-            // gap: "1rem",
+            gap: "0.5rem",
             autoWidth: true,
             autoplay: true,
           }}

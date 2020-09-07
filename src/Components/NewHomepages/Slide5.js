@@ -44,17 +44,21 @@ export default function Slide5() {
               <div className="col-4 p-0 p-md-block my-auto">
                 <img
                   className="img-reduce-size"
-                  src="/images/homepage/screenshot.png"
+                  src="/images/homepage/DesktopP2.svg"
                   alt="Art"
                 />
               </div>
               <div className="col-4 p-0 p-md-block my-auto">
-                <img className="w-100" src="/images/homepage/2.png" alt="Art" />
+                <img
+                  className="w-100"
+                  src="/images/homepage/DesktopP.png"
+                  alt="Art"
+                />
               </div>
               <div className="col-4 p-0 p-md-block my-auto">
                 <img
                   className="img-reduce-size"
-                  src="/images/homepage/3.png"
+                  src="/images/homepage/DesktopP1.svg"
                   alt="Art"
                 />
               </div>

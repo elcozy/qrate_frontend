@@ -1,17 +1,21 @@
 import React from "react";
+
 export function PageHeaderText({ text }) {
   return (
-    <h5
-      className="text-left page-head-text"
-      style={{
-        fontWeight: 500,
-        fontSize: "2rem",
-        lineHeight: "41px",
-        color: "black",
-      }}
-    >
-      {text}
-    </h5>
+    <>
+      <h5
+        className="text-left page-head-text"
+        style={{
+          fontWeight: 500,
+          fontSize: "2rem",
+          lineHeight: "41px",
+          color: "black",
+          marginBottom: 0,
+        }}
+      >
+        {text}
+      </h5>
+    </>
   );
 }
 PageHeaderText.defaultProps = {

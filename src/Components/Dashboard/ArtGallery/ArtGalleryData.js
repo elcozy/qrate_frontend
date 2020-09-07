@@ -54,9 +54,9 @@ export const gallery_images = [...Array(50).keys()]
         profileImg: "/assets/img/artgallery/f-collection-img.svg",
       },
     ],
-    photos: [...Array(5).keys()].map((i) => ({
+    photos: [...Array(15).keys()].map((i) => ({
       id: i + 1,
-      image: `/assets/img/artgallery/art_gallery photos (${i + 1}).svg`,
+      image: `/assets/img/artgallery/art_gallery photos (${(i % 5) + 1}).svg`,
     })),
   }))
   .sort(() => Math.random() - 0.5);

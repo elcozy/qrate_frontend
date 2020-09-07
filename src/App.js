@@ -35,7 +35,7 @@ class App extends React.Component {
       <div className="App">
         <Navbar />
         <Switch>
-     <Route exact path="/home" component={Home}></Route> 
+          <Route exact path="/home" component={Home}></Route>
 
           <Route exact path="/home/artist" component={Artist}></Route>
 
@@ -55,7 +55,7 @@ class App extends React.Component {
 
           <Route exact path="/home/catalogue" component={Catalogue} />
 
-          <Route exact path="/home/logout" component={Logout} />
+          <Route exact path="/" component={Logout} />
 
           <Route exact path="/home/profile" component={UserProfile} />
 

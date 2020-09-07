@@ -12,6 +12,7 @@ import ".././artgallery.css";
 import "./ArtGalleryDetails.scss";
 import MainWrapper from "../../Shared/MainWrapper";
 
+import { Link } from "react-router-dom";
 export default class ArtGalleryDetails extends React.Component {
   constructor(props) {
     super(props);
@@ -37,7 +38,19 @@ export default class ArtGalleryDetails extends React.Component {
     console.log(selectedArtGallery.featuredCollections);
     return (
       <MainWrapper className="art-gallery-details container-fluid">
-        <PageHeaderText text={selectedArtGallery.name} />
+        <div className="d-flex flex-row mb-2">
+          <Link
+            to="/home/gallery"
+            className="d-flex align-items-center pr-3 text-dark"
+            style={{
+              textDecoration: "none",
+            }}
+          >
+            <i className="fas fa-arrow-left arrow-left"></i>
+          </Link>
+          <PageHeaderText text={selectedArtGallery.name} />
+        </div>
+
         <ArtGalleryDetailsHero selectedArtGallery={selectedArtGallery} />
         <UpcomingExhibition
           upcomingExhibition={selectedArtGallery.upcomingExhibitions}

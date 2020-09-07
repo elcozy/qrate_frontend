@@ -134,14 +134,13 @@ body {
 }*/
 
 .icon-nav {
-  padding-top: 20px;
   background: #ffffff;
   position: fixed;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   border-bottom: 1px solid #c4c4c4;
   right: 0;
-  width: 90%;
+  width: 100%;
   z-index: 9998;
 }
 .icon-nav-name {
@@ -195,7 +194,7 @@ body {
   }
 
   .sidebar {
-    width: 12%;
+    width: 115px;
   }
   .two {
     display: none !important;
@@ -211,7 +210,7 @@ body {
     display: none;
   }
   .main {
-    margin-left: 12%;
+    margin-left: 115px;
   }
 }
 
@@ -348,4 +347,3 @@ body {
 .icon-navbar:focus {
   color: #f7931e;
 }
-
